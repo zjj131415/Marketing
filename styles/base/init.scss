@@ -79,10 +79,13 @@ html {
   background: #f3f3f3;
   color: #1b1b1b;
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  height: 100%;
 }
 body {
   padding: 0;
   min-width: 300px;
   max-width: 640px;
+  height: 100%;
+  overflow: hidden;
   margin: 0 auto;
 }
