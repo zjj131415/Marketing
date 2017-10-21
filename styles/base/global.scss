@@ -1,0 +1,28 @@
+//全局样式
+$M_COLOR: #129992;
+$TEXT_ORANGE: #ff9600;
+$TEXT_666: #666;
+$BORDER_COLOR: #dcdcdc;
+
+//伪元素实现1像素边框；
+/*
+*
+*/
+@mixin brdCom($pst, $bdrColor, $leftDis: 0) {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  left: $leftDis;
+  #{$pst}: 0;
+  border-top: 1px solid $bdrColor;
+  color: $bdrColor;
+  transform: scaleY(.5);
+}
+
+@mixin flexCt($size) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $size;
+  height: $size;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "marketing",
+  "version": "1.0.0",
+  "description": "Marketing",
+  "main": "index.js",
+  "scripts": {
+    "watch": "gulp --gulpfile=tools/gulpfile.js --color --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zjj131415/Marketing.git"
+  },
+  "author": "zjj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zjj131415/Marketing/issues"
+  },
+  "homepage": "https://github.com/zjj131415/Marketing#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-util": "^3.0.8",
+    "optimist": "^0.6.1",
+    "path": "^0.12.7"
+  }
+}
