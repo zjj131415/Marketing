@@ -1,0 +1,142 @@
+.scenes2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  .scenes2-bg > img {
+    width: 100%;
+    height: 100%
+  }
+  .bat {
+    position: absolute;
+    z-index: 2;
+    &.bat1 {
+      width: 53px;
+      top: 1.56rem;
+      left: 1.4rem;
+      animation: heartAnimate 1s ease infinite;
+    }
+    &.bat2 {
+      width: 1.44rem;
+      top: 5rem;
+      left: 2.68rem;
+      animation: heartAnimate 2s ease infinite;
+    }
+    &.bat3 {
+      width: 1.56rem;
+      top: 2.12rem;
+      left: 7.08rem;
+      animation: heartAnimate 3s ease infinite;
+    }
+    &.bat4 {
+      width: 2.16rem;
+      left: 11.2rem;
+      top: 4.04rem;
+      animation: heartAnimate 6s ease infinite;
+    }
+    &.bat5 {
+      width: 1.4rem;
+      top: 2.8rem;
+      right: .32rem;
+      animation: heartAnimate 2s ease infinite;
+    }
+  }
+  .page1 {
+    .bat-text {
+      position: absolute;
+      width: 4.4rem;
+      left: 3.6rem;
+      top: 3.6rem;
+      z-index: 3;
+    }
+    .tuanzi1 {
+      width: 7.92rem;
+      position: absolute;
+      left: 50%;
+      top: 5.52rem;
+      z-index: 5;
+      margin-left: -3.96rem;
+    }
+    .keys {
+      position: absolute;
+      left: 0;
+      bottom: 4rem;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 .8rem;
+      .key1 {
+        width: 5rem;
+      }
+      .key2 {
+        width: 6rem;
+      
+      }
+    }
+    .choice {
+      width: 3.6rem;
+      position: absolute;
+      left: 50%;
+      bottom: 2rem;
+      margin-left: -1.8rem;
+    }
+  }
+  .page2 {
+    .tuanzi2 {
+      position: absolute;
+      left: 50%;
+      top: 10rem;
+      width: 8.8rem;
+      margin-left: -4.4rem;
+    }
+    .page2-banner {
+      position: absolute;
+      left: 50%;
+      top: 2.92rem;
+      width: 9.6rem;
+      margin-left: -4.8rem;
+      z-index: 4;
+    }
+  }
+  .page3 {
+    .tuanzi3 {
+      width: 9.8rem;
+      position: absolute;
+      left: 50%;
+      top: 5.8rem;
+      margin-left: -4.9rem;
+    }
+  }
+  .page4 {
+    .tuanzi4 {
+      width: 6.56rem;
+      position: absolute;
+      left: 50%;
+      top: 8.16rem;
+      margin-left: -3.28rem;
+    }
+    .page4-banner {
+      width: 10.08rem;
+      position: absolute;
+      left: 50%;
+      top: 2rem;
+      z-index: 5;
+      margin-left: -5.04rem;
+    }
+    .page4-text {
+      width: 6.56rem;
+      position: absolute;
+      left: 50%;
+      bottom: 1.8rem;
+      margin-left: -3.28rem;
+    }
+  }
+}
+
+@keyframes heartAnimate{
+  0%,100%{transform:scale(1) rotate(0);}
+  10%,30%{transform: scale(0.9) rotate(3deg);}
+  20%,40%,60%,80%{transform:scale(1.1) rotate(-3deg);}
+  50%,70%{ transform:scale(1.1) rotate(3deg);}
+}
