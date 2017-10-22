@@ -13,11 +13,11 @@ let
   basePath = path.resolve(__dirname, '..');
 
 gulp.task('sass', cd => (
-  gulp.src(path.resolve(basePath, 'styles', '!(base)', '*.scss'))
+  gulp.src(path.resolve(basePath, 'styles', 'tuanzi', 'index.scss'))
     .pipe(plumber())
     .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
     .pipe(autoPrefixer({browsers: ['last 20 versions']}))
-    .pipe(gulp.dest(path.resolve(basePath, 'dist')))
+    .pipe(gulp.dest(path.resolve(basePath, 'html', 'tuanzi', 'css')))
     .pipe(notify("Found file: <%= file.relative %>!"))
     .on("error", notify.onError(function (error) {
       return "Message to the notifier: " + error.message;

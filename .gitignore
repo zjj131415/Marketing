@@ -7,3 +7,7 @@ dist/
 node_modules/
 #package-lock.json
 #package.json
+.DS_Store
+html/.DS_Store
+#html/tuanzi/css/
+images/.DS_Store
