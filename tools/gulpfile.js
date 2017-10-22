@@ -15,7 +15,7 @@ let
 gulp.task('sass', cd => (
   gulp.src(path.resolve(basePath, 'styles', 'tuanzi', 'index.scss'))
     .pipe(plumber())
-    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(autoPrefixer({browsers: ['last 20 versions']}))
     .pipe(gulp.dest(path.resolve(basePath, 'html', 'tuanzi', 'css')))
     .pipe(notify("Found file: <%= file.relative %>!"))
