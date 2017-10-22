@@ -9,6 +9,5 @@ node_modules/
 #package.json
 .DS_Store
 html/.DS_Store
-#html/tuanzi/css/
 images/.DS_Store
 html/tuanzi/css/
