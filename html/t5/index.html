@@ -90,99 +90,52 @@
         <img src="images/car.png">
       </div>
       <div class="form">
-        <div class="form-box">
-          <div class="form-item">
-            <span class="tit">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span>
-            <span class="input">
+        <form action="">
+          <div id="city_china" class="form-box">
+            <div class="form-item">
+              <span class="tit">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span>
+              <span class="input">
               <input type="text" class="txt">
             </span>
-          </div>
-          <div class="form-item">
-            <span class="tit">联系电话 ：</span>
-            <span class="input">
+            </div>
+            <div class="form-item">
+              <span class="tit">联系电话 ：</span>
+              <span class="input">
              <input type="tal" class="txt">
           </span>
-          </div>
-          <div class="form-item">
-            <span class="tit">试驾城市 ：</span>
-            <span class="input">
-            <select class="txt" name="" id="">
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
-              <option value="jjj">sss</option>
+            </div>
+            <div class="form-item">
+              <span class="tit">试驾城市 ：</span>
+              <span class="input">
+            <select class="province other txt" name="" id="">
+              <option value="">请选择</option>
             </select>
           </span>
-          </div>
-          <div class="form-item">
-            <span class="tit">体验4s店：</span>
-            <span class="input">
-
+            </div>
+            <div class="form-item">
+              <span class="tit">体验4s店：</span>
+              <span class="input">
+            <select class="city txt" name="" id="">
+              <option value="">请选择</option>
+            </select>
           </span>
-          </div>
-          <div class="form-item">
-            <span class="tit">预约时间 ：</span>
-            <span class="input">
-
+              </span>
+            </div>
+            <div class="form-item">
+              <span class="tit">预约时间 ：</span>
+              <span class="input">
+            <select class="txt" name="" id="">
+              <option value="">请选择</option>
+              <option value="">11.01-11.15</option>
+              <option value="">11.16-11.30</option>
+              <option value="">12.01-12.15</option>
+              <option value="">12.16-12.31</option>
+            </select>
           </span>
+            </div>
           </div>
-        </div>
+          <button class="text form-btn"></button>
+        </form>
       </div>
     </div>
     <div class="page page6">
@@ -221,7 +174,22 @@
 			<img src="images/btn9.png">
 		</div>
     </div>
-  	<!--<script src="js/jquery-1.8.3.min.js"></script>-->
+  	<script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.cxselect.js"></script>
   	<!--<script src="js/index.js"></script>-->
+    <script>
+      (function () {
+        $(function () {
+          var urlChina = 'js/data.json';
+
+          $.cxSelect.defaults.url = urlChina;
+
+          // 默认
+          $('#city_china').cxSelect({
+            selects: ['province', 'city', 'area']
+          });
+        })
+      })()
+    </script>
 </body>
 </html>

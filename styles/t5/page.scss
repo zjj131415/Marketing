@@ -275,6 +275,28 @@ html, body {
         border-bottom: 1px solid #fff;
         border-radius: 0;
       }
+      select {
+        padding-right: 30px;
+        background-image: url(../images/arrow.png)!important;
+        background-size: 19px 10px !important;
+        background-position: center right !important;
+        background-repeat: no-repeat!important;
+      }
+    }
+    .form-btn {
+      position: absolute;
+      left: 50%;
+      bottom: -8.4rem;
+      margin-left: -3.46rem;
+      width: 6.92rem;
+      height: 1.72rem;
+      outline: none;
+      border: none;
+      background: transparent;
+      background-image: url(../images/btn10.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
     }
   }
 }
