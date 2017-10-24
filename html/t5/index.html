@@ -82,7 +82,49 @@
   			<img src="images/adjust.png">
   		</div>
   	</div>
-    <div class="page page5" style="display: block">
+  	<div class="page page4">
+      <div class="cover">
+        <div class="frame">
+          <div class="zan">
+            <img src="./images/fabulous.png" alt="">
+          </div>
+          <div class="text">您已集齐<span>**</span>枚能量!</div>
+        </div>
+        <div class="actions">
+          <div class="btn1">
+            <img src="./images/btn6.png" alt="">
+          </div>
+          <div class="btn2">
+            <img src="./images/btn7.png" alt="">
+          </div>
+        </div>
+      </div>
+  		<div class="logo">
+        <img src="images/logo.png">
+      </div>
+  		<div class="car">
+  			<img src="images/car2.png">
+  		</div>
+  		<div class="qrcode">
+  			<img src="images/qrcode.png">
+  		</div>
+  		<div class="word">
+  			<img src="images/word.png">
+  		</div>
+  		<div class="word2">
+  			<img src="images/word2.png">
+  		</div>
+  		<div class="word3">
+  			<img src="images/word3.png">
+  		</div>
+  		<div class="photo">
+  			<img src="images/photo.png">
+  		</div>
+  		<div class="adjust">
+  			<img src="images/adjust.png">
+  		</div>
+  	</div>
+    <div class="page page5">
       <div class="logo">
         <img src="images/logo.png">
       </div>
@@ -90,7 +132,7 @@
         <img src="images/car.png">
       </div>
       <div class="form">
-        <form action="">
+        <form class="ƒorm">
           <div id="city_china" class="form-box">
             <div class="form-item">
               <span class="tit">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span>
@@ -180,14 +222,38 @@
     <script>
       (function () {
         $(function () {
+          //联动
           var urlChina = 'js/data.js';
-
           $.cxSelect.defaults.url = urlChina;
-
           // 默认
           $('#city_china').cxSelect({
             selects: ['province', 'city', 'area']
           });
+          $('.page1').on('click', '.btn1', function () {
+            $('.page3').show();
+            $('.page1').hide();
+          });
+          $('.page1').on('click', '.btn2', function () {
+            $('.page2').show();
+            $('.page1').hide();
+          });
+          $('.page1').on('click', '.btn3', function () {
+            $('.page5').show();
+            $('.page1').hide();
+          });
+          $('.page2').on('click', '.close', function () {
+            $('.page2').hide();
+            $('.page1').show();
+          });
+          $('.page5').on('submit', '.ƒorm', function (e) {
+            e.preventDefault();
+            $('.page5').hide();
+            $('.page8').show();
+          });
+          $('.page4').on('click', '.btn2', function () {
+            $('.page4').hide();
+            $('.page6').show();
+          })
         })
       })()
     </script>

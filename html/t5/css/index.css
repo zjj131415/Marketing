@@ -1547,7 +1547,7 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page { display: none; }
 
-.page1 { position: relative; width: 100%; height: 100%; background: url(../images/bg.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
+.page1 { display: block; position: relative; width: 100%; height: 100%; background: url(../images/bg.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
 
 .page1 .logo { position: absolute; top: 0; left: 0; padding-left: 4%; padding-top: 4%; width: 32%; }
 
@@ -1573,19 +1573,29 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page1 .btn3 img { display: block; width: 100%; }
 
-.page2 { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.page2 { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-.page2 .rule { width: 100%; height: 100%; overflow: auto; -webkit-overflow-scrolling: touch; }
+.page2 .rule { position: relative; width: 100%; height: 100%; overflow: auto; -webkit-overflow-scrolling: touch; }
 
-.page2 .rule .top { position: relative; width: 100%; }
+.page2 .rule .bg { display: block; width: 100%; }
 
-.page2 .rule .top .rule-list { display: block; width: 100%; }
+.page2 .rule .rule-box { position: absolute; top: 0; left: 0; width: 100%; padding-left: 2%; padding-right: 2%; }
 
-.page2 .rule .top .close { position: absolute; top: 15%; right: 10%; width: 0.66rem; height: 0.66rem; }
+.page2 .rule .rule-box .rule-bg { display: block; width: 100%; }
 
-.page2 .rule .rule-list { display: block; width: 100%; }
+.page2 .rule .rule-box .close { position: absolute; top: 4%; right: 10%; width: 0.66rem; height: 0.66rem; }
 
-.page3 { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../images/bg2.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
+.page2 .rule .rule-box .rule-content { position: absolute; top: 5%; left: 12%; width: 76%; }
+
+.page2 .rule .rule-box .rule-content .title1 { position: relative; width: 57%; margin: 0 auto; }
+
+.page2 .rule .rule-box .rule-content .title1 img { display: block; width: 100%; }
+
+.page2 .rule .rule-box .rule-content .title1 .word1 { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; -webkit-justify-content: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-size: 0.6rem; font-weight: 500; color: #a50000; }
+
+.page2 .rule .rule-box .rule-content .detail { margin-top: 0.8rem; line-height: 0.72rem; font-size: 0.44rem; color: #ffffff; }
+
+.page3 { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../images/bg2.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
 
 .page3 .logo { position: absolute; top: 0; left: 0; padding-left: 4%; padding-top: 4%; width: 32%; }
 
@@ -1619,6 +1629,56 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page3 .adjust img { display: block; width: 100%; }
 
+.page4 { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../images/bg2.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
+
+.page4 .cover { position: absolute; left: 0; top: 0; z-index: 4; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); }
+
+.page4 .cover .frame { width: 9.76rem; height: 7.6rem; margin: 7rem auto 0 auto; background-image: url(../images/frame.png); background-repeat: no-repeat; -webkit-background-size: cover; background-size: cover; background-position: center; }
+
+.page4 .cover .zan { width: 2rem; margin: 0 auto; padding-top: 1rem; }
+
+.page4 .cover .text { margin-top: 1.4rem; font-size: .8rem; color: #fff; text-align: center; }
+
+.page4 .cover .text > span { letter-spacing: 4px; font-weight: bold; color: #c61508; }
+
+.page4 .cover .actions { position: absolute; left: 0; bottom: 1.2rem; width: 100%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
+
+.page4 .cover .actions .btn1 { width: 7.2rem; }
+
+.page4 .cover .actions .btn2 { width: 7.2rem; }
+
+.page4 .logo { position: absolute; top: 0; left: 0; padding-left: 4%; padding-top: 4%; width: 32%; }
+
+.page4 .logo img { display: block; width: 100%; }
+
+.page4 .car { position: absolute; bottom: 0; width: 100%; }
+
+.page4 .car img { display: block; width: 100%; }
+
+.page4 .qrcode { position: absolute; bottom: 2%; left: 0.8rem; width: 2.4rem; height: 2.4rem; }
+
+.page4 .qrcode img { display: block; width: 100%; }
+
+.page4 .word { position: absolute; bottom: 0%; right: 0.8rem; width: 3.6rem; }
+
+.page4 .word img { display: block; width: 100%; }
+
+.page4 .word2 { position: absolute; bottom: 4%; left: 3.6rem; width: 3.6rem; }
+
+.page4 .word2 img { display: block; width: 100%; }
+
+.page4 .word3 { position: absolute; bottom: 52%; left: 0%; width: 100%; }
+
+.page4 .word3 img { display: block; width: 100%; }
+
+.page4 .photo { position: absolute; bottom: 30%; left: 0%; width: 100%; }
+
+.page4 .photo img { display: block; width: 100%; }
+
+.page4 .adjust { position: absolute; bottom: 33%; right: 3%; width: 1.32rem; }
+
+.page4 .adjust img { display: block; width: 100%; }
+
 .page5 { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../images/bg2.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
 
 .page5 .logo { position: absolute; top: 0; left: 0; padding-left: 4%; padding-top: 4%; width: 32%; }
@@ -1651,6 +1711,8 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page8 { display: none; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: url(../images/bg2.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
 
+.page8 .logo { position: absolute; top: 0; left: 0; padding-left: 4%; padding-top: 4%; width: 32%; }
+
 .page8 .success { position: absolute; top: 10%; left: 10%; width: 80%; }
 
 .page8 .success img { display: block; width: 100%; }
@@ -1663,6 +1725,4 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page8 .btn9 img { display: block; width: 100%; }
 
-.page8 .car { position: absolute; top: 48%; left: 6.4%; width: 87.2%; }
-
-.page8 .car img { display: block; width: 100%; }
+.page8 .car { position: absolute; bottom: -1rem; width: 10.12rem; left: 50%; margin-left: -5.06rem; }
