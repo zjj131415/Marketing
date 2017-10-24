@@ -1571,17 +1571,27 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page1 .btn3 img { display: block; width: 100%; }
 
-.page2 { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.page2 { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-.page2 .rule { width: 100%; height: 100%; overflow: auto; -webkit-overflow-scrolling: touch; }
+.page2 .rule { position: relative; width: 100%; height: 100%; overflow: auto; -webkit-overflow-scrolling: touch; }
 
-.page2 .rule .top { position: relative; width: 100%; }
+.page2 .rule .bg { display: block; width: 100%; }
 
-.page2 .rule .top .rule-list { display: block; width: 100%; }
+.page2 .rule .rule-box { position: absolute; top: 0; left: 0; width: 100%; padding-left: 2%; padding-right: 2%; }
 
-.page2 .rule .top .close { position: absolute; top: 15%; right: 10%; width: 0.66rem; height: 0.66rem; }
+.page2 .rule .rule-box .rule-bg { display: block; width: 100%; }
 
-.page2 .rule .rule-list { display: block; width: 100%; }
+.page2 .rule .rule-box .close { position: absolute; top: 4%; right: 10%; width: 0.66rem; height: 0.66rem; }
+
+.page2 .rule .rule-box .rule-content { position: absolute; top: 5%; left: 12%; width: 76%; }
+
+.page2 .rule .rule-box .rule-content .title1 { position: relative; width: 57%; margin: 0 auto; }
+
+.page2 .rule .rule-box .rule-content .title1 img { display: block; width: 100%; }
+
+.page2 .rule .rule-box .rule-content .title1 .word1 { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; -webkit-justify-content: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-size: 0.6rem; font-weight: 500; color: #a50000; }
+
+.page2 .rule .rule-box .rule-content .detail { margin-top: 0.8rem; line-height: 0.72rem; font-size: 0.44rem; color: #ffffff; }
 
 .page3 { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../images/bg2.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
 
