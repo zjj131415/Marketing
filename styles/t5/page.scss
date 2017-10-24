@@ -108,3 +108,93 @@ html,body{
 		}
 	}
 }
+.page3{
+	display: none;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: url(../images/bg2.jpg) no-repeat center;
+	background-size: cover;
+	.logo{
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding-left: 4%;
+		padding-top: 4%;
+		width: 32%;
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+	.car{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+	.qrcode{
+		position: absolute;
+		bottom: 2%;
+		left: 0.8rem;
+		width: 2.4rem;
+		height: 2.4rem;
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+	.word{
+		position: absolute;
+		bottom: 0%;
+		right: 0.8rem;
+		width: 3.6rem;
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+	.word2{
+		position: absolute;
+		bottom: 4%;
+		left: 3.6rem;
+		width: 3.6rem;
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+	.word3{
+		position: absolute;
+		bottom: 52%;
+		left: 0%;
+		width: 100%;
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+	.photo{
+		position: absolute;
+		bottom: 30%;
+		left: 0%;
+		width: 100%;
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+	.adjust{
+		position: absolute;
+		bottom: 33%;
+		right: 3%;
+		width: 1.32rem;
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+}
