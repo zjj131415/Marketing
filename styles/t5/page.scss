@@ -198,3 +198,29 @@ html,body{
 		}
 	}
 }
+.page6 {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width:100%;
+	height: 100%;
+	background: rgba(0,0,0,.7);
+	.title {
+		position: absolute;
+		width: 8rem;
+		left: 50%;
+		top: 1.2rem;
+		margin-left: -4rem;
+	}
+	.box {
+		width: 12rem;
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 3rem;
+	}
+	.item {
+		width: 6rem;
+	}
+}
