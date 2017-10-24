@@ -1,354 +1,358 @@
-html,body{
-	position: relative;
-	min-width: 320px;
-	max-width: 750px;
-	height: 100%;
-	margin: 0 auto;
-	overflow: hidden;
+html, body {
+  position: relative;
+  min-width: 320px;
+  max-width: 750px;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
 }
-.page1{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	background: url(../images/bg.jpg) no-repeat center;
-	background-size: cover;
-	.logo{
-		position: absolute;
-		top: 0;
-		left: 0;
-		padding-left: 4%;
-		padding-top: 4%;
-		width: 32%;
-		img{
-			display: block;
-			width: 100%;
-		}
-	}
-	.word{
-		position: absolute;
-		top: 3%;
-		left: 3.7%;
-		width: 93.6%;
-		img{
-			display: block;
-			width: 100%;
-		}
-	}
-	.car{
-		position: absolute;
-		top: 48%;
-		left: 6.4%;
-		width: 87.2%;
-		img{
-			display: block;
-			width: 100%;
-		}
-	}
-	.btn1{
-		position: absolute;
-		left: 0;
-		bottom: 10%;
-		width: 100%;
-		img{
-			display: block;
-			width: 100%;
-		}
-	}
-	.btn2{
-		position: absolute;
-		left: 4.8%;
-		bottom: 4%;
-		width: 33.7%;
-		img{
-			display: block;
-			width: 100%;
-		}
-	}
-	.btn3{
-		position: absolute;
-		right: 4.8%;
-		bottom: 4%;
-		width: 34.2%;
-		img{
-			display: block;
-			width: 100%;
-		}
-	}
+
+.page {
+  display: none;
 }
-.page2{
-	// display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	.rule{
-		position: relative;
-		width: 100%;
-		height: 100%;
-		overflow: auto;
-		-webkit-overflow-scrolling: touch;
-		.bg{
-			display: block;
-			width: 100%;
-		}
-		.rule-box{
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			padding-left: 2%;
-			padding-right: 2%;
-			.rule-bg{
-				display: block;
-				width: 100%;
-			}
-			.close{
-				position: absolute;
-				top: 4%;
-				right: 10%;
-				width: 0.66rem;
-				height: 0.66rem;
-			}
-			.rule-content{
-				position: absolute;
-				top: 5%;
-				left: 12%;
-				width: 76%;
-				.title1{
-					position: relative;
-					width: 57%;
-					margin: 0 auto;
-					img{
-						display: block;
-						width: 100%;
-					}
-					.word1{
-						position: absolute;
-						top: 0;
-						left: 0;
-						width: 100%;
-						height: 100%;
-						display:flex;
-						display:-webkit-box;
-						display:-ms-flexbox;
-						display:-webkit-flex;
-						-webkit-justify-content: center;
-					    justify-content: center;
-					    -webkit-align-items: center;
-					    align-items: center;
-						font-size: 0.6rem;
-						font-weight: 500;
-						color: #a50000;
-					}
-				}
-				.detail{
-					margin-top: 0.8rem;
-					line-height: 0.72rem;
-					font-size: 0.44rem;
-					color: #ffffff;
-				}
-			}
-		}
-		// .top{
-		// 	position: relative;
-		// 	width: 100%;
-		// 	.rule-list{
-		// 		display: block;
-		// 		width: 100%;
-		// 	}
-		// 	.close{
-		// 		position: absolute;
-		// 		top: 15%;
-		// 		right: 10%;
-		// 		width: 0.66rem;
-		// 		height: 0.66rem;
-		// 	}
-		// }
-		// .rule-list{
-		// 	display: block;
-		// 	width: 100%;
-		// }
-	}
+
+.page1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(../images/bg.jpg) no-repeat center;
+  background-size: cover;
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 4%;
+    padding-top: 4%;
+    width: 32%;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .word {
+    position: absolute;
+    top: 3%;
+    left: 3.7%;
+    width: 93.6%;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .car {
+    position: absolute;
+    top: 48%;
+    left: 6.4%;
+    width: 87.2%;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .btn1 {
+    position: absolute;
+    left: 0;
+    bottom: 10%;
+    width: 100%;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .btn2 {
+    position: absolute;
+    left: 4.8%;
+    bottom: 4%;
+    width: 33.7%;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .btn3 {
+    position: absolute;
+    right: 4.8%;
+    bottom: 4%;
+    width: 34.2%;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
 }
-.page3{
-	display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: url(../images/bg2.jpg) no-repeat center;
-	background-size: cover;
-	.logo{
-		position: absolute;
-		top: 0;
-		left: 0;
-		padding-left: 4%;
-		padding-top: 4%;
-		width: 32%;
-		img{
-			display: block;
-			width: 100%;
-		}
-	}
-	.car{
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-		img{
-			display: block;
-			width: 100%;
-		}
-	}
-	.qrcode{
-		position: absolute;
-		bottom: 2%;
-		left: 0.8rem;
-		width: 2.4rem;
-		height: 2.4rem;
-		img{
-			display: block;
-			width: 100%;
-		}
-	}
-	.word{
-		position: absolute;
-		bottom: 0%;
-		right: 0.8rem;
-		width: 3.6rem;
-		img{
-			display: block;
-			width: 100%;
-		}
-	}
-	.word2{
-		position: absolute;
-		bottom: 4%;
-		left: 3.6rem;
-		width: 3.6rem;
-		img{
-			display: block;
-			width: 100%;
-		}
-	}
-	.word3{
-		position: absolute;
-		bottom: 52%;
-		left: 0%;
-		width: 100%;
-		img{
-			display: block;
-			width: 100%;
-		}
-	}
-	.photo{
-		position: absolute;
-		bottom: 30%;
-		left: 0%;
-		width: 100%;
-		img{
-			display: block;
-			width: 100%;
-		}
-	}
-	.adjust{
-		position: absolute;
-		bottom: 33%;
-		right: 3%;
-		width: 1.32rem;
-		img{
-			display: block;
-			width: 100%;
-		}
-	}
+
+.page2 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  .rule {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    .top {
+      position: relative;
+      width: 100%;
+      .rule-list {
+        display: block;
+        width: 100%;
+      }
+      .close {
+        position: absolute;
+        top: 15%;
+        right: 10%;
+        width: 0.66rem;
+        height: 0.66rem;
+      }
+    }
+    .rule-list {
+      display: block;
+      width: 100%;
+    }
+  }
 }
+
+.page3 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/bg2.jpg) no-repeat center;
+  background-size: cover;
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 4%;
+    padding-top: 4%;
+    width: 32%;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .car {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .qrcode {
+    position: absolute;
+    bottom: 2%;
+    left: 0.8rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .word {
+    position: absolute;
+    bottom: 0%;
+    right: 0.8rem;
+    width: 3.6rem;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .word2 {
+    position: absolute;
+    bottom: 4%;
+    left: 3.6rem;
+    width: 3.6rem;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .word3 {
+    position: absolute;
+    bottom: 52%;
+    left: 0%;
+    width: 100%;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .photo {
+    position: absolute;
+    bottom: 30%;
+    left: 0%;
+    width: 100%;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .adjust {
+    position: absolute;
+    bottom: 33%;
+    right: 3%;
+    width: 1.32rem;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.page5 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/bg2.jpg) no-repeat center;
+  background-size: cover;
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 4%;
+    padding-top: 4%;
+    width: 32%;
+  }
+  .car {
+    position: absolute;
+    bottom: -1rem;
+    width: 10.12rem;
+    left: 50%;
+    margin-left: -5.06rem;
+  }
+  .form {
+    position: absolute;
+    top: 3.8rem;
+    left: 50%;
+    width: 11.28rem;
+    height: 11rem;
+    background: url(../images/form.png);
+    background-size: cover;
+    margin-left: -5.64rem;
+    .form-box {
+      width: 8.4rem;
+      height: 6rem;
+      margin: 0 auto;
+      margin-top: 3.4rem;
+    }
+    .form-item {
+      height: 1.2rem;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      .tit {
+        font-weight: bold;
+        font-size: .52rem;
+        color: #fff;
+        letter-spacing: 2px;
+      }
+      .input {
+        flex: 1;
+        overflow: hidden;
+      }
+      .txt {
+        width: 100%;
+        outline: none;
+        border: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        font-size: .52rem;
+        color: #fff;
+        background: transparent;
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+}
+
 .page6 {
-	display: none;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width:100%;
-	height: 100%;
-	background: rgba(0,0,0,.7);
-	.title {
-		position: absolute;
-		width: 8rem;
-		left: 50%;
-		top: 1.2rem;
-		margin-left: -4rem;
-	}
-	.box {
-		overflow-y: auto;
-		width: 12rem;
-		margin: 0 auto;
-		display: flex;
-		flex-wrap: wrap;
-		margin-top: 3rem;
-	}
-	.item {
-		width: 6rem;
-	}
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+  .title {
+    position: absolute;
+    width: 8rem;
+    left: 50%;
+    top: 1.2rem;
+    margin-left: -4rem;
+  }
+  .box {
+    overflow-y: auto;
+    width: 12rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+  }
+  .item {
+    width: 6rem;
+  }
 }
-.page8{
-	display: none;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width:100%;
-	height: 100%;
-	background: url(../images/bg2.jpg) no-repeat center;
-	background-size: cover;
-	.logo{
-		position: absolute;
-		top: 0;
-		left: 0;
-		padding-left: 4%;
-		padding-top: 4%;
-		width: 32%;
-		img{
-			display: block;
-			width: 100%;
-		}
-	}
-	.success{
-		position: absolute;
-		top: 10%;
-		left: 10%;
-		width: 80%;
-		img{
-			display: block;
-			width: 100%;
-		}
-	}
-	.btn8{
-		position: absolute;
-		left: -5%;
-		bottom: 4%;
-		width: 55%;
-		img{
-			display: block;
-			width: 100%;
-		}
-	}
-	.btn9{
-		position: absolute;
-		right: -5%;
-		bottom: 4%;
-		width: 55%;
-		img{
-			display: block;
-			width: 100%;
-		}
-	}
-	.car{
-		position: absolute;
-		bottom: 0%;
-		left: 6.4%;
-		width: 87.2%;
-		img{
-			display: block;
-			width: 100%;
-		}
-	}
+
+.page8 {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/bg2.jpg) no-repeat center;
+  background-size: cover;
+  .success {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .btn8 {
+    position: absolute;
+    left: 0%;
+    bottom: 4%;
+    width: 50%;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .btn9 {
+    position: absolute;
+    right: 0%;
+    bottom: 4%;
+    width: 50%;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .car {
+    position: absolute;
+    top: 48%;
+    left: 6.4%;
+    width: 87.2%;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
 }
