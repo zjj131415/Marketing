@@ -1543,7 +1543,7 @@ body { font-size: 50px; }
 
 .noBorder { border: none !important; }
 
-html, body { min-width: 320px; max-width: 750px; height: 100%; margin: 0 auto; overflow: hidden; }
+html, body { position: relative; min-width: 320px; max-width: 750px; height: 100%; margin: 0 auto; overflow: hidden; }
 
 .page1 { position: relative; width: 100%; height: 100%; background: url(../images/bg.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
 
@@ -1570,3 +1570,15 @@ html, body { min-width: 320px; max-width: 750px; height: 100%; margin: 0 auto; o
 .page1 .btn3 { position: absolute; right: 4.8%; bottom: 4%; width: 34.2%; }
 
 .page1 .btn3 img { display: block; width: 100%; }
+
+.page2 { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.page2 .rule { width: 100%; height: 100%; overflow: auto; -webkit-overflow-scrolling: touch; }
+
+.page2 .rule .top { position: relative; width: 100%; }
+
+.page2 .rule .top .rule-list { display: block; width: 100%; }
+
+.page2 .rule .top .close { position: absolute; top: 15%; right: 10%; width: 0.66rem; height: 0.66rem; }
+
+.page2 .rule .rule-list { display: block; width: 100%; }
