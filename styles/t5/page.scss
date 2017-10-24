@@ -216,6 +216,7 @@ html,body{
 		margin-left: -4rem;
 	}
 	.box {
+		overflow-y: auto;
 		width: 12rem;
 		margin: 0 auto;
 		display: flex;
