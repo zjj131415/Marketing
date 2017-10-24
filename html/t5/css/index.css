@@ -1621,7 +1621,7 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page6 .title { position: absolute; width: 8rem; left: 50%; top: 1.2rem; margin-left: -4rem; }
 
-.page6 .box { width: 12rem; margin: 0 auto; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; margin-top: 3rem; }
+.page6 .box { overflow-y: auto; width: 12rem; margin: 0 auto; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; margin-top: 3rem; }
 
 .page6 .item { width: 6rem; }
 
