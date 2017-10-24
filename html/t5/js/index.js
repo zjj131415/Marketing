@@ -1,5 +1,8 @@
 $(function(){
 	// 页面一点击
+	$(".page1").on("click",".btn1",function(){
+		$(".page3").show();
+	});
 	$(".page1").on("click",".btn2",function(){
 		$(".page2").show();
 	});
