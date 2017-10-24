@@ -229,28 +229,28 @@
           $('#city_china').cxSelect({
             selects: ['province', 'city', 'area']
           });
-          $('.page1').on('click', '.btn1', function () {
+          $('.page1 .btn1').on('click', function () {
             $('.page3').show();
             $('.page1').hide();
           });
-          $('.page1').on('click', '.btn2', function () {
+          $('.page1 .btn2').on('click', function () {
             $('.page2').show();
             $('.page1').hide();
           });
-          $('.page1').on('click', '.btn3', function () {
+          $('.page1 .btn3').on('click', function () {
             $('.page5').show();
             $('.page1').hide();
           });
-          $('.page2').on('click', '.close', function () {
+          $('.page2 .close').on('click', function () {
             $('.page2').hide();
             $('.page1').show();
           });
-          $('.page5').on('submit', '.ƒorm', function (e) {
+          $('.page5 .ƒorm').on('submit', function (e) {
             e.preventDefault();
             $('.page5').hide();
             $('.page8').show();
           });
-          $('.page4').on('click', '.btn2', function () {
+          $('.page4 .btn2').on('click', function () {
             $('.page4').hide();
             $('.page6').show();
           })
