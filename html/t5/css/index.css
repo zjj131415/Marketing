@@ -1583,7 +1583,7 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page2 .rule .rule-list { display: block; width: 100%; }
 
-.page3 { display: none; position: relative; width: 100%; height: 100%; background: url(../images/bg2.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
+.page3 { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../images/bg2.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
 
 .page3 .logo { position: absolute; top: 0; left: 0; padding-left: 4%; padding-top: 4%; width: 32%; }
 
@@ -1624,3 +1624,21 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 .page6 .box { width: 12rem; margin: 0 auto; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; margin-top: 3rem; }
 
 .page6 .item { width: 6rem; }
+
+.page8 { display: none; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: url(../images/bg2.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
+
+.page8 .success { position: absolute; top: 10%; left: 10%; width: 80%; }
+
+.page8 .success img { display: block; width: 100%; }
+
+.page8 .btn8 { position: absolute; left: 0%; bottom: 4%; width: 50%; }
+
+.page8 .btn8 img { display: block; width: 100%; }
+
+.page8 .btn9 { position: absolute; right: 0%; bottom: 4%; width: 50%; }
+
+.page8 .btn9 img { display: block; width: 100%; }
+
+.page8 .car { position: absolute; top: 48%; left: 6.4%; width: 87.2%; }
+
+.page8 .car img { display: block; width: 100%; }
