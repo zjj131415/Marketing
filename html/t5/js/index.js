@@ -69,14 +69,14 @@ function draw(fn){
 						h = 66;
 						break;
 					case 2:
-						x = 30;
-						y = 70;
+						x = 0;
+						y = 50;
 						w = c.width;
 						h = 280;
 						break;
 					case 3:
 						x = (c.width - 200)/2;
-						y = 200;
+						y = 240;
 						w = 200;
 						h = 200;
 						break;
