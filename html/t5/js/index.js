@@ -1,5 +1,5 @@
 var imgSrc = "";
-var data = [];
+var data = ["images/bg4.jpg","images/qrcode.png","images/word3.png"];
 $("#uploadImage").on("change", function() {
 	var _this = $(this);
 	var fr = new FileReader();
@@ -10,7 +10,8 @@ $("#uploadImage").on("change", function() {
 	fr.onload = function() {
 		img.src = this.result;
 		imgSrc = this.result;
-		data = [imgSrc];
+		$("#photo").attr("src",imgSrc);
+		data.push(imgSrc);
 		console.log(data);
 		$("#hecheng").attr("src",imgSrc);
 		img.onload = function() {
@@ -21,8 +22,9 @@ $("#uploadImage").on("change", function() {
 
 function hecheng(){
 	draw(function(){
-		$("#photo").attr("src",base64[0]);
-		
+		// $("#photo").attr("src",base64[0]);
+		$(".posters").attr("src",base64[0]);
+		$(".posters").show();
 	})	
 }
 
@@ -32,11 +34,15 @@ function draw(fn){
 	var c=document.createElement('canvas'),
 		ctx=c.getContext('2d'),
 		len=data.length;
-	c.width=290;
-	c.height=290;
-	ctx.rect(0,0,c.width,c.height);
-	ctx.fillStyle='#fff';
-	ctx.fill();
+	// c.width= 200;
+	// c.height= 200;
+	c.width= $(window).width();
+	c.height= $(window).height();
+	console.log(c.width);
+	console.log(c.height);
+	// ctx.rect(0,0,c.width,c.height);
+	// ctx.fillStyle='#fff';
+	// ctx.fill();
 
 	function drawing(n){
 		if(n<len){
@@ -44,12 +50,42 @@ function draw(fn){
 			// img.crossOrigin = 'Anonymous'; //解决跨域
 			img.src=data[n];
 			img.onload=function(){
-				ctx.drawImage(img,0,0,290,290);
+				var x = 0;
+				var y = 0;
+				var w = "";
+				var h = "";
+				switch(n){
+					case 0:
+						x = 0;
+						y = 0;
+						w = c.width;
+						h = c.height;
+						break;
+					case 1:
+						x = 10;
+						y = c.height - 66 - 10;
+						w = 66;
+						h = 66;
+						break;
+					case 2:
+						x = 30;
+						y = 70;
+						w = c.width;
+						h = 280;
+						break;
+					case 3:
+						x = (c.width - 200)/2;
+						y = 200;
+						w = 200;
+						h = 200;
+						break;
+				}
+				ctx.drawImage(img,x,y,w,h);
 				drawing(n+1);//递归
 			}
 		}else{
 			//保存生成作品图片
-			base64.push(c.toDataURL("image/jpeg",0.8));
+			base64.push(c.toDataURL("image/png",1));
 			fn();
 		}
 	}
