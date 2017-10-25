@@ -1,3 +1,65 @@
+var imgSrc = "";
+var data = [];
+$("#uploadImage").on("change", function() {
+	var _this = $(this);
+	var fr = new FileReader();
+	fr.readAsDataURL(this.files[0]);
+
+	var img = new Image();
+
+	fr.onload = function() {
+		img.src = this.result;
+		imgSrc = this.result;
+		data = [imgSrc];
+		console.log(data);
+		$("#hecheng").attr("src",imgSrc);
+		img.onload = function() {
+			console.log("上传成功");
+		}
+	}
+});
+
+function hecheng(){
+	draw(function(){
+		$("#photo").attr("src",base64[0]);
+		
+	})	
+}
+
+var base64=[];
+
+function draw(fn){
+	var c=document.createElement('canvas'),
+		ctx=c.getContext('2d'),
+		len=data.length;
+	c.width=290;
+	c.height=290;
+	ctx.rect(0,0,c.width,c.height);
+	ctx.fillStyle='#fff';
+	ctx.fill();
+
+	function drawing(n){
+		if(n<len){
+			var img=new Image;
+			// img.crossOrigin = 'Anonymous'; //解决跨域
+			img.src=data[n];
+			img.onload=function(){
+				ctx.drawImage(img,0,0,290,290);
+				drawing(n+1);//递归
+			}
+		}else{
+			//保存生成作品图片
+			base64.push(c.toDataURL("image/jpeg",0.8));
+			fn();
+		}
+	}
+	drawing(0);
+}
+
+$("#synthesis").on("click",function(){
+	hecheng();
+});
+
 (function () {
   $(function () {
     var progress = 0;
