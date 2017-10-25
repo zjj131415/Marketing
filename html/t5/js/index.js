@@ -1,4 +1,8 @@
 var imgSrc = "";
+var imgW = "";
+var imgH = "";
+var imgLeft = "";
+var imgTop = "";
 var data = ["images/bg4.jpg","images/qrcode.png","images/word3.png"];
 $("#uploadImage").on("change", function() {
 	var _this = $(this);
@@ -11,7 +15,6 @@ $("#uploadImage").on("change", function() {
 		img.src = this.result;
 		imgSrc = this.result;
 		$("#photo").attr("src",imgSrc);
-		data.push(imgSrc);
 		console.log(data);
 		$("#hecheng").attr("src",imgSrc);
     $('.page7 .upload > img').attr("src",imgSrc);
@@ -22,6 +25,15 @@ $("#uploadImage").on("change", function() {
 });
 
 function hecheng(){
+	imgW = $("#photo").width();
+	imgH = $("#photo").height();
+	imgLeft = $("#photo").offset().left;
+	imgTop = $("#photo").offset().top;
+	// console.log(imgW);
+	// console.log(imgH);
+	// console.log(imgLeft);
+	// console.log(imgTop);
+	data.push(imgSrc);
 	draw(function(){
 		// $("#photo").attr("src",base64[0]);
 		$(".posters").attr("src",base64[0]);
@@ -35,12 +47,8 @@ function draw(fn){
 	var c=document.createElement('canvas'),
 		ctx=c.getContext('2d'),
 		len=data.length;
-	// c.width= 200;
-	// c.height= 200;
 	c.width= $(window).width();
 	c.height= $(window).height();
-	console.log(c.width);
-	console.log(c.height);
 	// ctx.rect(0,0,c.width,c.height);
 	// ctx.fillStyle='#fff';
 	// ctx.fill();
@@ -75,10 +83,10 @@ function draw(fn){
 						h = 280;
 						break;
 					case 3:
-						x = (c.width - 200)/2;
-						y = 240;
-						w = 200;
-						h = 200;
+						x = imgLeft;
+						y = imgTop;
+						w = imgW;
+						h = imgH;
 						break;
 				}
 				ctx.drawImage(img,x,y,w,h);
@@ -95,6 +103,10 @@ function draw(fn){
 
 $("#synthesis").on("click",function(){
 	hecheng();
+});
+
+$("#photo").on("dragstart",function(){
+	console.log(11);
 });
 
 (function () {
