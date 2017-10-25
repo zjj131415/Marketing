@@ -10,6 +10,9 @@
 	<meta http-equiv="Expires" content="0" />
 	<title>比速T5 速写未来 试不可挡</title>
 	<link rel="stylesheet" href="./css/index.css">
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/jquery.cxselect.js"></script>
+	<script src="js/index.js"></script>
 </head>
 <body>
   	<div class="page page1">
@@ -81,6 +84,9 @@
   		<div class="adjust">
   			<img src="images/adjust.png">
   		</div>
+			<div class="synthesis">
+				<img src="./images/btn5.png" alt="">
+			</div>
   	</div>
   	<div class="page page4">
       <div class="cover">
@@ -186,6 +192,9 @@
 			</div>
 			<div class="car">
 				<img src="images/car.png">
+			</div>
+			<div class="close">
+				<img src="images/close.png">
 			</div>
       <div class="title">
         <img src="./images/rank.png" alt="">
@@ -293,58 +302,5 @@
 			<img src="images/btn9.png">
 		</div>
     </div>
-  	<script src="js/jquery-1.8.3.min.js"></script>
-    <script src="js/jquery.cxselect.js"></script>
-  	<!--<script src="js/index.js"></script>-->
-    <script>
-      (function () {
-        $(function () {
-          //联动
-          var urlChina = 'js/data.js';
-          $.cxSelect.defaults.url = urlChina;
-          // 默认
-          $('#city_china').cxSelect({
-            selects: ['province', 'city', 'area']
-          });
-          $('.page1 .btn1').on('click', function () {
-            $('.page7').show();
-            $('.page1').hide();
-          });
-          $('.page1 .btn2').on('click', function () {
-            $('.page2').show();
-            $('.page1').hide();
-          });
-          $('.page1 .btn3').on('click', function () {
-            $('.page5').show();
-            $('.page1').hide();
-          });
-          $('.page2 .close').on('click', function () {
-            $('.page2').hide();
-            $('.page1').show();
-          });
-          $('.page5 .ƒorm').on('submit', function (e) {
-            e.preventDefault();
-            $('.page5').hide();
-            $('.page8').show();
-          });
-          $('.page4 .btn2').on('click', function () {
-            $('.page4').hide();
-            $('.page6').show();
-          });
-          $('.page7 .btn2').on('click', function () {
-            $('.page7').hide();
-            $('.page3').show();
-          });
-          $('.page8 .btn9').on('click', function () {
-            $('.page8').hide();
-            $('.page4').show();
-          });
-//          $('.page4 .btn2').on('click', function () {
-//            $('.page4').hide();
-//            $('.page6').show();
-//          });
-        })
-      })()
-    </script>
 </body>
 </html>
