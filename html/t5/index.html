@@ -184,21 +184,92 @@
       <div class="title">
         <img src="./images/rank.png" alt="">
       </div>
-      <div class="box">
-        <div class="item">
-          <img src="./images/poster.png" alt="">
-        </div>
-        <div class="item">
-          <img src="./images/poster.png" alt="">
-        </div>
-        <div class="item">
-          <img src="./images/poster.png" alt="">
-        </div>
-        <div class="item">
-          <img src="./images/poster.png" alt="">
-        </div>
-      </div>
+      <div class="box-list">
+				<div class="box">
+					<div class="item">
+						<img src="./images/poster.png" alt="">
+					</div>
+					<div class="item">
+						<img src="./images/poster.png" alt="">
+					</div>
+					<div class="item">
+						<img src="./images/poster.png" alt="">
+					</div>
+					<div class="item">
+						<img src="./images/poster.png" alt="">
+					</div>
+					<div class="item">
+						<img src="./images/poster.png" alt="">
+					</div>
+					<div class="item">
+						<img src="./images/poster.png" alt="">
+					</div>
+				</div>
+			</div>
     </div>
+		<div class="page page7">
+			<div class="logo">
+				<img src="images/logo.png">
+			</div>
+			<div class="car">
+				<img src="images/car2.png">
+			</div>
+			<div class="qrcode">
+				<img src="images/qrcode.png">
+			</div>
+			<div class="word">
+				<img src="images/word.png">
+			</div>
+			<div class="word2">
+				<img src="images/word2.png">
+			</div>
+			<div class="word3">
+				<img src="images/word3.png">
+			</div>
+			<div class="photo">
+				<img src="images/photo.png">
+			</div>
+			<div class="cover">
+				<form>
+					<div class="upload">
+						<img src="./images/upload.png" alt="">
+						<input type="file"  accept=".jpg, .jpeg, .png">
+					</div>
+					<div class="gender">
+						<div class="g1"><img src="./images/man.png" alt=""></div>
+						<div class="g2"><img src="./images/woman.png" alt=""></div>
+					</div>
+					<div class="selects">
+						<div class="select">
+							<select name="" id="">
+								<option value="">请选择助威方式 </option>
+								<option value="">我为比速T5自动挡助威 </option>
+								<option value="">我为比速T5自动挡代言 </option>
+								<option value="">我为比速T5自动挡呐喊 </option>
+							</select>
+						</div>
+						<div class="select">
+							<select name="" id="">
+								<option value="">请选择助威宣言</option>
+								<option value="">领先动力 我来体验</option>
+								<option value="">领先颜值 我来体验</option>
+								<option value="">领先安全 我来体验</option>
+								<option value="">领先装备 我来体验</option>
+								<option value="">领先品质 我来体验</option>
+							</select>
+						</div>
+					</div>
+					<div class="actions">
+						<button class="btn btn1" type="r">
+							<img src="./images/btn4.png" alt="">
+						</button>
+						<div class="btn btn2">
+							<img src="./images/btn22.png" alt="">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
     <div class="page page8">
     	<div class="logo">
         	<img src="images/logo.png">
@@ -230,7 +301,7 @@
             selects: ['province', 'city', 'area']
           });
           $('.page1 .btn1').on('click', function () {
-            $('.page3').show();
+            $('.page7').show();
             $('.page1').hide();
           });
           $('.page1 .btn2').on('click', function () {
@@ -253,6 +324,10 @@
           $('.page4 .btn2').on('click', function () {
             $('.page4').hide();
             $('.page6').show();
+          });
+          $('.page7 .btn2').on('click', function () {
+            $('.page7').hide();
+            $('.page3').show();
           })
         })
       })()

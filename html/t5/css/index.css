@@ -1573,27 +1573,17 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page1 .btn3 img { display: block; width: 100%; }
 
-.page2 { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.page2 { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
 .page2 .rule { position: relative; width: 100%; height: 100%; overflow: auto; -webkit-overflow-scrolling: touch; }
 
-.page2 .rule .bg { display: block; width: 100%; }
+.page2 .rule .top { position: relative; width: 100%; }
 
-.page2 .rule .rule-box { position: absolute; top: 0; left: 0; width: 100%; padding-left: 2%; padding-right: 2%; }
+.page2 .rule .top .rule-list { display: block; width: 100%; }
 
-.page2 .rule .rule-box .rule-bg { display: block; width: 100%; }
+.page2 .rule .top .close { position: absolute; top: 15%; right: 10%; width: 0.66rem; height: 0.66rem; }
 
-.page2 .rule .rule-box .close { position: absolute; top: 4%; right: 10%; width: 0.66rem; height: 0.66rem; }
-
-.page2 .rule .rule-box .rule-content { position: absolute; top: 5%; left: 12%; width: 76%; }
-
-.page2 .rule .rule-box .rule-content .title1 { position: relative; width: 57%; margin: 0 auto; }
-
-.page2 .rule .rule-box .rule-content .title1 img { display: block; width: 100%; }
-
-.page2 .rule .rule-box .rule-content .title1 .word1 { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; -webkit-justify-content: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-size: 0.6rem; font-weight: 500; color: #a50000; }
-
-.page2 .rule .rule-box .rule-content .detail { margin-top: 0.8rem; line-height: 0.72rem; font-size: 0.44rem; color: #ffffff; }
+.page2 .rule .rule-list { display: block; width: 100%; }
 
 .page3 { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../images/bg2.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
 
@@ -1685,9 +1675,9 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page5 .car { position: absolute; bottom: -1rem; width: 10.12rem; left: 50%; margin-left: -5.06rem; }
 
-.page5 .form { position: absolute; top: 3.8rem; left: 50%; width: 11.28rem; height: 11rem; background: url(../images/form.png); -webkit-background-size: cover; background-size: cover; margin-left: -5.64rem; }
+.page5 .form { margin: 3.8rem auto 0 auto; width: 11.28rem; height: 11rem; background: url(../images/form.png); -webkit-background-size: cover; background-size: cover; }
 
-.page5 .form .form-box { width: 8.4rem; height: 6rem; margin: 0 auto; margin-top: 3.4rem; }
+.page5 .form .form-box { width: 8.4rem; height: 6rem; margin: 0 auto; padding-top: 3.4rem; }
 
 .page5 .form .form-item { height: 1.2rem; overflow: hidden; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 
@@ -1699,15 +1689,69 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page5 .form .form-item select { padding-right: 30px; background-image: url(../images/arrow.png) !important; -webkit-background-size: 19px 10px !important; background-size: 19px 10px !important; background-position: center right !important; background-repeat: no-repeat !important; }
 
-.page5 .form .form-btn { position: absolute; left: 50%; bottom: -8.4rem; margin-left: -3.46rem; width: 6.92rem; height: 1.72rem; outline: none; border: none; background: transparent; background-image: url(../images/btn10.png); background-repeat: no-repeat; -webkit-background-size: cover; background-size: cover; background-position: center center; }
+.page5 .form .form-btn { position: absolute; left: 50%; bottom: 4.4rem; margin-left: -3.46rem; width: 6.92rem; height: 1.72rem; outline: none; border: none; background: transparent; background-image: url(../images/btn10.png); background-repeat: no-repeat; -webkit-background-size: cover; background-size: cover; background-position: center center; }
 
-.page6 { display: none; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); }
+.page6 { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); }
 
 .page6 .title { position: absolute; width: 8rem; left: 50%; top: 1.2rem; margin-left: -4rem; }
 
-.page6 .box { overflow-y: auto; width: 12rem; margin: 0 auto; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; margin-top: 3rem; }
+.page6 .box-list { padding: 3rem 0 2rem 0; overflow: hidden; height: 100%; }
+
+.page6 .box { width: 12rem; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; height: 100%; overflow-y: scroll; margin: 0 auto; }
 
 .page6 .item { width: 6rem; }
+
+.page7 { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../images/bg2.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
+
+.page7 .cover { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); }
+
+.page7 .cover .upload { position: relative; margin: 0 auto; margin-top: 3.2rem; width: 12.32rem; height: 8.4rem; }
+
+.page7 .cover .upload input { position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 5; opacity: 0; }
+
+.page7 .cover .gender { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; margin-top: 1.4rem; }
+
+.page7 .cover .gender .g1, .page7 .cover .gender .g2 { width: 1.52rem; height: 1.52rem; margin: 0 .48rem; }
+
+.page7 .cover .selects .select { width: 14rem; height: 1.6rem; margin: 0 auto; margin-top: .8rem; background: rgba(94, 94, 94, 0.6); padding: 0 1rem; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+
+.page7 .cover .selects .select select { width: 100%; outline: none; border: 0; -webkit-appearance: none; -moz-appearance: none; appearance: none; color: #fff; background: transparent; -webkit-border-radius: 0; border-radius: 0; font-size: .6rem; color: rgba(255, 255, 255, 0.5); padding-right: 1.2rem; background-image: url(../images/arrow.png); background-repeat: no-repeat; background-position: center right; -webkit-background-size: 26px 12px; background-size: 26px 12px; }
+
+.page7 .cover .actions { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; position: absolute; left: 0; bottom: 1.28rem; width: 100%; }
+
+.page7 .cover .actions .btn { width: 6.8rem; outline: none; border: 0; -webkit-appearance: none; -moz-appearance: none; appearance: none; color: #fff; background: transparent; }
+
+.page7 .logo { position: absolute; top: 0; left: 0; padding-left: 4%; padding-top: 4%; width: 32%; }
+
+.page7 .logo img { display: block; width: 100%; }
+
+.page7 .car { position: absolute; bottom: 0; width: 100%; }
+
+.page7 .car img { display: block; width: 100%; }
+
+.page7 .qrcode { position: absolute; bottom: 2%; left: 0.8rem; width: 2.4rem; height: 2.4rem; }
+
+.page7 .qrcode img { display: block; width: 100%; }
+
+.page7 .word { position: absolute; bottom: 0%; right: 0.8rem; width: 3.6rem; }
+
+.page7 .word img { display: block; width: 100%; }
+
+.page7 .word2 { position: absolute; bottom: 4%; left: 3.6rem; width: 3.6rem; }
+
+.page7 .word2 img { display: block; width: 100%; }
+
+.page7 .word3 { position: absolute; bottom: 52%; left: 0%; width: 100%; }
+
+.page7 .word3 img { display: block; width: 100%; }
+
+.page7 .photo { position: absolute; bottom: 30%; left: 0%; width: 100%; }
+
+.page7 .photo img { display: block; width: 100%; }
+
+.page7 .adjust { position: absolute; bottom: 33%; right: 3%; width: 1.32rem; }
+
+.page7 .adjust img { display: block; width: 100%; }
 
 .page8 { display: none; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: url(../images/bg2.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
 
