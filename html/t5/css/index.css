@@ -1737,7 +1737,7 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page5 .form .form-item select { padding-right: 30px; background-image: url(../images/arrow.png) !important; -webkit-background-size: 19px 10px !important; background-size: 19px 10px !important; background-position: center right !important; background-repeat: no-repeat !important; }
 
-.page5 .form .form-btn { position: absolute; left: 50%; bottom: 4.4rem; margin-left: -3.46rem; width: 6.92rem; height: 1.72rem; outline: none; border: none; background: transparent; background-image: url(../images/btn10.png); background-repeat: no-repeat; -webkit-background-size: cover; background-size: cover; background-position: center center; }
+.page5 .form .form-btn { position: absolute; left: 50%; bottom: 2rem; margin-left: -3.46rem; width: 6.92rem; height: 1.72rem; outline: none; border: none; background: transparent; background-image: url(../images/btn10.png); background-repeat: no-repeat; -webkit-background-size: cover; background-size: cover; background-position: center center; }
 
 .page6 { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../images/bg2.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
 
@@ -1753,7 +1753,9 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page6 .box { width: 12rem; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; height: 100%; overflow-y: scroll; margin: 0 auto; }
 
-.page6 .item { width: 6rem; }
+.page6 .item { width: 6rem; position: relative; }
+
+.page6 .item .number { position: absolute; right: 2.4rem; color: #fff; text-align: center; font-size: .52rem; top: 2.1rem; }
 
 .page7 { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../images/bg2.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
 
@@ -1761,11 +1763,15 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page7 .cover .upload { position: relative; margin: 0 auto; margin-top: 3.2rem; width: 12.32rem; height: 8.4rem; }
 
+.page7 .cover .upload > img { width: 12.32rem; height: 8.4rem; }
+
 .page7 .cover .upload input { position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 5; opacity: 0; }
 
 .page7 .cover .gender { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; margin-top: 1.4rem; }
 
 .page7 .cover .gender .g1, .page7 .cover .gender .g2 { width: 1.52rem; height: 1.52rem; margin: 0 .48rem; }
+
+.page7 .cover .gender .g1.active, .page7 .cover .gender .g2.active { background-color: #000; }
 
 .page7 .cover .selects .select { width: 14rem; height: 1.6rem; margin: 0 auto; margin-top: .8rem; background: rgba(94, 94, 94, 0.6); padding: 0 1rem; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 
@@ -1825,7 +1831,7 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page8 .car { position: absolute; bottom: -1rem; width: 10.12rem; left: 50%; margin-left: -5.06rem; }
 
-.video_exist { width: 1.6rem; height: 1.6rem; position: absolute; right: .8rem; top: .8rem; z-index: 10; background: url(../images/normalmusic.png) no-repeat; -webkit-background-size: 1.6rem 1.6rem; background-size: 1.6rem 1.6rem; }
+.video_exist { width: 1.6rem; height: 1.6rem; position: absolute; right: .8rem; top: 4rem; z-index: 10; background: url(../images/normalmusic.png) no-repeat; -webkit-background-size: 1.6rem 1.6rem; background-size: 1.6rem 1.6rem; }
 
 .rotate { -webkit-animation: rotating 2s linear infinite; animation: rotating 2s linear infinite; }
 
@@ -1834,3 +1840,11 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 @keyframes rotating { from { -webkit-transform: rotate(0); transform: rotate(0); }
   to { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+
+.share { width: 100%; height: 100%; }
+
+.share > img { width: 100%; height: 100%; }
+
+.share .actions { position: absolute; bottom: 1.6rem; left: 0; width: 100%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
+
+.share .actions .btn { width: 8rem; }

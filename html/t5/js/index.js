@@ -14,6 +14,7 @@ $("#uploadImage").on("change", function() {
 		data.push(imgSrc);
 		console.log(data);
 		$("#hecheng").attr("src",imgSrc);
+    $('.page7 .upload > img').attr("src",imgSrc);
 		img.onload = function() {
 			console.log("上传成功");
 		}
@@ -25,7 +26,7 @@ function hecheng(){
 		// $("#photo").attr("src",base64[0]);
 		$(".posters").attr("src",base64[0]);
 		$(".posters").show();
-	})	
+	})
 }
 
 var base64=[];
@@ -204,11 +205,14 @@ $("#synthesis").on("click",function(){
     });
     $('.page8 .btn9').on('click', function () {
       $('.page8').hide();
-      $('.page4').show();
+      $('.page1').show();
     });
    $('.page6 .close').on('click', function () {
      $('.page6').hide();
-     $('.page1').show();
+     $('.page7').show();
    });
+   $('.gender .g').on('click', function () {
+     $(this).addClass('active').siblings().removeClass('active')
+   })
   })
 })()
