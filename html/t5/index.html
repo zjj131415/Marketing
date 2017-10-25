@@ -12,9 +12,19 @@
 	<link rel="stylesheet" href="./css/index.css">
 	<script src="js/jquery-1.8.3.min.js"></script>
 	<script src="js/jquery.cxselect.js"></script>
+	<script src="js/preloadjs-0.6.2.min.js"></script>
 	<script src="js/index.js"></script>
 </head>
 <body>
+		<div id="audio_btn" class="video_exist rotate">
+			<audio loop autoplay src="images/music.mp3" id="media"  preload=""></audio>
+		</div>
+		<div class="page-load" style="display: block;">
+			<div class="loading">
+				<strong><i></i></strong>
+				<em>10%</em>
+			</div>
+		</div>
   	<div class="page page1">
       	<div class="logo">
         	<img src="images/logo.png">

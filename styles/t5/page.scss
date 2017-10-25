@@ -7,6 +7,45 @@ html, body {
   overflow: hidden;
 }
 
+.page-load {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 999;
+  .loading {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #75dcf7;
+    font-size: .6rem;
+    strong {
+      border: 1px solid #75dcf7;
+      width: 11.2rem;
+      height: .8rem;
+      display: block;
+      margin: 0 auto;
+      border-radius: 0.04rem;
+      overflow: hidden;
+      i {
+        display: block;
+        height: 100%;
+        background: #75dcf7;
+      }
+    }
+    em {
+      width: 100%;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
 .page {
   display: none;
 }
@@ -82,136 +121,136 @@ html, body {
   }
 }
 
-.page2{
-	 display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	.rule{
-		position: relative;
-		width: 100%;
-		height: 100%;
-		overflow: auto;
-		-webkit-overflow-scrolling: touch;
-		.bg{
- 			display: block;
- 			width: 100%;
- 		}
- 		.rule-box{
- 			position: absolute;
- 			top: 0;
- 			left: 0;
- 			width: 100%;
- 			padding-left: 2%;
- 			padding-right: 2%;
- 			.rule-bg{
- 				display: block;
- 				width: 100%;
- 			}
- 			.close{
- 				position: absolute;
- 				top: 4%;
- 				right: 10%;
- 				width: 0.66rem;
- 				height: 0.66rem;
- 			}
- 			.rule-content{
- 				position: absolute;
- 				top: 5%;
- 				left: 12%;
- 				width: 76%;
- 				.title{
- 					position: relative;
- 					margin: 0 auto;
- 					img{
-						display: block;
-						width: 100%;
-					}
-					.word{
- 						position: absolute;
-						top: 0;
-						left: 0;
-						width: 100%;
-						height: 100%;
- 						display:flex;
- 					    align-items: center;
- 					    justify-content: center;
- 						font-size: 0.6rem;
- 						font-weight: 500;
- 						color: #a50000;
- 					}
- 				}
- 				.tag{
- 					position: relative;
- 					img{
-						display: block;
-						width: 100%;
-					}
-					.word{
- 						position: absolute;
-						top: 0;
-						left: 0;
-						width: 100%;
-						height: 100%;
- 						display:flex;
- 					    align-items: center;
- 					    justify-content: center;
- 						font-size: 0.52rem;
- 						font-weight: 500;
- 						color: #ffffff;
- 					}
- 				}
- 				.describe{
- 					margin-top: 0.2rem;
- 					margin-bottom: 0.2rem;
- 					padding-left: 0.4rem;
- 					line-height: 0.72rem;
- 					font-size: 0.44rem;
- 					color: #ffffff;
- 				}
- 				.copyright{
- 					margin-top: 0.8rem;
- 					text-align: right;
- 					font-size: 0.4rem;
- 					color: #ffffff;
- 				}
- 				.detail{
- 					line-height: 0.72rem;
- 					font-size: 0.44rem;
-					color: #ffffff;
- 				}
- 				.title1{
- 					width: 57%;
- 				}
- 				.detail1{
- 					margin-top: 0.56rem;
- 					margin-bottom: 0.56rem;
- 				}
- 				.title2{
- 					width: 50%;
- 					margin-bottom: 0.56rem;
- 				}
- 				.tag1{
- 					width: 29%;
- 				}
- 				.tag2{
- 					width: 37%;
- 				}
- 				.title3{
- 					width: 79%;
- 					margin-top: 0.56rem;
- 					margin-bottom: 0.56rem;
- 				}
- 				.title4{
- 					width: 46%;
- 					margin-top: 0.56rem;
- 					margin-bottom: 0.56rem;
- 				}
- 			}
-		}
-	}
+.page2 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  .rule {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    .bg {
+      display: block;
+      width: 100%;
+    }
+    .rule-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding-left: 2%;
+      padding-right: 2%;
+      .rule-bg {
+        display: block;
+        width: 100%;
+      }
+      .close {
+        position: absolute;
+        top: 4%;
+        right: 10%;
+        width: 0.66rem;
+        height: 0.66rem;
+      }
+      .rule-content {
+        position: absolute;
+        top: 5%;
+        left: 12%;
+        width: 76%;
+        .title {
+          position: relative;
+          margin: 0 auto;
+          img {
+            display: block;
+            width: 100%;
+          }
+          .word {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.6rem;
+            font-weight: 500;
+            color: #a50000;
+          }
+        }
+        .tag {
+          position: relative;
+          img {
+            display: block;
+            width: 100%;
+          }
+          .word {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.52rem;
+            font-weight: 500;
+            color: #ffffff;
+          }
+        }
+        .describe {
+          margin-top: 0.2rem;
+          margin-bottom: 0.2rem;
+          padding-left: 0.4rem;
+          line-height: 0.72rem;
+          font-size: 0.44rem;
+          color: #ffffff;
+        }
+        .copyright {
+          margin-top: 0.8rem;
+          text-align: right;
+          font-size: 0.4rem;
+          color: #ffffff;
+        }
+        .detail {
+          line-height: 0.72rem;
+          font-size: 0.44rem;
+          color: #ffffff;
+        }
+        .title1 {
+          width: 57%;
+        }
+        .detail1 {
+          margin-top: 0.56rem;
+          margin-bottom: 0.56rem;
+        }
+        .title2 {
+          width: 50%;
+          margin-bottom: 0.56rem;
+        }
+        .tag1 {
+          width: 29%;
+        }
+        .tag2 {
+          width: 37%;
+        }
+        .title3 {
+          width: 79%;
+          margin-top: 0.56rem;
+          margin-bottom: 0.56rem;
+        }
+        .title4 {
+          width: 46%;
+          margin-top: 0.56rem;
+          margin-bottom: 0.56rem;
+        }
+      }
+    }
+  }
 }
 
 .page3 {
@@ -328,7 +367,7 @@ html, body {
     z-index: 4;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0,0,.6);
+    background: rgba(0, 0, 0, .6);
     .frame {
       width: 9.76rem;
       height: 7.6rem;
@@ -519,10 +558,10 @@ html, body {
       }
       select {
         padding-right: 30px;
-        background-image: url(../images/arrow.png)!important;
+        background-image: url(../images/arrow.png) !important;
         background-size: 19px 10px !important;
         background-position: center right !important;
-        background-repeat: no-repeat!important;
+        background-repeat: no-repeat !important;
       }
     }
     .form-btn {
@@ -589,7 +628,7 @@ html, body {
     padding: 3rem 0 2rem 0;
     overflow: hidden;
     height: 100%;
-    background: rgba(0,0,0,.5);
+    background: rgba(0, 0, 0, .5);
   }
   .box {
     width: 12rem;
@@ -618,8 +657,8 @@ html, body {
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,.7);
-    .upload{
+    background: rgba(0, 0, 0, .7);
+    .upload {
       position: relative;
       margin: 0 auto;
       margin-top: 3.2rem;
@@ -834,5 +873,50 @@ html, body {
     width: 10.12rem;
     left: 50%;
     margin-left: -5.06rem;
+  }
+}
+
+.video_exist {
+  width: 1.6rem;
+  height: 1.6rem;
+  position: absolute;
+  right: .8rem;
+  top: .8rem;
+  z-index: 10;
+  background: url(../images/normalmusic.png) no-repeat;
+  background-size: 1.6rem 1.6rem;
+}
+
+.rotate {
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
+}
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0)
+  }
+  to {
+    -webkit-transform: rotate(360deg)
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+@-moz-keyframes rotating {
+  from {
+    -moz-transform: rotate(0)
+  }
+  to {
+    -moz-transform: rotate(360deg)
   }
 }
