@@ -214,20 +214,26 @@ function draw(fn){
 	drawing(0);
 }
 
+$("#btnCapture").on("click",function(){
+	$('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+  	
+  	$('#carImg').css("display","block");
+});
+
 $(".synthesis").on("click",function(){
 	$(".page3").css("visibility","hidden");
   	$('.page9').show();
 
-  	$('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+  	// $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
   	
-  	$('#carImg').css("display","block");
+  	// $('#carImg').css("display","block");
   	// $("#captureCanvas2").hide();
 
-  	hecheng();
- //  	var img = new Image();
-	// img.src = $('#carImg').attr('src');
-	// img.onload = function () {
-	// }
+  	var img = new Image();
+	img.src = $('#carImg').attr('src');
+	img.onload = function () {
+		hecheng();
+	}
 });
 
 
@@ -250,6 +256,8 @@ $(".synthesis").on("click",function(){
       'images/bg.jpg',
       'images/bg2.jpg',
       'images/bg3.jpg',
+      'images/bg4.jpg',
+      'images/bg5.jpg',
       'images/btn1.png',
       'images/btn2.png',
       'images/btn3.png',
