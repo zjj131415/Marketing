@@ -29,6 +29,7 @@ $('#btnCapture').on('click', function () {
     $('#carImg').attr('src', viewSrc);
     $('#carImg').css("display","block");
     $("#captureCanvas2").hide();
+    $(this).hide();
 });
 
 var data = ["images/canvas_header.png", "images/footer.png"];

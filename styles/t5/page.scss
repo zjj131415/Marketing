@@ -303,8 +303,17 @@ html, body {
     	bottom: -1.2rem;
     	left: 50%;
     	z-index: 100;
-    	font-size: 1.2rem;
-    	color: #000;
+    	width: 4.0rem;
+    	height: 1.6rem;
+    	line-height: 1.6rem;
+    	// height: 4.96rem;
+    	font-size: 0.96rem;
+    	color: #fff;
+ 		background: none;
+    	border: none;
+    	border-radius: 10px;
+    	// background: url(../images/btn-capture-icon.png) no-repeat center/100%;
+    	background-color: #ffb534;
     }
   }
   .footer {
