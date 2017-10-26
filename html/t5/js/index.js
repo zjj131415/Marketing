@@ -18,7 +18,6 @@ document.getElementById('uploadImage').onchange = function (e) {
   $("#photo").attr("src",src);
   $("#hecheng").attr("src",src);
   $('.page7 .upload > img').attr("src",src);
-  alert(src)
   imgSrc = src;
 };
 
