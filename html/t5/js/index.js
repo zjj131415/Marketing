@@ -214,23 +214,23 @@ function draw(fn){
 	drawing(0);
 }
 
-$("#btnCapture").on("click",function(){
-	$('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+// $("#btnCapture").on("click",function(){
+// 	$('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
   	
-  	$('#carImg').css("display","block");
-});
+//   	$('#carImg').css("display","block");
+// });
 
 $(".synthesis").on("click",function(){
 	$(".page3").css("visibility","hidden");
   	$('.page9').show();
 
-  	// $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+  	$('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
   	
-  	// $('#carImg').css("display","block");
+  	$('#carImg').css("display","block");
   	// $("#captureCanvas2").hide();
-
   	var img = new Image();
 	img.src = $('#carImg').attr('src');
+  	alert(img.src);
 	img.onload = function () {
 		hecheng();
 	}
