@@ -1551,7 +1551,7 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page-load .loading strong { border: 1px solid #75dcf7; width: 11.2rem; height: .8rem; display: block; margin: 0 auto; -webkit-border-radius: 0.04rem; border-radius: 0.04rem; overflow: hidden; }
 
-.page-load .loading strong i { display: block; height: 100%; background: #75dcf7; }
+.page-load .loading strong i { width: 0%; display: block; height: 100%; background: #75dcf7; }
 
 .page-load .loading em { width: 100%; margin-top: 10px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
 
