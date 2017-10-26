@@ -13,8 +13,11 @@
 	<script src="js/jquery-1.8.3.min.js"></script>
 	<script src="js/jquery.cxselect.js"></script>
 	<script src="js/preloadjs-0.6.2.min.js"></script>
+	<script src="js/qrcode.min.js"></script>
 </head>
 <body>
+		<div class="qrcode" style="display: none;">
+		</div>
 		<div id="audio_btn" class="video_exist rotate">
 			<audio loop autoplay src="images/music.mp3" id="media"  preload=""></audio>
 		</div>
@@ -112,37 +115,18 @@
 	  	</div>
   	</div>
   	<div class="page page3">
-  		<div class="logo">
-        	<img src="images/logo.png">
-      	</div>
-  		<div class="car">
-  			<img src="images/car2.png" id="posterCar">
-  		</div>
-  		<!--<div class="qrcode">-->
-  			<!--<img src="images/qrcode.png">-->
-  		<!--</div>-->
-  		<div class="word">
-  			<img src="images/word.png">
-  		</div>
-  		<!--<div class="word2">-->
-  			<!--<img src="images/word2.png">-->
-  		<!--</div>-->
-  		<div class="word3">
-  			<img src="images/word3.png" id="cheer">
-  		</div>
-  		<div class="photo">
-  			<img src="images/photo.png" id="photo" draggable="true">
-  		</div>
-  		<!--<div class="adjust">-->
-  			<!--<img src="images/adjust.png">-->
-  		<!--</div>-->
-		<div class="synthesis" id="synthesis">
-			<img src="./images/btn5.png" alt="">
-		</div>
-		<img src="" class="posters">
-    <div class="saveTip">
-      长按屏幕保存图片
-    </div>
+
+			<div class="header">
+				<img src="./images/canvas_header.png" alt="">
+			</div>
+			<div class="content">
+			</div>
+			<div class="footer">
+				<img src="./images/footer.png" alt="">
+			</div>
+			<div class="synthesis">
+				<img src="./images/btn5.png" alt="">
+			</div>
   	</div>
   	<div class="page page4">
       <div class="cover">
@@ -359,6 +343,9 @@
 			<img src="images/btn9.png">
 		</div>
     </div>
+		<div class="page page9">
+			<img src="" alt="">
+		</div>
     <script src="js/index.js"></script>
 </body>
 </html>

@@ -1,14 +1,9 @@
-// 上传图片路径
 var imgSrc = "";
-// 图片尺寸对象
-var photoObj = null;
-// 车辆尺寸对象
-var carObj = null;
-// 助威尺寸对象
-var cheerObj = null;
-// 合成图片数组
-var data = ["images/bg2.jpg","images/car2.png","images/qrcode.png","images/word3.png"];
-// 上传图片
+var imgW = "";
+var imgH = "";
+var imgLeft = "";
+var imgTop = "";
+var data = ["images/canvas_header.png", "images/footer.png"];
 document.getElementById('uploadImage').onchange = function (e) {
   var src, url = window.URL || window.webkitURL || window.mozURL, files = e.target.files;
   for (var i = 0, len = files.length; i < len; ++i) {
@@ -27,35 +22,23 @@ document.getElementById('uploadImage').onchange = function (e) {
   imgSrc = src;
 };
 
-// 获取图片尺寸
-function getSize(obj){
-    var $obj = $("#"+obj);
-    var w = $obj.width();
-    var h = $obj.height();
-    var x = $obj.offset().left;
-    var y = $obj.offset().top;
-    return {
-        "w": w,
-        "h": h,
-        "x": x,
-        "y": y
-    }
-}
 
 function hecheng(){
-  // 图片
-  photoObj = getSize("photo");
-  // 车辆
-  carObj = getSize("posterCar");
-  // 助威
-  cheerObj = getSize("cheer");
-  // 增加进图片合成数组
-	data.push(imgSrc);
+	// imgW = $("#photo").width();
+	// imgH = $("#photo").height();
+	// imgLeft = $("#photo").offset().left;
+	// imgTop = $("#photo").offset().top;
+	// console.log(imgW);
+	// console.log(imgH);
+	// console.log(imgLeft);
+	// console.log(imgTop);
+	data.unshift('images/canvas_header.png');
+	data.push($('.qrcode > img').attr('src'));
 	draw(function(){
-  		$(".posters").attr("src",base64[0]);
-  		$(".posters").show();
-      $(".saveTip").show();
-	});
+		// $("#photo").attr("src",base64[0]);
+		$(".page9 > img").attr("src",base64[0]);
+		$('.pag3').hide()
+	})
 }
 
 var base64=[];
@@ -71,6 +54,19 @@ function draw(fn){
 	// ctx.fill();
 
 	function drawing(n){
+    var word3 = $('.page3 .header'),
+      word3W = word3.width(),
+      word3H = word3.height();
+    var photo = $('.page3 .header'),
+      photoW = photo.width(),
+      photoH = photo.height();
+    var footer = $('.page3 .footer'),
+      footerW = footer.width(),
+      footerH = footer.height();
+    console.log(footer, footerW, footerH)
+    var qrcode = $('.qrcode'),
+      qrcodeW = 0,
+      qrcodeH = 0;
 		if(n<len){
 			var img=new Image;
 			// img.crossOrigin = 'Anonymous'; //解决跨域
@@ -82,35 +78,30 @@ function draw(fn){
 				var h = "";
 				switch(n){
 					case 0:
-						x = 0;
-						y = 0;
-						w = c.width;
-						h = c.height;
+            x = (word3W-photoW)/2;
+            y = word3H;
+            w = photoW;
+            h = photoH;
 						break;
           case 1:
-            x = carObj.x;
-            y = carObj.y;
-            w = carObj.w;
-            h = carObj.h;
+            x = 0;
+            y = 0;
+            w = word3W;
+            h = word3H;
             break;
 					case 2:
-						x = 10;
-						y = c.height - 66 - 10;
-						w = 66;
-						h = 66;
+						x = 0;
+						y = word3H + photoH;
+						w = footerW;
+						h = footerH;
+						console.log(x,y,w,h)
 						break;
-					case 3:
-						x = cheerObj.x;
-            y = cheerObj.y;
-            w = cheerObj.w;
-            h = cheerObj.h;
-						break;
-					case 4:
-						x = photoObj.x;
-						y = photoObj.y;
-						w = photoObj.w;
-						h = photoObj.h;
-						break;
+          case 3:
+            x = 10;
+            y = photoH + word3H + footerH -100;
+            w = 90;
+            h = 90;
+            break;
 				}
 				ctx.drawImage(img,x,y,w,h);
 				drawing(n+1);//递归
@@ -124,19 +115,24 @@ function draw(fn){
 	drawing(0);
 }
 
-$("#synthesis").on("click",function(){
+$(".synthesis").on("click",function(){
+  $('.page9').show();
 	hecheng();
 });
 
-$("#photo").on("dragstart",function(){
-	console.log(11);
-});
 
 (function () {
   $(function () {
+    var qrcode = new QRCode(document.querySelector(".qrcode"), {
+      width : 90,
+      height : 90
+    });
+    qrcode.makeCode('heep://www.baidu.com')
     var progress = 0;
     var queue = new createjs.LoadQueue(true);
     queue.loadManifest([
+      'images/canvas_header.png',
+      'images/footer.png',
       'images/music.mp3',
       'images/adjust.png',
       'images/arrow.png',
@@ -185,8 +181,8 @@ $("#photo").on("dragstart",function(){
     ]);
     queue.on("fileload", function (e) {
       progress ++;
-      $('.page-load i').width(parseInt(progress/44*100)+"%");
-      $('.page-load em').html(parseInt(progress/44*100)+"%");
+      $('.page-load i').width(parseInt(progress/46*100)+"%");
+      $('.page-load em').html(parseInt(progress/46*100)+"%");
       // console.log(parseInt(progress/44*100)+"%")
     }, this);
     $('.video_exist').on('click', function () {
@@ -237,6 +233,9 @@ $("#photo").on("dragstart",function(){
     $('.page7 .btn2').on('click', function () {
       $('.page7').hide();
       $('.page3').show();
+      console.log($('.page3').height(),$('.page3 .header').height(), $('.page3 .footer').height())
+      $('.page3 .content').height($('.page3').height() - $('.page3 .header').height() - $('.page3 .footer').height())
+
     });
     $('.page8 .btn9').on('click', function () {
       $('.page8').hide();
