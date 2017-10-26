@@ -223,7 +223,7 @@ $(".synthesis").on("click",function(){
       'images/poster.png',
       'images/qrcode.png',
       'images/rank.png',
-      'images/rule-bg.png',
+      // 'images/rule-bg.png',
       'images/shadow.png',
       'images/success.png',
       'images/tag1.png',
