@@ -193,6 +193,7 @@ $(".synthesis").on("click",function(){
     qrcode.makeCode('heep://www.baidu.com')
     var progress = 0;
     var queue = new createjs.LoadQueue(true);
+    var queue2 = new createjs.LoadQueue(true);
     queue.loadManifest([
       'images/canvas_header.png',
       'images/footer.png',
@@ -242,6 +243,19 @@ $(".synthesis").on("click",function(){
       'images/word3.png',
       'images/word4.png',
     ]);
+    queue2.loadManifest([
+      'images/canvas_header11.png',
+      'images/canvas_header12.png'
+    ]);
+    queue.on("complete", function (e) {
+      $('.page-load').hide();
+      queue.on("fileload", function (e) {
+        progress ++;
+        $('.page-load i').width(parseInt(progress/46*100)+"%");
+        $('.page-load em').html(parseInt(progress/46*100)+"%");
+        // console.log(parseInt(progress/44*100)+"%")
+      }, this);
+    }, this);
     queue.on("fileload", function (e) {
       progress ++;
       $('.page-load i').width(parseInt(progress/46*100)+"%");
@@ -258,9 +272,7 @@ $(".synthesis").on("click",function(){
         $(this).removeClass('rotate');
       }
     });
-    queue.on("complete", function (e) {
-      $('.page-load').hide();
-    }, this);
+
     //联动
     var urlChina = 'js/data.js';
     $.cxSelect.defaults.url = urlChina;
