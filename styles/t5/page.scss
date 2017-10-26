@@ -654,15 +654,16 @@ html, body {
       position: relative;
       margin: 0 auto;
       margin-top: 3.2rem;
-      width: 12.32rem;
-      height: 8.4rem;
+      width: 10rem;
+      height: 7rem;
       overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       .uploadBg {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 12.32rem;
-        height: 8.4rem;
       }
       .uploadShow{
         display: none;
