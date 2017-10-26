@@ -311,7 +311,7 @@ html { -webkit-text-size-adjust: none; -ms-text-size-adjust: 100%; -webkit-tap-h
   44.4% { -webkit-transform: skewX(-3.125deg) skewY(-3.125deg); transform: skewX(-3.125deg) skewY(-3.125deg); }
   55.5% { -webkit-transform: skewX(1.5625deg) skewY(1.5625deg); transform: skewX(1.5625deg) skewY(1.5625deg); }
   66.6% { -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg); transform: skewX(-0.78125deg) skewY(-0.78125deg); }
-  77.7% { -webkit-transform: skewX(0.39062deg) skewY(0.39062deg); transform: skewX(0.39062deg) skewY(0.39062deg); }
+  77.7% { -webkit-transform: skewX(0.39063deg) skewY(0.39063deg); transform: skewX(0.39063deg) skewY(0.39063deg); }
   88.8% { -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg); transform: skewX(-0.19531deg) skewY(-0.19531deg); } }
 
 @keyframes jello { from, 11.1%, to { -webkit-transform: none; transform: none; }
@@ -320,7 +320,7 @@ html { -webkit-text-size-adjust: none; -ms-text-size-adjust: 100%; -webkit-tap-h
   44.4% { -webkit-transform: skewX(-3.125deg) skewY(-3.125deg); transform: skewX(-3.125deg) skewY(-3.125deg); }
   55.5% { -webkit-transform: skewX(1.5625deg) skewY(1.5625deg); transform: skewX(1.5625deg) skewY(1.5625deg); }
   66.6% { -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg); transform: skewX(-0.78125deg) skewY(-0.78125deg); }
-  77.7% { -webkit-transform: skewX(0.39062deg) skewY(0.39062deg); transform: skewX(0.39062deg) skewY(0.39062deg); }
+  77.7% { -webkit-transform: skewX(0.39063deg) skewY(0.39063deg); transform: skewX(0.39063deg) skewY(0.39063deg); }
   88.8% { -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg); transform: skewX(-0.19531deg) skewY(-0.19531deg); } }
 
 .jello { -webkit-animation-name: jello; animation-name: jello; -webkit-transform-origin: center; -ms-transform-origin: center; transform-origin: center; }
@@ -1641,7 +1641,7 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page3 .content .car-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-.page3 .content .btn-circle { display: none; position: absolute; bottom: 0.8rem; right: 1%; z-index: 100; width: 4.0rem; height: 1.2rem; line-height: 1.2rem; font-size: 0.72rem; color: #fff; background: none; border: none; -webkit-border-radius: 10px; border-radius: 10px; background-color: #BA0108; }
+.page3 .content .btn-circle { position: absolute; bottom: 0.8rem; right: 1%; z-index: 100; width: 4.0rem; height: 1.2rem; line-height: 1.2rem; font-size: 0.72rem; color: #fff; background: none; border: none; -webkit-border-radius: 10px; border-radius: 10px; background-color: #BA0108; }
 
 .page3 .footer { position: absolute; left: 0; bottom: 0; width: 100%; z-index: 5; }
 

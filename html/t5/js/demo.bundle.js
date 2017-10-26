@@ -61,6 +61,22 @@
 	//     $('#carImg').show();
 	// });
 
+	// 视图宽度
+	// var pageWidth = $(window).width();
+	// var contentHeight = $(".content").height();
+	
+	// var imgEdit2;
+	// var img = new Image();
+	// img.src = 'images/photo.png';
+	// img.onload = function () {
+	//     imgEdit2 = new veImage({ canvas: document.getElementById('captureCanvas2'), image: this });
+	//     $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+	// };
+	// $('#btnCapture').on('click', function () {
+	//     $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+	// });
+
+
 /***/ },
 /* 1 */
 /***/ function(module, exports) {
