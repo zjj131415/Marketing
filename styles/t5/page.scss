@@ -300,20 +300,18 @@ html, body {
     }
     .btn-circle{
     	position: absolute;
-    	bottom: -1.2rem;
-    	left: 50%;
+    	bottom: 0.8rem;
+    	right: 1%;
     	z-index: 100;
     	width: 4.0rem;
-    	height: 1.6rem;
-    	line-height: 1.6rem;
-    	// height: 4.96rem;
-    	font-size: 0.96rem;
+    	height: 1.2rem;
+    	line-height: 1.2rem;
+    	font-size: 0.72rem;
     	color: #fff;
  		background: none;
     	border: none;
     	border-radius: 10px;
-    	// background: url(../images/btn-capture-icon.png) no-repeat center/100%;
-    	background-color: #ffb534;
+    	background-color: #BA0108;
     }
   }
   .footer {
