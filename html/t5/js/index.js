@@ -1,4 +1,3 @@
-var imgSrc = "";
 // 视图宽度
 var pageWidth = $(window).width();
 // 视图高度
@@ -14,10 +13,13 @@ var carObj = null;
 var footerObj = null;
 // 二维码尺寸对象
 var qrcodeObj = null;
+// 裁剪图片对象
+var imgEdit2;
+// 生成图片路径
+var carSrc = "";
 
 // $(".page1").hide();
 
-var imgEdit2;
 
 var data = ["images/canvas_header.png", "images/footer.png"];
 document.getElementById('uploadImage').onchange = function (e) {
@@ -77,7 +79,6 @@ document.getElementById('uploadImage').onchange = function (e) {
       $("#hecheng").attr("src",src);
       $('.page7 .upload .uploadBg').hide();
       $('.page7 .upload .uploadShow').attr("src",src).css("display","block");
-      imgSrc = src;
 
       var img = new Image();
       img.src = src;
@@ -128,7 +129,7 @@ function hecheng(){
 	draw(function(){
 		// $("#photo").attr("src",base64[0]);
 		$(".page9 > img").attr("src",base64[0]);
-		$('.pag3').hide()
+		$('.pag3').hide();
 	})
 }
 
@@ -217,17 +218,15 @@ $(".synthesis").on("click",function(){
 	$(".page3").css("visibility","hidden");
   	$('.page9').show();
 
+  	$('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+  	
   	$('#carImg').css("display","block");
   	// $("#captureCanvas2").hide();
-  	$('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
 
+  	hecheng();
  //  	var img = new Image();
 	// img.src = $('#carImg').attr('src');
 	// img.onload = function () {
-		var timer = setTimeout(function(){
-  			hecheng();
-  			clearTimeout(timer);
-		},3000);
 	// }
 });
 
