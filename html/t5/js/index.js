@@ -233,9 +233,6 @@ $(".synthesis").on("click",function(){
     $('.page7 .btn2').on('click', function () {
       $('.page7').hide();
       $('.page3').show();
-      console.log($('.page3').height(),$('.page3 .header').height(), $('.page3 .footer').height())
-      $('.page3 .content').height($('.page3').height() - $('.page3 .header').height() - $('.page3 .footer').height())
-
     });
     $('.page8 .btn9').on('click', function () {
       $('.page8').hide();
