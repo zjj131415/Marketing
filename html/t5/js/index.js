@@ -25,12 +25,12 @@ var viewSrc;
 //     viewSrc = imgEdit2.crop(2*pageWidth, 375, 0, 133);
 // };
 
-$('#btnCapture').on('click', function () {
-    $('#carImg').attr('src', viewSrc);
-    $('#carImg').css("display","block");
-    $("#captureCanvas2").hide();
-    $(this).hide();
-});
+// $('#btnCapture').on('click', function () {
+//     $('#carImg').attr('src', viewSrc);
+//     $('#carImg').css("display","block");
+//     $("#captureCanvas2").hide();
+//     $(this).hide();
+// });
 
 var data = ["images/canvas_header.png", "images/footer.png"];
 document.getElementById('uploadImage').onchange = function (e) {
@@ -166,8 +166,18 @@ function draw(fn){
 
 $(".synthesis").on("click",function(){
 	$(".page3").css("visibility","hidden");
-  $('.page9').show();
-	hecheng();
+  	$('.page9').show();
+
+  	$('#carImg').attr('src', viewSrc);
+  	$('#carImg').css("display","block");
+  	$("#captureCanvas2").hide();
+
+  	var img = new Image();
+	img.src = viewSrc;
+	console.log(viewSrc);
+	img.onload = function () {
+		hecheng();
+	}
 });
 
 
