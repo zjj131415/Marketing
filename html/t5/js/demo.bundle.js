@@ -48,17 +48,18 @@
 
 	var $ = __webpack_require__(1);
 	__webpack_require__(2);
-
-	var $capture = $('#capture'),
-	    imgEdit2;
-	var img = new Image();
-	img.src = 'img/car-demo2.jpg';
-	img.onload = function () {
-	    imgEdit2 = new veImage({ canvas: document.getElementById('captureCanvas2'), image: this });
-	};
-	$('#btnCapture').on('click', function () {
-	    $('#carImg').attr('src', imgEdit2.crop(550, 380, 100, 120));
-	});
+	// var $capture = $('#capture'),
+	// var imgEdit2;
+	// var img = new Image();
+	// img.src = 'images/car2.png';
+	// img.onload = function () {
+	//     imgEdit2 = new veImage({ canvas: document.getElementById('captureCanvas2'), image: this });
+	// };
+	// $('#btnCapture').on('click', function () {
+	// 	console.log(11);
+	//     $('#carImg').attr('src', imgEdit2.crop(550, 380, 100, 120));
+	//     $('#carImg').show();
+	// });
 
 /***/ },
 /* 1 */

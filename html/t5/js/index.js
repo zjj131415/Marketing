@@ -1,8 +1,36 @@
 var imgSrc = "";
-var imgW = "";
-var imgH = "";
-var imgLeft = "";
-var imgTop = "";
+// 视图宽度
+var pageWidth = $(window).width();
+// 视图高度
+var pageHeight = $(window).height();
+
+// 头部尺寸对象
+var headerObj = null;
+// 车辆尺寸对象
+var carObj = null;
+// 底部尺寸对象
+var footerObj = null;
+// 二维码尺寸对象
+var qrcodeObj = null;
+
+
+var imgEdit2;
+var viewSrc;
+
+// var img = new Image();
+// img.src = 'images/photo.png';
+// img.onload = function () {
+//     imgEdit2 = new veImage({ canvas: document.getElementById('captureCanvas2'), image: this });
+//     // viewSrc = imgEdit2.crop(450, 380, 120, 120);
+//     viewSrc = imgEdit2.crop(2*pageWidth, 375, 0, 133);
+// };
+
+$('#btnCapture').on('click', function () {
+    $('#carImg').attr('src', viewSrc);
+    $('#carImg').css("display","block");
+    $("#captureCanvas2").hide();
+});
+
 var data = ["images/canvas_header.png", "images/footer.png"];
 document.getElementById('uploadImage').onchange = function (e) {
   var src, url = window.URL || window.webkitURL || window.mozURL, files = e.target.files;
@@ -20,20 +48,51 @@ document.getElementById('uploadImage').onchange = function (e) {
   $('.page7 .upload .uploadBg').hide();
   $('.page7 .upload .uploadShow').attr("src",src).css("display","block");
   imgSrc = src;
+
+  var img = new Image();
+  img.src = src;
+  console.log(img.src);
+  img.onload = function () {
+      imgEdit2 = new veImage({ canvas: document.getElementById('captureCanvas2'), image: this });
+      // viewSrc = imgEdit2.crop(450, 380, 120, 120);
+      viewSrc = imgEdit2.crop(2*pageWidth, 375, 0, 133);
+  };
+
 };
+
+// 获取图片尺寸
+function getSize(obj){
+    var $obj = $("#"+obj);
+    var w = $obj.width();
+    var h = $obj.height();
+    var x = $obj.offset().left;
+    var y = $obj.offset().top;
+    return {
+        "w": w,
+        "h": h,
+        "x": x,
+        "y": y
+    }
+}
 
 
 function hecheng(){
-	// imgW = $("#photo").width();
-	// imgH = $("#photo").height();
-	// imgLeft = $("#photo").offset().left;
-	// imgTop = $("#photo").offset().top;
-	// console.log(imgW);
-	// console.log(imgH);
-	// console.log(imgLeft);
-	// console.log(imgTop);
-	data.unshift('images/canvas_header.png');
-	data.push($('.qrcode > img').attr('src'));
+	// 头部
+  	headerObj = getSize("header");
+  	console.log(headerObj);
+  	// 车辆
+  	carObj = getSize("carImg");
+  	console.log(carObj);
+  	// 底部
+  	footerObj = getSize("footer");
+  	console.log(footerObj);
+  	// 二维码
+  	qrcodeObj = getSize("qrcode > img");
+  	console.log(qrcodeObj);
+
+	data.unshift(viewSrc);
+	data.push($('#qrcode > img').attr('src'));
+	console.log(data);
 	draw(function(){
 		// $("#photo").attr("src",base64[0]);
 		$(".page9 > img").attr("src",base64[0]);
@@ -54,16 +113,6 @@ function draw(fn){
 	// ctx.fill();
 
 	function drawing(n){
-    var word3 = $('.page3 .header'),
-      word3W = word3.width(),
-      word3H = word3.height();
-    var photo = $('.page3 .header'),
-      photoW = photo.width(),
-      photoH = photo.height();
-    var footer = $('.page3 .footer'),
-      footerW = footer.width(),
-      footerH = footer.height();
-    console.log(footer, footerW, footerH)
     var qrcode = $('.qrcode'),
       qrcodeW = 0,
       qrcodeH = 0;
@@ -78,30 +127,29 @@ function draw(fn){
 				var h = "";
 				switch(n){
 					case 0:
-            x = (word3W-photoW)/2;
-            y = word3H;
-            w = photoW;
-            h = photoH;
+			            x = carObj.x;
+			            y = carObj.y;
+			            w = carObj.w;
+			            h = carObj.h;
 						break;
-          case 1:
-            x = 0;
-            y = 0;
-            w = word3W;
-            h = word3H;
-            break;
+			        case 1:
+			            x = headerObj.x;
+			            y = headerObj.y;
+			            w = headerObj.w;
+			            h = headerObj.h;
+			            break;
 					case 2:
-						x = 0;
-						y = word3H + photoH;
-						w = footerW;
-						h = footerH;
-						console.log(x,y,w,h)
+						x = footerObj.x;
+						y = footerObj.y;
+						w = footerObj.w;
+						h = footerObj.h;
 						break;
-          case 3:
-            x = 10;
-            y = photoH + word3H + footerH -100;
-            w = 90;
-            h = 90;
-            break;
+			        case 3:
+			            x = 10;
+			            y = pageHeight - 100;
+			            w = 90;
+			            h = 90;
+			            break;
 				}
 				ctx.drawImage(img,x,y,w,h);
 				drawing(n+1);//递归
@@ -116,6 +164,7 @@ function draw(fn){
 }
 
 $(".synthesis").on("click",function(){
+	$(".page3").css("visibility","hidden");
   $('.page9').show();
 	hecheng();
 });
@@ -232,7 +281,8 @@ $(".synthesis").on("click",function(){
     });
     $('.page7 .btn2').on('click', function () {
       $('.page7').hide();
-      $('.page3').show();
+      // $('.page3').show();
+      $(".page3").css("visibility","visible");
     });
     $('.page8 .btn9').on('click', function () {
       $('.page8').hide();

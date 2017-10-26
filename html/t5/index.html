@@ -16,7 +16,7 @@
 	<script src="js/qrcode.min.js"></script>
 </head>
 <body>
-		<div class="qrcode" style="display: none;">
+		<div class="qrcode" style="display: none;" id="qrcode">
 		</div>
 		<div id="audio_btn" class="video_exist rotate">
 			<audio loop autoplay src="images/music.mp3" id="media"  preload=""></audio>
@@ -114,15 +114,20 @@
 	  		</div>
 	  	</div>
   	</div>
-  	<div class="page page3">
+  	<div class="page page3" style="display: block;">
 
 			<div class="header">
-				<img src="./images/canvas_header.png" alt="">
+				<img src="./images/canvas_header.png" alt="" id="header">
 			</div>
 			<div class="content">
+				<div class="car-box">
+					<img src="" id="carImg" class="carImg">
+				</div>
+				<canvas id="captureCanvas2" class="car-canvas"></canvas>
+				<button id="btnCapture" class="btn-circle">确定</button>
 			</div>
 			<div class="footer">
-				<img src="./images/footer.png" alt="">
+				<img src="./images/footer.png" alt="" id="footer">
 			</div>
 			<div class="synthesis">
 				<img src="./images/btn5.png" alt="">
@@ -346,6 +351,20 @@
 		<div class="page page9">
 			<img src="" alt="">
 		</div>
+    <script src="js/demo.bundle.js"></script>
     <script src="js/index.js"></script>
+    <script>
+    	// var imgEdit2;
+    	// var img = new Image();
+    	// img.src = 'images/photo.png';
+    	// img.onload = function () {
+    	//     imgEdit2 = new veImage({ canvas: document.getElementById('captureCanvas2'), image: this });
+    	// };
+    	// $('#btnCapture').on('click', function () {
+    	// 	console.log(11);
+    	//     $('#carImg').attr('src', imgEdit2.crop(550, 380, 100, 120));
+    	//     $('#carImg').show();
+    	// });
+    </script>
 </body>
 </html>
