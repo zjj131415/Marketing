@@ -529,14 +529,14 @@ html, body {
     margin-left: -5.06rem;
   }
   .form {
-    position: relative;
-    z-index: 30;
     margin: 3.8rem auto 0 auto;
     width: 11.28rem;
     height: 11rem;
     background: url(../images/form.png);
     background-size: cover;
     .form-box {
+      position: relative;
+      z-index: 30;
       width: 8.4rem;
       height: 6rem;
       margin: 0 auto;

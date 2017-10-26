@@ -1723,9 +1723,9 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page5 .car { position: absolute; bottom: -1rem; width: 10.12rem; left: 50%; margin-left: -5.06rem; }
 
-.page5 .form { position: relative; z-index: 30; margin: 3.8rem auto 0 auto; width: 11.28rem; height: 11rem; background: url(../images/form.png); -webkit-background-size: cover; background-size: cover; }
+.page5 .form { margin: 3.8rem auto 0 auto; width: 11.28rem; height: 11rem; background: url(../images/form.png); -webkit-background-size: cover; background-size: cover; }
 
-.page5 .form .form-box { width: 8.4rem; height: 6rem; margin: 0 auto; padding-top: 3.4rem; }
+.page5 .form .form-box { position: relative; z-index: 30; width: 8.4rem; height: 6rem; margin: 0 auto; padding-top: 3.4rem; }
 
 .page5 .form .form-item { height: 1.2rem; overflow: hidden; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 
