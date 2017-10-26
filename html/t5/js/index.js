@@ -78,9 +78,9 @@ function draw(fn){
 						break;
 					case 2:
 						x = 0;
-						y = 50;
+						y = 0;
 						w = c.width;
-						h = 280;
+						h = 260;
 						break;
 					case 3:
 						x = imgLeft;
