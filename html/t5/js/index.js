@@ -3,6 +3,8 @@ var imgSrc = "";
 var pageWidth = $(window).width();
 // 视图高度
 var pageHeight = $(window).height();
+// 裁剪图片高度
+var contentHeight = $(".content").height();
 
 // 头部尺寸对象
 var headerObj = null;
@@ -35,18 +37,16 @@ document.getElementById('uploadImage').onchange = function (e) {
   $('.page7 .upload .uploadShow').attr("src",src).css("display","block");
   imgSrc = src;
 
-  	var contentHeight = $(".content").height();
-
 	var img = new Image();
 	img.src = src;
 	img.onload = function () {
 	    imgEdit2 = new veImage({ canvas: document.getElementById('captureCanvas2'), image: this });
 	    $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
 	};
-	$('#btnCapture').on('click', function () {
-	    // $('#carImg').attr('src', imgEdit2.crop(550, 380, 100, 120));
-	    $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
-	});
+	// $('#btnCapture').on('click', function () {
+	//     // $('#carImg').attr('src', imgEdit2.crop(550, 380, 100, 120));
+	//     $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+	// });
 
 };
 
@@ -178,7 +178,7 @@ $(".synthesis").on("click",function(){
 
   	$('#carImg').css("display","block");
   	// $("#captureCanvas2").hide();
-
+  	$('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
 
   	hecheng();
 });
