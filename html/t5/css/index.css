@@ -311,7 +311,7 @@ html { -webkit-text-size-adjust: none; -ms-text-size-adjust: 100%; -webkit-tap-h
   44.4% { -webkit-transform: skewX(-3.125deg) skewY(-3.125deg); transform: skewX(-3.125deg) skewY(-3.125deg); }
   55.5% { -webkit-transform: skewX(1.5625deg) skewY(1.5625deg); transform: skewX(1.5625deg) skewY(1.5625deg); }
   66.6% { -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg); transform: skewX(-0.78125deg) skewY(-0.78125deg); }
-  77.7% { -webkit-transform: skewX(0.39063deg) skewY(0.39063deg); transform: skewX(0.39063deg) skewY(0.39063deg); }
+  77.7% { -webkit-transform: skewX(0.39062deg) skewY(0.39062deg); transform: skewX(0.39062deg) skewY(0.39062deg); }
   88.8% { -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg); transform: skewX(-0.19531deg) skewY(-0.19531deg); } }
 
 @keyframes jello { from, 11.1%, to { -webkit-transform: none; transform: none; }
@@ -320,7 +320,7 @@ html { -webkit-text-size-adjust: none; -ms-text-size-adjust: 100%; -webkit-tap-h
   44.4% { -webkit-transform: skewX(-3.125deg) skewY(-3.125deg); transform: skewX(-3.125deg) skewY(-3.125deg); }
   55.5% { -webkit-transform: skewX(1.5625deg) skewY(1.5625deg); transform: skewX(1.5625deg) skewY(1.5625deg); }
   66.6% { -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg); transform: skewX(-0.78125deg) skewY(-0.78125deg); }
-  77.7% { -webkit-transform: skewX(0.39063deg) skewY(0.39063deg); transform: skewX(0.39063deg) skewY(0.39063deg); }
+  77.7% { -webkit-transform: skewX(0.39062deg) skewY(0.39062deg); transform: skewX(0.39062deg) skewY(0.39062deg); }
   88.8% { -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg); transform: skewX(-0.19531deg) skewY(-0.19531deg); } }
 
 .jello { -webkit-animation-name: jello; animation-name: jello; -webkit-transform-origin: center; -ms-transform-origin: center; transform-origin: center; }
@@ -1629,45 +1629,15 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page2 .rule .rule-box .rule-content .title4 { width: 46%; margin-top: 0.56rem; margin-bottom: 0.56rem; }
 
-.page3 { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../images/bg2.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
+.page3 { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-.page3 .logo { position: absolute; top: 0; left: 0; padding-left: 4%; padding-top: 4%; width: 32%; }
+.page3 .header { position: absolute; left: 0; top: 0; width: 100%; }
 
-.page3 .logo img { display: block; width: 100%; }
+.page3 .content { position: absolute; left: 0; top: 4.6rem; width: 100%; height: 13.8rem; }
 
-.page3 .car { position: absolute; bottom: 0; width: 100%; }
-
-.page3 .car img { display: block; width: 100%; }
-
-.page3 .qrcode { position: absolute; bottom: 2%; left: 0.8rem; width: 2.4rem; height: 2.4rem; }
-
-.page3 .qrcode img { display: block; width: 100%; }
-
-.page3 .word { position: absolute; bottom: 0%; right: 0.8rem; width: 3.6rem; }
-
-.page3 .word img { display: block; width: 100%; }
-
-.page3 .word2 { position: absolute; bottom: 4%; left: 3.6rem; width: 3.6rem; }
-
-.page3 .word2 img { display: block; width: 100%; }
-
-.page3 .word3 { position: absolute; bottom: 60%; left: 0%; width: 100%; }
-
-.page3 .word3 img { display: block; width: 100%; }
-
-.page3 .photo { position: absolute; bottom: 36%; left: 0%; width: 100%; height: 42%; height: 8.0rem; }
-
-.page3 .photo img { display: block; max-width: 100%; max-height: 100%; margin: 0 auto; }
-
-.page3 .adjust { position: absolute; bottom: 33%; right: 3%; width: 1.32rem; }
-
-.page3 .adjust img { display: block; width: 100%; }
+.page3 .footer { position: absolute; left: 0; bottom: 0; width: 100%; }
 
 .page3 .synthesis { position: absolute; left: 50%; bottom: 1rem; width: 8.8rem; margin-left: -4.4rem; }
-
-.page3 .posters { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-
-.page3 .saveTip { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 40px; line-height: 40px; text-align: center; font-size: 16px; color: #fff; background-color: rgba(0, 0, 0, 0.5); }
 
 .page4 { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../images/bg2.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
 
@@ -1765,9 +1735,9 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page7 .cover .upload { position: relative; margin: 0 auto; margin-top: 3.2rem; width: 12.32rem; height: 8.4rem; overflow: hidden; }
 
-.page7 .cover .upload .uploadBg { width: 12.32rem; height: 8.4rem; }
+.page7 .cover .upload .uploadBg { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; width: 12.32rem; height: 8.4rem; }
 
-.page7 .cover .upload .uploadShow { display: none; height: 100%; margin: 0 auto; }
+.page7 .cover .upload .uploadShow { display: none; max-width: 100%; max-height: 100%; margin: 0 auto; }
 
 .page7 .cover .upload input { position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 5; opacity: 0; }
 
@@ -1834,6 +1804,10 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 .page8 .btn9 img { display: block; width: 100%; }
 
 .page8 .car { position: absolute; bottom: -1rem; width: 10.12rem; left: 50%; margin-left: -5.06rem; }
+
+.page9 { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+
+.page9 > img { width: 100%; height: 100%; }
 
 .video_exist { width: 1.6rem; height: 1.6rem; position: absolute; right: .8rem; top: 4rem; z-index: 10; background: url(../images/normalmusic.png) no-repeat; -webkit-background-size: 1.6rem 1.6rem; background-size: 1.6rem 1.6rem; }
 
