@@ -227,7 +227,7 @@ $(".synthesis").on("click",function(){
 		var timer = setTimeout(function(){
   			hecheng();
   			clearTimeout(timer);
-		},1000);
+		},3000);
 	// }
 });
 
