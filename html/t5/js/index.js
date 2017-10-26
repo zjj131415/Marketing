@@ -1,9 +1,14 @@
+// 上传图片路径
 var imgSrc = "";
-var imgW = "";
-var imgH = "";
-var imgLeft = "";
-var imgTop = "";
-var data = ["images/bg4.jpg","images/qrcode.png","images/word3.png"];
+// 图片尺寸对象
+var photoObj = null;
+// 车辆尺寸对象
+var carObj = null;
+// 助威尺寸对象
+var cheerObj = null;
+// 合成图片数组
+var data = ["images/bg2.jpg","images/car2.png","images/qrcode.png","images/word3.png"];
+// 上传图片
 document.getElementById('uploadImage').onchange = function (e) {
   var src, url = window.URL || window.webkitURL || window.mozURL, files = e.target.files;
   for (var i = 0, len = files.length; i < len; ++i) {
@@ -22,23 +27,35 @@ document.getElementById('uploadImage').onchange = function (e) {
   imgSrc = src;
 };
 
+// 获取图片尺寸
+function getSize(obj){
+    var $obj = $("#"+obj);
+    var w = $obj.width();
+    var h = $obj.height();
+    var x = $obj.offset().left;
+    var y = $obj.offset().top;
+    return {
+        "w": w,
+        "h": h,
+        "x": x,
+        "y": y
+    }
+}
 
 function hecheng(){
-	imgW = $("#photo").width();
-	imgH = $("#photo").height();
-	imgLeft = $("#photo").offset().left;
-	imgTop = $("#photo").offset().top;
-	// console.log(imgW);
-	// console.log(imgH);
-	// console.log(imgLeft);
-	// console.log(imgTop);
+  // 图片
+  photoObj = getSize("photo");
+  // 车辆
+  carObj = getSize("posterCar");
+  // 助威
+  cheerObj = getSize("cheer");
+  // 增加进图片合成数组
 	data.push(imgSrc);
 	draw(function(){
-		// $("#photo").attr("src",base64[0]);
-		$(".posters").attr("src",base64[0]);
-		$(".posters").show();
-    $(".saveTip").show();
-	})
+  		$(".posters").attr("src",base64[0]);
+  		$(".posters").show();
+      $(".saveTip").show();
+	});
 }
 
 var base64=[];
@@ -70,23 +87,29 @@ function draw(fn){
 						w = c.width;
 						h = c.height;
 						break;
-					case 1:
+          case 1:
+            x = carObj.x;
+            y = carObj.y;
+            w = carObj.w;
+            h = carObj.h;
+            break;
+					case 2:
 						x = 10;
 						y = c.height - 66 - 10;
 						w = 66;
 						h = 66;
 						break;
-					case 2:
-						x = 0;
-						y = 0;
-						w = c.width;
-						h = 260;
-						break;
 					case 3:
-						x = imgLeft;
-						y = imgTop;
-						w = imgW;
-						h = imgH;
+						x = cheerObj.x;
+            y = cheerObj.y;
+            w = cheerObj.w;
+            h = cheerObj.h;
+						break;
+					case 4:
+						x = photoObj.x;
+						y = photoObj.y;
+						w = photoObj.w;
+						h = photoObj.h;
 						break;
 				}
 				ctx.drawImage(img,x,y,w,h);
