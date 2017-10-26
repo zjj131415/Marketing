@@ -109,6 +109,23 @@ function draw(fn){
 		len=data.length;
 	c.width= $(window).width();
 	c.height= $(window).height();
+  c.style.width = $(window).width();
+  c.style.height = $(window).height();
+  // 屏幕的设备像素比
+  var devicePixelRatio = window.devicePixelRatio || 1;
+
+// 浏览器在渲染canvas之前存储画布信息的像素比
+  var backingStoreRatio = ctx.webkitBackingStorePixelRatio ||
+    ctx.mozBackingStorePixelRatio ||
+    ctx.msBackingStorePixelRatio ||
+    ctx.oBackingStorePixelRatio ||
+    ctx.backingStorePixelRatio || 1;
+
+// canvas的实际渲染倍率
+  var ratio = devicePixelRatio / backingStoreRatio;
+
+  c.width = c.width * ratio;
+  c.height = c.height * ratio;
 	// ctx.rect(0,0,c.width,c.height);
 	// ctx.fillStyle='#fff';
 	// ctx.fill();
@@ -152,12 +169,13 @@ function draw(fn){
 			            h = 90;
 			            break;
 				}
-				ctx.drawImage(img,x,y,w,h);
+
+				ctx.drawImage(img,x*ratio,y*ratio,w*ratio,h*ratio);
 				drawing(n+1);//递归
 			}
 		}else{
 			//保存生成作品图片
-			base64.push(c.toDataURL("image/png",1));
+			base64.push(c.toDataURL("image/jpeg", 1));
 			fn();
 		}
 	}
