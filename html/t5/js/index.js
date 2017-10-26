@@ -195,9 +195,9 @@ function draw(fn){
 						break;
 			        case 3:
 			            x = 10;
-			            y = pageHeight - 100;
-			            w = 90;
-			            h = 90;
+			            y = pageHeight - 80;
+			            w = 70;
+			            h = 70;
 			            break;
 				}
 
