@@ -702,9 +702,15 @@ html, body {
       margin-top: 3.2rem;
       width: 12.32rem;
       height: 8.4rem;
-      > img {
+      overflow: hidden;
+      .uploadBg {
         width: 12.32rem;
         height: 8.4rem;
+      }
+      .uploadShow{
+        display: none;
+        max-width: 100%;
+        margin: 0 auto;
       }
       input {
         position: absolute;

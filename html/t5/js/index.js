@@ -17,7 +17,8 @@ document.getElementById('uploadImage').onchange = function (e) {
 
   $("#photo").attr("src",src);
   $("#hecheng").attr("src",src);
-  $('.page7 .upload > img').attr("src",src);
+  $('.page7 .upload .uploadBg').hide();
+  $('.page7 .upload .uploadShow').attr("src",src).css("display","block");
   imgSrc = src;
 };
 

@@ -1763,9 +1763,11 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page7 .cover { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); }
 
-.page7 .cover .upload { position: relative; margin: 0 auto; margin-top: 3.2rem; width: 12.32rem; height: 8.4rem; }
+.page7 .cover .upload { position: relative; margin: 0 auto; margin-top: 3.2rem; width: 12.32rem; height: 8.4rem; overflow: hidden; }
 
-.page7 .cover .upload > img { width: 12.32rem; height: 8.4rem; }
+.page7 .cover .upload .uploadBg { width: 12.32rem; height: 8.4rem; }
+
+.page7 .cover .upload .uploadShow { display: none; max-width: 100%; margin: 0 auto; }
 
 .page7 .cover .upload input { position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 5; opacity: 0; }
 
