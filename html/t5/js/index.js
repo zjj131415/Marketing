@@ -221,7 +221,11 @@ $(".synthesis").on("click",function(){
   	// $("#captureCanvas2").hide();
   	$('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
 
-  	hecheng();
+  	var img = new Image();
+	img.src = $('#carImg').attr('src');
+	img.onload = function () {
+  		hecheng();
+	}
 });
 
 
