@@ -4,24 +4,20 @@ var imgH = "";
 var imgLeft = "";
 var imgTop = "";
 var data = ["images/bg4.jpg","images/qrcode.png","images/word3.png"];
-$("#uploadImage").on("change", function() {
-	var _this = $(this);
-	var fr = new FileReader();
-	fr.readAsDataURL(this.files[0]);
-
-	var img = new Image();
-
-	fr.onload = function() {
-		img.src = this.result;
-		imgSrc = this.result;
-		$("#photo").attr("src",imgSrc);
-		console.log(data);
-		$("#hecheng").attr("src",imgSrc);
-    $('.page7 .upload > img').attr("src",imgSrc);
-		img.onload = function() {
-			console.log("上传成功");
-		}
-	}
+$("#uploadImage").on("change", function(e) {
+  var src, url = window.URL || window.webkitURL || window.mozURL, files = e.target.files;
+  for (var i = 0, len = files.length; i < len; ++i) {
+    var file = files[i];
+    if (url) {
+      src = url.createObjectURL(file);
+    } else {
+      src = e.target.result;
+    }
+  }
+  $("#photo").attr("src",src);
+  $("#hecheng").attr("src",src);
+  $('.page7 .upload > img').attr("src",src);
+  imgSrc = src;
 });
 
 function hecheng(){
