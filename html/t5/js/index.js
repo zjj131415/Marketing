@@ -14,11 +14,13 @@ $("#uploadImage").on("change", function(e) {
       src = e.target.result;
     }
   }
+
   $("#photo").attr("src",src);
   $("#hecheng").attr("src",src);
   $('.page7 .upload > img').attr("src",src);
   alert(src)
   imgSrc = src;
+
 });
 
 function hecheng(){
@@ -35,6 +37,7 @@ function hecheng(){
 		// $("#photo").attr("src",base64[0]);
 		$(".posters").attr("src",base64[0]);
 		$(".posters").show();
+    $(".saveTip").show();
 	})
 }
 
