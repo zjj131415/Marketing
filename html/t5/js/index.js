@@ -4,7 +4,7 @@ var imgH = "";
 var imgLeft = "";
 var imgTop = "";
 var data = ["images/bg4.jpg","images/qrcode.png","images/word3.png"];
-$("#uploadImage").on("change", function(e) {
+document.getElementById('uploadImage').onchange = function (e) {
   var src, url = window.URL || window.webkitURL || window.mozURL, files = e.target.files;
   for (var i = 0, len = files.length; i < len; ++i) {
     var file = files[i];
@@ -19,7 +19,7 @@ $("#uploadImage").on("change", function(e) {
   $('.page7 .upload > img').attr("src",src);
   alert(src)
   imgSrc = src;
-});
+}
 
 function hecheng(){
 	imgW = $("#photo").width();
