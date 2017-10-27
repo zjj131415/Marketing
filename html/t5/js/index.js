@@ -270,7 +270,16 @@ $(".synthesis").on("click",function(){
 (function () {
   $(function () {
     console.log(document.getElementById('uploadImage'))
-
+    var cut = new ImgClip({
+      canvas : 'canvas01', // canvas id
+      fileObj : 'file', // file id
+      // cutBtn : 'save', // cut btn id
+      // resultObj : 'img', // result img i
+      // rotateR : 'rotateR',
+      cutScale : 1, // 1:1、3:4
+      cutH: 100,
+      cutW : 'winW' // '数字'或者'winW'关键字，裁切宽度，随屏幕宽或自己设置
+    });
     $('.page7 .btn1').on('click', function () {
       document.querySelector('.upload-form').reset();
       $('.uploadShow').hide();
