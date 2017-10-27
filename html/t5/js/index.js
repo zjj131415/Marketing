@@ -17,20 +17,24 @@ var qrcodeObj = null;
 var imgEdit2;
 // 生成图片路径
 var carSrc = "";
+// 上传标记
+var uploadFlag = false;
 
 // $(".page1").hide();
 
 
 $("#produce").on("click",function(){
-    // $('#carImg').css("display","block");
-    // var img = new Image();
-    //   img.src = $('#carImg').attr('src');
-    //   img.onload = function () {
-    //     imgEdit2 = new veImage({ canvas: document.getElementById('captureCanvas2'), image: this });
-    //     $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
-    //     carSrc = imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50);
-    //     // $('#carImg').attr('src', "images/photo.png");
-    // };
+    // $('#carImg').css("visibility","visible");
+    if(!uploadFlag){
+      var img = new Image();
+        img.src = "images/photo.png"
+      img.onload = function () {
+          imgEdit2 = new veImage({ canvas: document.getElementById('captureCanvas2'), image: this });
+          $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+          carSrc = imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50);
+          // $('#carImg').attr('src', "images/photo.png");
+      };
+    }
 });
 
 var data = ["images/canvas_header.png", "images/footer1.png"];
@@ -98,6 +102,7 @@ document.getElementById('uploadImage').onchange = function (e) {
         imgEdit2 = new veImage({ canvas: document.getElementById('captureCanvas2'), image: this });
         $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
         carSrc = imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50);
+        uploadFlag = true;
         // $('#carImg').attr('src', "images/photo.png");
       };
     };
@@ -242,17 +247,19 @@ $(".synthesis").on("click",function(){
 	$(".page3").css("visibility","hidden");
   	$('.page9').show();
 
-    if(carSrc){
+    if(uploadFlag){
       $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+    }else{
+      $('#carImg').attr('src', "images/photo.png");
     }
   	// $('#carImg').attr('src', "images/photo.png");
     // $('#carImg').css("display","block");
   	// $("#captureCanvas2").hide();
   	var img1 = new Image();
-	 img1.src = $('#carImg').attr('src');
-	img1.onload = function () {
-		hecheng();
-	}
+	  img1.src = $('#carImg').attr('src');
+	  img1.onload = function () {
+		  hecheng();
+	  }
 });
 
 
