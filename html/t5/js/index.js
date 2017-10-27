@@ -84,7 +84,7 @@ document.getElementById('uploadImage').onchange = function (e) {
       img.src = src;
       img.onload = function () {
         imgEdit2 = new veImage({ canvas: document.getElementById('captureCanvas2'), image: this });
-        $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+        // $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
       };
     };
   };
