@@ -24,7 +24,10 @@ var uploadFlag = false;
 
 
 $("#produce").on("click",function(){
-    // $('#carImg').css("visibility","visible");
+    $('#carImg').css("visibility","visible");
+    $('#carImg').css("position","relative");
+    $('#carImg').css("z-index","1000");
+
     if(!uploadFlag){
       var img = new Image();
         img.src = "images/photo.png"
