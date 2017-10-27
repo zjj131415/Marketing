@@ -266,7 +266,7 @@ $(".synthesis").on("click",function(){
 	  }
 });
 
-console.log(document.getElementById('uploadImage'))
+console.log(document.getElementById('uploadImage'));
 window.onload = function(){
   var cut = new ImgClip({
     canvas : 'canvas01', // canvas id
