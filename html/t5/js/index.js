@@ -263,11 +263,15 @@ $(".synthesis").on("click",function(){
   	// // $('#carImg').attr('src', "images/photo.png");
     // // $('#carImg').css("display","block");
   	// // $("#captureCanvas2").hide();
-  	var img1 = new Image();
-	  img1.src = $('#carImg').attr('src');
-	  img1.onload = function () {
-		  hecheng();
-	  }
+  	// var img1 = new Image();
+	  // img1.src = $('#carImg').attr('src');
+	  // img1.onload = function () {
+		 //  hecheng();
+	  // }
+	  var timer = setTimeout(function(){
+	  		hecheng();
+	  		clearTimeout(timer);
+	  },1000);
 });
 
 
@@ -286,7 +290,7 @@ $(".synthesis").on("click",function(){
     var cut = new ImgClip({
       canvas : 'canvas01', // canvas id
       fileObj : 'uploadImagee', // file id
-      cutBtn : 'produce', // cut btn id
+      cutBtn : 'synthesis', // cut btn id
       resultObj : 'carImg', // result img i
       rotateR: 'adjust',
       cutScale : 1, // 1:1、3:4
