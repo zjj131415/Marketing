@@ -329,8 +329,8 @@ $(".synthesis").on("click",function(){
     }, this);
     queue.on("fileload", function (e) {
       progress ++;
-      $('.page-load i').width(parseInt(progress/46*100)+"%");
-      $('.page-load em').html(parseInt(progress/46*100)+"%");
+      $('.page-load i').width(parseInt(progress/44*100)+"%");
+      $('.page-load em').html(parseInt(progress/44*100)+"%");
       // console.log(parseInt(progress/44*100)+"%")
     }, this);
     $('.video_exist').on('click', function () {
