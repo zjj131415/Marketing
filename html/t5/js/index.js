@@ -171,6 +171,9 @@ function draw(fn){
 		if(n<len){
 			var img=new Image;
 			// img.crossOrigin = 'Anonymous'; //解决跨域
+      var va1 = $('.v1').val();
+      var va2 = $('.v2').val();
+      if (n==1) data[n] ='images/canvas_header' + (va2+"" +va1)+'.png';
 			img.src=data[n];
 			img.onload=function(){
 				var x = 0;
@@ -325,8 +328,8 @@ $(".synthesis").on("click",function(){
     }, this);
     queue.on("fileload", function (e) {
       progress ++;
-      $('.page-load i').width(parseInt(progress/44*100)+"%");
-      $('.page-load em').html(parseInt(progress/44*100)+"%");
+      $('.page-load i').width(parseInt(progress/47*100)+"%");
+      $('.page-load em').html(parseInt(progress/47*100)+"%");
       // console.log(parseInt(progress/44*100)+"%")
     }, this);
     $('.video_exist').on('click', function () {
