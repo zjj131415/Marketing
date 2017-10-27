@@ -67,7 +67,7 @@ ImgClip.prototype = {
     // set canvas
     this.setCanvas(this.canvas);
     this.clearCanvas(this.canvas);
-    // this.ctx.fillStyle = 'rgba(0,0,0,0.3)';
+    this.ctx.fillStyle = 'rgba(0,0,0,00)';
     this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
     (opt.rotateR) && (this.rotateR = this.getObj(opt.rotateR));
 
@@ -448,10 +448,10 @@ ImgClip.prototype = {
     cxt.rect(0, 0, cxt.canvas.width, cxt.canvas.height);
     pathRect(cxt, cut.l, cut.t, cut.w, cut.h);
     cxt.closePath();
-    // cxt.fillStyle = "rgba(0,0,0,0.3)";
+    cxt.fillStyle = "rgba(0,0,0,0)";
     cxt.fill();
     cxt.lineWidth = 2;
-    // cxt.strokeStyle = '#57b7eb';
+    cxt.strokeStyle = "rgba(0,0,0,0)";
     cxt.strokeRect(cut.l-1.5, cut.t-1.5, cut.w+3, cut.h+3);
   }
 };
