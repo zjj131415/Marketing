@@ -21,7 +21,7 @@ var carSrc = "";
 // $(".page1").hide();
 
 
-var data = ["images/canvas_header.png", "images/footer.png"];
+var data = ["images/canvas_header.png", "images/footer1.png"];
 document.getElementById('uploadImage').onchange = function (e) {
   // var src, url = window.URL || window.webkitURL || window.mozURL, files = e.target.files;
   // for (var i = 0, len = files.length; i < len; ++i) {
@@ -319,8 +319,8 @@ $(".synthesis").on("click",function(){
     }, this);
     queue.on("fileload", function (e) {
       progress ++;
-      $('.page-load i').width(parseInt(progress/46*100)+"%");
-      $('.page-load em').html(parseInt(progress/46*100)+"%");
+      $('.page-load i').width(parseInt(progress/44*100)+"%");
+      $('.page-load em').html(parseInt(progress/44*100)+"%");
       // console.log(parseInt(progress/44*100)+"%")
     }, this);
     $('.video_exist').on('click', function () {
