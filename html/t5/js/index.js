@@ -274,7 +274,7 @@ $(".synthesis").on("click",function(){
       canvas : 'canvas01', // canvas id
       fileObj : 'uploadImagee', // file id
       cutBtn : 'produce', // cut btn id
-      resultObj : 'img', // result img i
+      resultObj : 'carImg', // result img i
       cutScale : 1, // 1:1、3:4
       cutH: 100,
       cutW : 'winW' // '数字'
@@ -420,7 +420,7 @@ $(".synthesis").on("click",function(){
     });
     $('.page7 .btn2').on('click', function () {
       var file = $('#uploadImage').val();
-      if (!file) return alert('请选择图哦~');
+      // if (!file) return alert('请选择图哦~');
       $('.page7').hide();
       // $('.page3').show();
       $(".page3").css("visibility","visible");
