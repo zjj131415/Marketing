@@ -449,6 +449,15 @@ $(".synthesis").on("click",function(){
    });
    $('.gender .g').on('click', function () {
      $(this).addClass('active').siblings().removeClass('active')
+   });
+   $('.page5 .ƒorm').on('submit', function () {
+     var form = $('.page5 .ƒorm');
+     for (var i = 0; i < form.elements.length; i++) {
+       if (form.elements[i].type == "text" && form.elements[i].value == "") {
+         return alert('fghjk');
+       }
+     }
+     return true;
    })
   })
 })()

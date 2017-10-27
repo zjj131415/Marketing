@@ -311,7 +311,7 @@ html { -webkit-text-size-adjust: none; -ms-text-size-adjust: 100%; -webkit-tap-h
   44.4% { -webkit-transform: skewX(-3.125deg) skewY(-3.125deg); transform: skewX(-3.125deg) skewY(-3.125deg); }
   55.5% { -webkit-transform: skewX(1.5625deg) skewY(1.5625deg); transform: skewX(1.5625deg) skewY(1.5625deg); }
   66.6% { -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg); transform: skewX(-0.78125deg) skewY(-0.78125deg); }
-  77.7% { -webkit-transform: skewX(0.39063deg) skewY(0.39063deg); transform: skewX(0.39063deg) skewY(0.39063deg); }
+  77.7% { -webkit-transform: skewX(0.39062deg) skewY(0.39062deg); transform: skewX(0.39062deg) skewY(0.39062deg); }
   88.8% { -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg); transform: skewX(-0.19531deg) skewY(-0.19531deg); } }
 
 @keyframes jello { from, 11.1%, to { -webkit-transform: none; transform: none; }
@@ -320,7 +320,7 @@ html { -webkit-text-size-adjust: none; -ms-text-size-adjust: 100%; -webkit-tap-h
   44.4% { -webkit-transform: skewX(-3.125deg) skewY(-3.125deg); transform: skewX(-3.125deg) skewY(-3.125deg); }
   55.5% { -webkit-transform: skewX(1.5625deg) skewY(1.5625deg); transform: skewX(1.5625deg) skewY(1.5625deg); }
   66.6% { -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg); transform: skewX(-0.78125deg) skewY(-0.78125deg); }
-  77.7% { -webkit-transform: skewX(0.39063deg) skewY(0.39063deg); transform: skewX(0.39063deg) skewY(0.39063deg); }
+  77.7% { -webkit-transform: skewX(0.39062deg) skewY(0.39062deg); transform: skewX(0.39062deg) skewY(0.39062deg); }
   88.8% { -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg); transform: skewX(-0.19531deg) skewY(-0.19531deg); } }
 
 .jello { -webkit-animation-name: jello; animation-name: jello; -webkit-transform-origin: center; -ms-transform-origin: center; transform-origin: center; }
@@ -1735,9 +1735,9 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page6 .box { width: 12rem; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; height: 100%; overflow-y: scroll; margin: 0 auto; }
 
-.page6 .item { width: 6rem; position: relative; }
+.page6 .item { width: 4rem; position: relative; margin-top: 2rem; margin: 2rem .4rem 0 .4rem; }
 
-.page6 .item .number { position: absolute; right: 2.4rem; color: #fff; text-align: center; font-size: .52rem; top: 2.1rem; }
+.page6 .item .number { position: absolute; left: 50%; top: 0; margin: -1rem 0 0 -1rem; display: block; width: 2rem; height: 2rem; padding-top: 1.2rem; -webkit-border-radius: 100%; border-radius: 100%; overflow: hidden; text-align: center; font-size: .52rem; color: #fff; background: url(../images/zan.png); -webkit-background-size: cover; background-size: cover; background-repeat: no-repeat; background-position: center; }
 
 .page7 { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../images/bg5.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
 
