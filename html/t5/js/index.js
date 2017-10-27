@@ -112,22 +112,22 @@ function getSize(obj){
 function hecheng(){
 	// 头部
   	headerObj = getSize("header");
-  	console.log(headerObj);
+  	// console.log(headerObj);
   	// 车辆
   	carObj = getSize("carImg");
-  	console.log(carObj);
+  	// console.log(carObj);
   	// 底部
   	footerObj = getSize("footer");
-  	console.log(footerObj);
+  	// console.log(footerObj);
   	// 二维码
   	qrcodeObj = getSize("qrcode > img");
-  	console.log(qrcodeObj);
+  	// console.log(qrcodeObj);
 
   	
     data.unshift($('#carImg').attr('src'));
   	// data.unshift($('#qrcode > img').attr('src'));
 	 data.push($('#qrcode > img').attr('src'));
-	console.log(data);
+	// console.log(data);
 	draw(function(){
 		// $("#photo").attr("src",base64[0]);
 		$(".page9 > img").attr("src",base64[0]);
@@ -205,7 +205,10 @@ function draw(fn){
 				}
 
 				ctx.drawImage(img,x*ratio,y*ratio,w*ratio,h*ratio);
-				drawing(n+1);//递归
+        var timer = setTimeout(function(){
+				  drawing(n+1);//递归
+          clearTimeout(timer);
+        },500);
 			}
 		}else{
 			//保存生成作品图片
