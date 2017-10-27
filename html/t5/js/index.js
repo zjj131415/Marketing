@@ -250,7 +250,11 @@ $(".synthesis").on("click",function(){
     if(uploadFlag){
       $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
     }else{
-      $('#carImg').attr('src', "images/photo.png");
+      if(carSrc){
+        $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+      }else{
+        $('#carImg').attr('src', "images/photo.png");
+      }
     }
   	// $('#carImg').attr('src', "images/photo.png");
     // $('#carImg').css("display","block");
