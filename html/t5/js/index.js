@@ -247,18 +247,18 @@ $(".synthesis").on("click",function(){
 	$(".page3").css("visibility","hidden");
   	$('.page9').show();
 
-    if(uploadFlag){
-      $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
-    }else{
-      if(carSrc){
-        $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
-      }else{
-        $('#carImg').attr('src', "images/photo.png");
-      }
-    }
-  	// $('#carImg').attr('src', "images/photo.png");
-    // $('#carImg').css("display","block");
-  	// $("#captureCanvas2").hide();
+    // if(uploadFlag){
+     //  $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+    // }else{
+     //  if(carSrc){
+     //    $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+     //  }else{
+     //    $('#carImg').attr('src', "images/photo.png");
+     //  }
+    // }
+  	// // $('#carImg').attr('src', "images/photo.png");
+    // // $('#carImg').css("display","block");
+  	// // $("#captureCanvas2").hide();
   	var img1 = new Image();
 	  img1.src = $('#carImg').attr('src');
 	  img1.onload = function () {
