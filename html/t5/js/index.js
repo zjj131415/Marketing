@@ -274,19 +274,17 @@ $(".synthesis").on("click",function(){
 
 (function () {
   $(function () {
+    var
+      cot = $('.content'),
+      cW = cot.width(),
+      cH = cot.height;
     var cut = new ImgClip({
       canvas : 'canvas01', // canvas id
       fileObj : 'uploadImagee', // file id
       cutBtn : 'produce', // cut btn id
       resultObj : 'carImg', // result img i
       cutScale : 1, // 1:1、3:4
-      winSize: {
-         w: 100, h: 300
-      },
-      cutH: 100,
-      imageSize: {w:200,h:200},
-      cutSize: {w:375,h:340,t:0,l:0},
-      cutW : '200' // '数字'
+      cutW : 'winW' // '数字'
     });
     var qrcode = new QRCode(document.querySelector(".qrcode"), {
       width : 90,
