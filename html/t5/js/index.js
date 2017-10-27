@@ -269,6 +269,10 @@ $(".synthesis").on("click",function(){
 
 (function () {
   $(function () {
+    $('.page7 .btn1').on('click', function () {
+      document.querySelector('.upload-form').reset();
+      $('.uploadShow').hide();
+    })
     var qrcode = new QRCode(document.querySelector(".qrcode"), {
       width : 90,
       height : 90
