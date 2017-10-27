@@ -21,6 +21,18 @@ var carSrc = "";
 // $(".page1").hide();
 
 
+$("#produce").on("click",function(){
+    // $('#carImg').css("display","block");
+    var img = new Image();
+      img.src = $('#carImg').attr('src');
+      img.onload = function () {
+        imgEdit2 = new veImage({ canvas: document.getElementById('captureCanvas2'), image: this });
+        $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+        carSrc = imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50);
+        // $('#carImg').attr('src', "images/photo.png");
+    };
+});
+
 var data = ["images/canvas_header.png", "images/footer1.png"];
 document.getElementById('uploadImage').onchange = function (e) {
   // var src, url = window.URL || window.webkitURL || window.mozURL, files = e.target.files;
@@ -73,7 +85,7 @@ document.getElementById('uploadImage').onchange = function (e) {
             break;
         }
       }
-      src = canvas.toDataURL("image/png");
+      src = canvas.toDataURL("image/png",0.8);
       $('.page7 .upload .uploadShow').attr("src",src).css("display","block");
       $("#photo").attr("src",src);
       $("#hecheng").attr("src",src);
@@ -85,6 +97,7 @@ document.getElementById('uploadImage').onchange = function (e) {
       img.onload = function () {
         imgEdit2 = new veImage({ canvas: document.getElementById('captureCanvas2'), image: this });
         $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+        carSrc = imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50);
         // $('#carImg').attr('src', "images/photo.png");
       };
     };
@@ -229,10 +242,11 @@ $(".synthesis").on("click",function(){
 	$(".page3").css("visibility","hidden");
   	$('.page9').show();
 
-    $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+    if(carSrc){
+      $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+    }
   	// $('#carImg').attr('src', "images/photo.png");
-  	
-  	$('#carImg').css("display","block");
+    // $('#carImg').css("display","block");
   	// $("#captureCanvas2").hide();
   	var img1 = new Image();
 	 img1.src = $('#carImg').attr('src');
