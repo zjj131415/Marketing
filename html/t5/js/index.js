@@ -145,7 +145,8 @@ function hecheng(){
     data.unshift($('#carImg').attr('src'));
   	// data.unshift($('#qrcode > img').attr('src'));
 	 data.push($('#qrcode > img').attr('src'));
-	// console.log(data);
+  data = data.splice(0,1);
+	console.log(data);
 	draw(function(){
 		// $("#photo").attr("src",base64[0]);
 		$(".page9 > img").attr("src",base64[0]);
