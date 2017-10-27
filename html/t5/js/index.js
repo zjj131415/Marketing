@@ -305,15 +305,25 @@ $(".synthesis").on("click",function(){
     ]);
     queue2.loadManifest([
       'images/canvas_header11.png',
-      'images/canvas_header12.png'
+      'images/canvas_header12.png',
+      'images/canvas_header13.png',
+      'images/canvas_header21.png',
+      'images/canvas_header22.png',
+      'images/canvas_header23.png',
+      'images/canvas_header31.png',
+      'images/canvas_header32.png',
+      'images/canvas_header33.png',
+      'images/canvas_header41.png',
+      'images/canvas_header42.png',
+      'images/canvas_header43.png',
+      'images/canvas_header51.png',
+      'images/canvas_header52.png',
+      'images/canvas_header53.png'
     ]);
     queue.on("complete", function (e) {
       $('.page-load').hide();
-      queue.on("fileload", function (e) {
-        progress ++;
-        $('.page-load i').width(parseInt(progress/46*100)+"%");
-        $('.page-load em').html(parseInt(progress/46*100)+"%");
-        // console.log(parseInt(progress/44*100)+"%")
+      queue2.on("complete", function (e) {
+       console.log(789)
       }, this);
     }, this);
     queue.on("fileload", function (e) {
@@ -369,6 +379,10 @@ $(".synthesis").on("click",function(){
       $('.page7').hide();
       // $('.page3').show();
       $(".page3").css("visibility","visible");
+      var va1 = $('.v1').val();
+      var va2 = $('.v2').val();
+      console.log(va1, va2)
+      $('.page3 .header > img').attr('src','./images/canvas_header'+(va2+"" +va1)+'.png');
     });
     $('.page8 .btn9').on('click', function () {
       $('.page8').hide();
