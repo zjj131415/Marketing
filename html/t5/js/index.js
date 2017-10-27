@@ -124,9 +124,8 @@ function hecheng(){
   	console.log(qrcodeObj);
 
   	
-    // data.unshift($('#carImg').attr('src'));
-    alert($('#carImg').attr('src'));
-  	data.unshift($('#qrcode > img').attr('src'));
+    data.unshift($('#carImg').attr('src'));
+  	// data.unshift($('#qrcode > img').attr('src'));
 	 data.push($('#qrcode > img').attr('src'));
 	console.log(data);
 	draw(function(){
