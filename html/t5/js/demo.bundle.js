@@ -82,6 +82,7 @@
 	var pageHeight = $(window).height();
 	// 裁剪图片高度
 	var contentHeight = $(".content").height();
+	alert(pageWidth + "~" + pageHeight + "~" + "~" + contentHeight);
 
 	// 头部尺寸对象
 	var headerObj = null;
@@ -97,23 +98,6 @@
 	var carSrc = "";
 	// 上传标记
 	var uploadFlag = false;
-
-	// $(".page1").hide();
-
-
-	// $("#produce").on("click",function(){
-	//     // $('#carImg').css("visibility","visible");
-	//     if(!uploadFlag){
-	//       var img = new Image();
-	//         img.src = "images/photo.png"
-	//       img.onload = function () {
-	//           imgEdit2 = new veImage({ canvas: document.getElementById('captureCanvas2'), image: this });
-	//           $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
-	//           carSrc = imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50);
-	//           // $('#carImg').attr('src', "images/photo.png");
-	//       };
-	//     }
-	// });
 
 	var data = ["images/canvas_header.png", "images/footer1.png"];
 	document.getElementById('uploadImage').onchange = function (e) {
