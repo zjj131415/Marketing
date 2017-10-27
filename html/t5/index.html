@@ -15,6 +15,8 @@
 	<script src="js/preloadjs-0.6.2.min.js"></script>
 	<script src="js/qrcode.min.js"></script>
 	<script src="js/exif.js"></script>
+	<script src="js/move.js"></script>
+	<script src="js/imgClip.js"></script>
 </head>
 <body>
 		<!--<div class="ui-loading-wrap" id="loading" style="/* display: none; */">-->
@@ -125,12 +127,11 @@
 				<img src="./images/canvas_header.png" alt="" id="header">
 			</div>
 			<div class="content">
-				<div class="car-box">
-					<!-- <img src="images/photo.png" id="carImg" class="carImg"> -->
-					<img src="" id="carImg" class="carImg">
-				</div>
-				<canvas id="captureCanvas2" class="car-canvas"></canvas>
-				<button id="btnCapture" class="btn-circle">裁切</button>
+				<!--<div class="car-box">-->
+					<!--&lt;!&ndash; <img src="images/photo.png" id="carImg" class="carImg"> &ndash;&gt;-->
+					<!--<img src="" id="carImg" class="carImg">-->
+				<!--</div>-->
+				<canvas id="canvas01"></canvas>
 			</div>
 			<div class="footer">
 				<img src="./images/footer1.png" alt="" id="footer">
@@ -303,7 +304,7 @@
 					<div class="upload">
 						<img src="./images/upload.png" alt="" class="uploadBg">
             <img src="" class="uploadShow">
-            <input type="file" accept="image/*" id="uploadImage">
+            <input type="file" accept="image/*" id="uploadImageuploadImage">
 					</div>
 					<!--<div class="gender">-->
 						<!--<div class="g g1"><img src="./images/man.png" alt=""></div>-->
@@ -362,6 +363,6 @@
 		</div>
     <!-- <script src="js/veImage.js"></script> -->
     <script src="js/index.js"></script>
-    <script src="js/demo.bundle.js"></script>
+    <!--<script src="js/demo.bundle.js"></script>-->
 </body>
 </html>
