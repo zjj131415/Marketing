@@ -205,11 +205,7 @@ function draw(fn){
 				}
 
 				ctx.drawImage(img,x*ratio,y*ratio,w*ratio,h*ratio);
-        // drawing(n+1);//递归
-        var timer = setTimeout(function(){
-				  drawing(n+1);//递归
-          clearTimeout(timer);
-        },2000);
+        drawing(n+1);//递归
 			}
 		}else{
 			//保存生成作品图片
