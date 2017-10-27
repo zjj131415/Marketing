@@ -235,7 +235,7 @@ $(".synthesis").on("click",function(){
   	$('#carImg').css("display","block");
   	// $("#captureCanvas2").hide();
   	var img1 = new Image();
-	img1.src = $('#carImg').attr('src');
+	 img1.src = $('#carImg').attr('src');
 	img1.onload = function () {
 		hecheng();
 	}
