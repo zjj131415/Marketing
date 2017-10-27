@@ -24,10 +24,7 @@ var uploadFlag = false;
 
 
 $("#produce").on("click",function(){
-    $('#carImg').css("visibility","visible");
-    $('#carImg').css("position","relative");
-    $('#carImg').css("z-index","1000");
-
+    // $('#carImg').css("visibility","visible");
     if(!uploadFlag){
       var img = new Image();
         img.src = "images/photo.png"
@@ -92,7 +89,7 @@ document.getElementById('uploadImage').onchange = function (e) {
             break;
         }
       }
-      src = canvas.toDataURL("image/png",0.8);
+      src = canvas.toDataURL("image/jpg",0.8);
       $('.page7 .upload .uploadShow').attr("src",src).css("display","block");
       $("#photo").attr("src",src);
       $("#hecheng").attr("src",src);
@@ -100,13 +97,12 @@ document.getElementById('uploadImage').onchange = function (e) {
       $('.page7 .upload .uploadShow').attr("src",src).css("display","block");
 
       var img = new Image();
-      // img.src = src;
-      img.src = "images/photo.png";
+      img.src = src;
       img.onload = function () {
         imgEdit2 = new veImage({ canvas: document.getElementById('captureCanvas2'), image: this });
         $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
         carSrc = imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50);
-        uploadFlag = true;;
+        uploadFlag = true;
         // $('#carImg').attr('src', "images/photo.png");
       };
     };
