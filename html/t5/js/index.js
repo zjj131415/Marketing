@@ -38,17 +38,21 @@ var uploadFlag = false;
 // });
 
 var data = ["images/canvas_header.png", "images/footer1.png"];
-// document.getElementById('uploadImage').onchange = function (e) {
-//   // var src, url = window.URL || window.webkitURL || window.mozURL, files = e.target.files;
-//   // for (var i = 0, len = files.length; i < len; ++i) {
-//   //   var file = files[i];
-//   //   if (url) {
-//   //     src = url.createObjectURL(file);
-//   //   } else {
-//   //     src = e.target.result;
-//   //   }
-//   // }
-//   var file = e.target.files[0];
+document.getElementById('uploadImagee').onchange = function (e) {
+   var src, url = window.URL || window.webkitURL || window.mozURL, files = e.target.files;
+  for (var i = 0, len = files.length; i < len; ++i) {
+    var file = files[i];
+    if (url) {
+      src = url.createObjectURL(file);
+    } else {
+      src = e.target.result;
+    }
+  }
+  $('.uploadShow').attr('src', src)     ;
+  $('.uploadShow').show();
+  $('.uploadBg').hide();
+}
+
 //   var Orientation = null;
 //   EXIF.getData(file, function () {
 //     EXIF.getAllTags(this);
@@ -276,7 +280,9 @@ $(".synthesis").on("click",function(){
       cutBtn : 'produce', // cut btn id
       resultObj : 'carImg', // result img i
       cutScale : 1, // 1:1、3:4
-      cutH: 100,
+      winSize: {
+         w: 100, h: 300
+      },
       cutW : 'winW' // '数字'
     });
     var qrcode = new QRCode(document.querySelector(".qrcode"), {
