@@ -369,7 +369,7 @@ $(".synthesis").on("click",function(){
         audio.play();
       }, false);
     }
-    audioAutoPlay('audio_btn');
+    audioAutoPlay('media');
     $('.video_exist').on('click', function () {
       var media = document.getElementById('media');
       if (media.paused) {
