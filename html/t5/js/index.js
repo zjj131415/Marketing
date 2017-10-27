@@ -89,7 +89,7 @@ document.getElementById('uploadImage').onchange = function (e) {
             break;
         }
       }
-      src = canvas.toDataURL("image/png",0.8);
+      src = canvas.toDataURL("image/jpg",0.8);
       $('.page7 .upload .uploadShow').attr("src",src).css("display","block");
       $("#photo").attr("src",src);
       $("#hecheng").attr("src",src);

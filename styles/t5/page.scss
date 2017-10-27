@@ -6,6 +6,51 @@ html, body {
   margin: 0 auto;
   overflow: hidden;
 }
+.ui-loading-wrap {
+  top: 45%;
+  left: 50%;
+  position: absolute;
+  z-index: 10;
+  width: 12rem;
+  margin-left: -6rem;
+  margin-top: -0.19rem;
+  padding: 0.666667rem 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #FFF;
+  border-radius: 0.4rem;
+}
+
+.ui-loading-wrap .ui-loading {
+  margin-right: 0.12rem;
+}
+
+.ui-loading {
+  width: 0.533333rem;
+  height: 0.533333rem;
+  display: inline-block;
+  border: #c7c7c7 solid 3px;
+  border-top-color: transparent;
+  border-radius: 100%;
+  -webkit-animation: border-rotate 1s linear infinite;
+  animation: border-rotate 1s linear infinite;
+}
+
+@keyframes border-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 
 .page-load {
   position: absolute;
