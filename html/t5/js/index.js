@@ -124,8 +124,10 @@ function hecheng(){
   	console.log(qrcodeObj);
 
   	
-  	data.unshift($('#carImg').attr('src'));
-	data.push($('#qrcode > img').attr('src'));
+    // data.unshift($('#carImg').attr('src'));
+    alert($('#carImg').attr('src'));
+  	data.unshift($('#qrcode > img').attr('src'));
+	 data.push($('#qrcode > img').attr('src'));
 	console.log(data);
 	draw(function(){
 		// $("#photo").attr("src",base64[0]);
@@ -225,7 +227,7 @@ $(".synthesis").on("click",function(){
 	$(".page3").css("visibility","hidden");
   	$('.page9').show();
 
-    // $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+    $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
   	// $('#carImg').attr('src', "images/photo.png");
   	
   	$('#carImg').css("display","block");
