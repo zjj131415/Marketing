@@ -266,28 +266,19 @@ $(".synthesis").on("click",function(){
 	  }
 });
 
-console.log(document.getElementById('uploadImage'));
-window.onload = function(){
-  var cut = new ImgClip({
-    canvas : 'canvas01', // canvas id
-    fileObj : 'file', // file id
-    // cutBtn : 'save', // cut btn id
-    // resultObj : 'img', // result img i
-    // rotateR : 'rotateR',
-    cutScale : 1, // 1:1、3:4
-    cutH: 100,
-    cutW : 'winW' // '数字'或者'winW'关键字，裁切宽度，随屏幕宽或自己设置
-  });
-};
 
 
 (function () {
   $(function () {
-    $('.page7 .btn1').on('click', function () {
-      document.querySelector('.upload-form').reset();
-      $('.uploadShow').hide();
-      $('.uploadBg').show();
-    })
+    var cut = new ImgClip({
+      canvas : 'canvas01', // canvas id
+      fileObj : 'uploadImagee', // file id
+      cutBtn : 'produce', // cut btn id
+      resultObj : 'img', // result img i
+      cutScale : 1, // 1:1、3:4
+      cutH: 100,
+      cutW : 'winW' // '数字'
+    });
     var qrcode = new QRCode(document.querySelector(".qrcode"), {
       width : 90,
       height : 90
