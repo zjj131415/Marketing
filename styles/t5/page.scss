@@ -328,6 +328,18 @@ html, body {
     top: 4.6rem;
     width: 100%;
     height: 13.6rem;
+    .l_canvas{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      #canvas01{
+        display:block;
+        width:100%;
+        height:100%;
+      }
+    }
     .car-box{
     	position: absolute;
     	top: 0;

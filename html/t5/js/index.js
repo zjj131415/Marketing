@@ -283,7 +283,10 @@ $(".synthesis").on("click",function(){
       winSize: {
          w: 100, h: 300
       },
-      cutW : 'winW' // '数字'
+      cutH: 100,
+      imageSize: {w:200,h:200},
+      cutSize: {w:375,h:340,t:0,l:0},
+      cutW : '200' // '数字'
     });
     var qrcode = new QRCode(document.querySelector(".qrcode"), {
       width : 90,
