@@ -106,7 +106,7 @@ document.getElementById('uploadImage').onchange = function (e) {
         imgEdit2 = new veImage({ canvas: document.getElementById('captureCanvas2'), image: this });
         $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
         carSrc = imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50);
-        uploadFlag = true;
+        uploadFlag = true;;
         // $('#carImg').attr('src', "images/photo.png");
       };
     };
