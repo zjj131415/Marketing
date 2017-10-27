@@ -100,7 +100,8 @@ document.getElementById('uploadImage').onchange = function (e) {
       $('.page7 .upload .uploadShow').attr("src",src).css("display","block");
 
       var img = new Image();
-      img.src = src;
+      // img.src = src;
+      img.src = "images/photo.png";
       img.onload = function () {
         imgEdit2 = new veImage({ canvas: document.getElementById('captureCanvas2'), image: this });
         $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
