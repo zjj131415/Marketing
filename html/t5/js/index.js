@@ -39,19 +39,57 @@ $("#produce").on("click",function(){
 
 var data = ["images/canvas_header.png", "images/footer1.png"];
 document.getElementById('uploadImage').onchange = function (e) {
-  var src, url = window.URL || window.webkitURL || window.mozURL, files = e.target.files;
-  for (var i = 0, len = files.length; i < len; ++i) {
-    var file = files[i];
-    if (url) {
-      src = url.createObjectURL(file);
-    } else {
-      src = e.target.result;
-    }
-  }
-  var image2 = new Image();
-  image2.src = src;
-  image2.onload = function () {
-      // src = canvas.toDataURL("image/png",0.8);
+  // var src, url = window.URL || window.webkitURL || window.mozURL, files = e.target.files;
+  // for (var i = 0, len = files.length; i < len; ++i) {
+  //   var file = files[i];
+  //   if (url) {
+  //     src = url.createObjectURL(file);
+  //   } else {
+  //     src = e.target.result;
+  //   }
+  // }
+  var file = e.target.files[0];
+  var Orientation = null;
+  EXIF.getData(file, function () {
+    EXIF.getAllTags(this);
+    Orientation = EXIF.getTag(this, 'Orientation');
+  });
+  var src = '';
+  var reader = new FileReader();
+  reader.readAsDataURL(file);
+  reader.onload = function (e) {
+    var image = new Image();
+    image.src = e.target.result;
+    image.onload = function () {
+      var canvas = document.createElement("canvas");
+      canvas.width = this.naturalWidth;
+      canvas.height = this.naturalHeight;
+      var ctx = canvas.getContext("2d");
+      ctx.drawImage(this, 0, 0, this.naturalWidth, this.naturalHeight);
+      var base64 = null;
+      if (Orientation != "" && Orientation != 1 && Orientation != undefined) {
+        var width = this.naturalWidth;
+        var height = this.naturalHeight;
+        switch (Orientation) {
+          case 6://需要顺时针90度旋转
+            canvas.width = height;
+            canvas.height = width;
+            ctx.rotate(90 * Math.PI / 180);
+            ctx.drawImage(this, 0, -height);
+            break;
+          case 8://需要逆时针90度旋转
+            canvas.width = height;
+            canvas.height = width;
+            ctx.rotate(-90 * Math.PI / 180);
+            ctx.drawImage(this, -width, 0);
+            break;
+          case 3://需要180度旋转
+            ctx.rotate(180 * Math.PI / 180);
+            ctx.drawImage(this, -width, -height);
+            break;
+        }
+      }
+      src = canvas.toDataURL("image/png",0.8);
       $('.page7 .upload .uploadShow').attr("src",src).css("display","block");
       $("#photo").attr("src",src);
       $("#hecheng").attr("src",src);
@@ -67,69 +105,8 @@ document.getElementById('uploadImage').onchange = function (e) {
         uploadFlag = true;
         // $('#carImg').attr('src', "images/photo.png");
       };
-  }
-
-  // 加旋转
-  // var file = e.target.files[0];
-  // var Orientation = null;
-  // EXIF.getData(file, function () {
-  //   EXIF.getAllTags(this);
-  //   Orientation = EXIF.getTag(this, 'Orientation');
-  // });
-  // var src = '';
-  // var reader = new FileReader();
-  // reader.readAsDataURL(file);
-  // reader.onload = function (e) {
-  //   var image = new Image();
-  //   image.src = e.target.result;
-  //   image.onload = function () {
-  //     var canvas = document.createElement("canvas");
-  //     canvas.width = this.naturalWidth;
-  //     canvas.height = this.naturalHeight;
-  //     var ctx = canvas.getContext("2d");
-  //     ctx.drawImage(this, 0, 0, this.naturalWidth, this.naturalHeight);
-  //     var base64 = null;
-  //     if (Orientation != "" && Orientation != 1 && Orientation != undefined) {
-  //       var width = this.naturalWidth;
-  //       var height = this.naturalHeight;
-  //       switch (Orientation) {
-  //         case 6://需要顺时针90度旋转
-  //           canvas.width = height;
-  //           canvas.height = width;
-  //           ctx.rotate(90 * Math.PI / 180);
-  //           ctx.drawImage(this, 0, -height);
-  //           break;
-  //         case 8://需要逆时针90度旋转
-  //           canvas.width = height;
-  //           canvas.height = width;
-  //           ctx.rotate(-90 * Math.PI / 180);
-  //           ctx.drawImage(this, -width, 0);
-  //           break;
-  //         case 3://需要180度旋转
-  //           ctx.rotate(180 * Math.PI / 180);
-  //           ctx.drawImage(this, -width, -height);
-  //           break;
-  //       }
-  //     }
-  //     src = canvas.toDataURL("image/png",0.8);
-  //     $('.page7 .upload .uploadShow').attr("src",src).css("display","block");
-  //     $("#photo").attr("src",src);
-  //     $("#hecheng").attr("src",src);
-  //     $('.page7 .upload .uploadBg').hide();
-  //     $('.page7 .upload .uploadShow').attr("src",src).css("display","block");
-
-  //     var img = new Image();
-  //     img.src = src;
-  //     img.onload = function () {
-  //       imgEdit2 = new veImage({ canvas: document.getElementById('captureCanvas2'), image: this });
-  //       $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
-  //       carSrc = imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50);
-  //       uploadFlag = true;
-  //       // $('#carImg').attr('src', "images/photo.png");
-  //     };
-
-  //   };
-  // };
+    };
+  };
 
 
 };
@@ -168,8 +145,7 @@ function hecheng(){
     data.unshift($('#carImg').attr('src'));
   	// data.unshift($('#qrcode > img').attr('src'));
 	 data.push($('#qrcode > img').attr('src'));
-  data = data.splice(0,1);
-	console.log(data);
+	// console.log(data);
 	draw(function(){
 		// $("#photo").attr("src",base64[0]);
 		$(".page9 > img").attr("src",base64[0]);
@@ -386,6 +362,14 @@ $(".synthesis").on("click",function(){
       $('.page-load em').html(parseInt(progress/47*100)+"%");
       // console.log(parseInt(progress/44*100)+"%")
     }, this);
+    function audioAutoPlay(id){
+      var audio = document.getElementById(id);
+      audio.play();
+      document.addEventListener("WeixinJSBridgeReady", function () {
+        audio.play();
+      }, false);
+    }
+    audioAutoPlay('audio_btn');
     $('.video_exist').on('click', function () {
       var media = document.getElementById('media');
       if (media.paused) {
@@ -430,13 +414,13 @@ $(".synthesis").on("click",function(){
       $('.page6').show();
     });
     $('.page7 .btn2').on('click', function () {
+      var file = $('#uploadImage').val();
+      if (!file) return alert('请选择图哦~');
       $('.page7').hide();
       // $('.page3').show();
       $(".page3").css("visibility","visible");
       var va1 = $('.v1').val();
       var va2 = $('.v2').val();
-      var file = $('#uploadImage').val();
-      if (!file) return alert('请选择图哦~');
       $('.page3 .header > img').attr('src','./images/canvas_header'+(va2+"" +va1)+'.png');
     });
     $('.page8 .btn9').on('click', function () {
