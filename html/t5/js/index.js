@@ -23,14 +23,14 @@ var carSrc = "";
 
 $("#produce").on("click",function(){
     // $('#carImg').css("display","block");
-    var img = new Image();
-      img.src = $('#carImg').attr('src');
-      img.onload = function () {
-        imgEdit2 = new veImage({ canvas: document.getElementById('captureCanvas2'), image: this });
-        $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
-        carSrc = imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50);
-        // $('#carImg').attr('src', "images/photo.png");
-    };
+    // var img = new Image();
+    //   img.src = $('#carImg').attr('src');
+    //   img.onload = function () {
+    //     imgEdit2 = new veImage({ canvas: document.getElementById('captureCanvas2'), image: this });
+    //     $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+    //     carSrc = imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50);
+    //     // $('#carImg').attr('src', "images/photo.png");
+    // };
 });
 
 var data = ["images/canvas_header.png", "images/footer1.png"];
