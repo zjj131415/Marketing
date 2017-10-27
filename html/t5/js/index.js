@@ -301,15 +301,9 @@ $(".synthesis").on("click",function(){
     var queue2 = new createjs.LoadQueue(true);
     queue.loadManifest([
       'images/canvas_header.png',
-      'images/footer.png',
       'images/music.mp3',
       'images/adjust.png',
       'images/arrow.png',
-      'images/bg.jpg',
-      'images/bg2.jpg',
-      'images/bg3.jpg',
-      'images/bg4.jpg',
-      'images/bg5.jpg',
       'images/btn1.png',
       'images/btn2.png',
       'images/btn3.png',
@@ -321,8 +315,6 @@ $(".synthesis").on("click",function(){
       'images/btn9.png',
       'images/btn10.png',
       'images/btn22.png',
-      'images/car.png',
-      'images/car2.png',
       'images/close.png',
       'images/fabulous.png',
       'images/form.png',
@@ -334,7 +326,6 @@ $(".synthesis").on("click",function(){
       'images/poster.png',
       'images/qrcode.png',
       'images/rank.png',
-      // 'images/rule-bg.png',
       'images/shadow.png',
       'images/success.png',
       'images/tag1.png',
@@ -365,7 +356,16 @@ $(".synthesis").on("click",function(){
       'images/canvas_header43.png',
       'images/canvas_header51.png',
       'images/canvas_header52.png',
-      'images/canvas_header53.png'
+      'images/canvas_header53.png',
+      'images/car.png',
+      'images/car2.png',
+      'images/rule-bg.png',
+      'images/footer.png',
+      'images/bg4.jpg',
+      'images/bg3.jpg',
+      'images/bg.jpg',
+      'images/bg2.jpg',
+      'images/bg5.jpg',
     ]);
     queue.on("complete", function (e) {
       $('.page-load').hide();
@@ -375,8 +375,8 @@ $(".synthesis").on("click",function(){
     }, this);
     queue.on("fileload", function (e) {
       progress ++;
-      $('.page-load i').width(parseInt(progress/47*100)+"%");
-      $('.page-load em').html(parseInt(progress/47*100)+"%");
+      $('.page-load i').width(parseInt(progress/39*100)+"%");
+      $('.page-load em').html(parseInt(progress/39*100)+"%");
       // console.log(parseInt(progress/44*100)+"%")
     }, this);
     function audioAutoPlay(id){
