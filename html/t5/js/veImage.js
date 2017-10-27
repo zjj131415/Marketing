@@ -178,7 +178,7 @@
             x, y, canvas.width, canvas.height,
             0, 0, canvas.width, canvas.height
         );
-        return canvas.toDataURL("image/png",0.8);
+        return canvas.toDataURL("image/png", 1);
     };
 
     /**

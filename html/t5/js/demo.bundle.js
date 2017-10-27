@@ -1979,7 +1979,7 @@
 	        canvas.width = w * rate;
 	        canvas.height = h * rate;
 	        context.drawImage(this.canvas, x, y, canvas.width, canvas.height, 0, 0, canvas.width, canvas.height);
-	        return canvas.toDataURL();
+	        return canvas.toDataURL("image/png", 1);
 	    };
 
 	    /**
