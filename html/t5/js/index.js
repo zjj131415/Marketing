@@ -33,7 +33,7 @@ document.getElementById('uploadImage').onchange = function (e) {
     }
   }
 
-  src = canvas.toDataURL("image/png");
+  // src = canvas.toDataURL("image/png");
   $('.page7 .upload .uploadShow').attr("src",src).css("display","block");
   $("#photo").attr("src",src);
   $("#hecheng").attr("src",src);
