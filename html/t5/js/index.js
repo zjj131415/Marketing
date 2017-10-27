@@ -274,6 +274,11 @@ $(".synthesis").on("click",function(){
 
 (function () {
   $(function () {
+    $('.page7 .btn1').on('click', function () {
+      document.querySelector('.upload-form').reset();
+      $('.uploadShow').hide();
+      $('.uploadBg').show();
+    })
     var
       cot = $('.content'),
       cW = cot.width(),
@@ -426,10 +431,8 @@ $(".synthesis").on("click",function(){
       $('.page6').show();
     });
     $('.page7 .btn2').on('click', function () {
-      var file = $('#uploadImage').val();
-      // if (!file) return alert('请选择图哦~');
       $('.page7').hide();
-      // $('.page3').show();
+      $('.page3').show();
       $(".page3").css("visibility","visible");
       var va1 = $('.v1').val();
       var va2 = $('.v2').val();
