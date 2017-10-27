@@ -82,7 +82,6 @@
 	var pageHeight = $(window).height();
 	// 裁剪图片高度
 	var contentHeight = $(".content").height();
-	alert(pageWidth + "~" + pageHeight + "~" + "~" + contentHeight);
 
 	// 头部尺寸对象
 	var headerObj = null;

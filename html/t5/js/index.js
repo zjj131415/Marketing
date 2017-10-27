@@ -1,4 +1,270 @@
+// 视图宽度
+var pageWidth = $(window).width();
+// 视图高度
+var pageHeight = $(window).height();
+// 裁剪图片高度
+var contentHeight = $(".content").height();
 
+// 头部尺寸对象
+var headerObj = null;
+// 车辆尺寸对象
+var carObj = null;
+// 底部尺寸对象
+var footerObj = null;
+// 二维码尺寸对象
+var qrcodeObj = null;
+// 裁剪图片对象
+var imgEdit2;
+// 生成图片路径
+var carSrc = "";
+// 上传标记
+var uploadFlag = false;
+
+// $(".page1").hide();
+
+
+// $("#produce").on("click",function(){
+//     // $('#carImg').css("visibility","visible");
+//     if(!uploadFlag){
+//       var img = new Image();
+//         img.src = "images/photo.png"
+//       img.onload = function () {
+//           imgEdit2 = new veImage({ canvas: document.getElementById('captureCanvas2'), image: this });
+//           $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+//           carSrc = imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50);
+//           // $('#carImg').attr('src', "images/photo.png");
+//       };
+//     }
+// });
+
+var data = ["images/canvas_header.png", "images/footer1.png"];
+document.getElementById('uploadImage').onchange = function (e) {
+  // var src, url = window.URL || window.webkitURL || window.mozURL, files = e.target.files;
+  // for (var i = 0, len = files.length; i < len; ++i) {
+  //   var file = files[i];
+  //   if (url) {
+  //     src = url.createObjectURL(file);
+  //   } else {
+  //     src = e.target.result;
+  //   }
+  // }
+  var file = e.target.files[0];
+  var Orientation = null;
+  EXIF.getData(file, function () {
+    EXIF.getAllTags(this);
+    Orientation = EXIF.getTag(this, 'Orientation');
+  });
+  var src = '';
+  var reader = new FileReader();
+  reader.readAsDataURL(file);
+  reader.onload = function (e) {
+    var image = new Image();
+    image.src = e.target.result;
+    image.onload = function () {
+      var canvas = document.createElement("canvas");
+      canvas.width = this.naturalWidth;
+      canvas.height = this.naturalHeight;
+      var ctx = canvas.getContext("2d");
+      ctx.drawImage(this, 0, 0, this.naturalWidth, this.naturalHeight);
+      var base64 = null;
+      if (Orientation != "" && Orientation != 1 && Orientation != undefined) {
+        var width = this.naturalWidth;
+        var height = this.naturalHeight;
+        switch (Orientation) {
+          case 6://需要顺时针90度旋转
+            canvas.width = height;
+            canvas.height = width;
+            ctx.rotate(90 * Math.PI / 180);
+            ctx.drawImage(this, 0, -height);
+            break;
+          case 8://需要逆时针90度旋转
+            canvas.width = height;
+            canvas.height = width;
+            ctx.rotate(-90 * Math.PI / 180);
+            ctx.drawImage(this, -width, 0);
+            break;
+          case 3://需要180度旋转
+            ctx.rotate(180 * Math.PI / 180);
+            ctx.drawImage(this, -width, -height);
+            break;
+        }
+      }
+      src = canvas.toDataURL("image/jpg",0.8);
+      $('.page7 .upload .uploadShow').attr("src",src).css("display","block");
+      $("#photo").attr("src",src);
+      $("#hecheng").attr("src",src);
+      $('.page7 .upload .uploadBg').hide();
+      $('.page7 .upload .uploadShow').attr("src",src).css("display","block");
+
+      var img = new Image();
+      img.src = src;
+      img.onload = function () {
+        imgEdit2 = new veImage({ canvas: document.getElementById('captureCanvas2'), image: this });
+        $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+        carSrc = imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50);
+        uploadFlag = true;
+        // $('#carImg').attr('src', "images/photo.png");
+      };
+    };
+  };
+
+
+};
+
+// 获取图片尺寸
+function getSize(obj){
+    var $obj = $("#"+obj);
+    var w = $obj.width();
+    var h = $obj.height();
+    var x = $obj.offset().left;
+    var y = $obj.offset().top;
+    return {
+        "w": w,
+        "h": h,
+        "x": x,
+        "y": y
+    }
+}
+
+
+function hecheng(){
+	// 头部
+  	headerObj = getSize("header");
+  	// console.log(headerObj);
+  	// 车辆
+  	carObj = getSize("carImg");
+  	// console.log(carObj);
+  	// 底部
+  	footerObj = getSize("footer");
+  	// console.log(footerObj);
+  	// 二维码
+  	qrcodeObj = getSize("qrcode > img");
+  	// console.log(qrcodeObj);
+
+  	
+    data.unshift($('#carImg').attr('src'));
+  	// data.unshift($('#qrcode > img').attr('src'));
+	 data.push($('#qrcode > img').attr('src'));
+	// console.log(data);
+	draw(function(){
+		// $("#photo").attr("src",base64[0]);
+		$(".page9 > img").attr("src",base64[0]);
+		$('.pag3').hide();
+	})
+}
+
+var base64=[];
+
+function draw(fn){
+	var c=document.createElement('canvas'),
+		ctx=c.getContext('2d'),
+		len=data.length;
+	c.width= $(window).width();
+	c.height= $(window).height();
+  c.style.width = $(window).width();
+  c.style.height = $(window).height();
+  // 屏幕的设备像素比
+  var devicePixelRatio = window.devicePixelRatio || 1;
+
+// 浏览器在渲染canvas之前存储画布信息的像素比
+  var backingStoreRatio = ctx.webkitBackingStorePixelRatio ||
+    ctx.mozBackingStorePixelRatio ||
+    ctx.msBackingStorePixelRatio ||
+    ctx.oBackingStorePixelRatio ||
+    ctx.backingStorePixelRatio || 1;
+
+// canvas的实际渲染倍率
+  var ratio = devicePixelRatio / backingStoreRatio;
+
+  c.width = c.width * ratio;
+  c.height = c.height * ratio;
+	// ctx.rect(0,0,c.width,c.height);
+	// ctx.fillStyle='#fff';
+	// ctx.fill();
+
+	function drawing(n){
+    var qrcode = $('.qrcode'),
+      qrcodeW = 0,
+      qrcodeH = 0;
+		if(n<len){
+			var img=new Image;
+			// img.crossOrigin = 'Anonymous'; //解决跨域
+      var va1 = $('.v1').val();
+      var va2 = $('.v2').val();
+      if (n==1) data[n] ='images/canvas_header' + (va2+"" +va1)+'.png';
+			img.src=data[n];
+			img.onload=function(){
+				var x = 0;
+				var y = 0;
+				var w = "";
+				var h = "";
+				switch(n){
+					case 0:
+			            x = carObj.x;
+			            y = carObj.y;
+			            w = carObj.w;
+			            h = carObj.h;
+						break;
+			        case 1:
+			            x = headerObj.x;
+			            y = headerObj.y;
+			            w = headerObj.w;
+			            h = headerObj.h;
+			            break;
+					case 2:
+						x = footerObj.x;
+						y = footerObj.y;
+						w = footerObj.w;
+						h = footerObj.h;
+						break;
+			        case 3:
+			            x = 10;
+			            y = pageHeight - 80;
+			            w = 70;
+			            h = 70;
+			            break;
+				}
+
+				ctx.drawImage(img,x*ratio,y*ratio,w*ratio,h*ratio);
+        drawing(n+1);//递归
+			}
+		}else{
+			//保存生成作品图片
+			base64.push(c.toDataURL("image/png", 1));
+			fn();
+		}
+	}
+	drawing(0);
+}
+
+// $("#btnCapture").on("click",function(){
+// 	$('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+  	
+//   	$('#carImg').css("display","block");
+// });
+
+$(".synthesis").on("click",function(){
+	$(".page3").css("visibility","hidden");
+  	$('.page9').show();
+
+    if(uploadFlag){
+      $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+    }else{
+      if(carSrc){
+        $('#carImg').attr('src', imgEdit2.crop(2*pageWidth, 2*contentHeight, 0, 50));
+      }else{
+        $('#carImg').attr('src', "images/photo.png");
+      }
+    }
+  	// $('#carImg').attr('src', "images/photo.png");
+    // $('#carImg').css("display","block");
+  	// $("#captureCanvas2").hide();
+  	var img1 = new Image();
+	  img1.src = $('#carImg').attr('src');
+	  img1.onload = function () {
+		  hecheng();
+	  }
+});
 
 
 (function () {
