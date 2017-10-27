@@ -412,7 +412,8 @@ $(".synthesis").on("click",function(){
       $(".page3").css("visibility","visible");
       var va1 = $('.v1').val();
       var va2 = $('.v2').val();
-      console.log(va1, va2)
+      var file = $('#uploadImage').val();
+      if (!file) return alert('请选择图哦~');
       $('.page3 .header > img').attr('src','./images/canvas_header'+(va2+"" +va1)+'.png');
     });
     $('.page8 .btn9').on('click', function () {
