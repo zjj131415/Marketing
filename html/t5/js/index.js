@@ -288,6 +288,7 @@ $(".synthesis").on("click",function(){
       fileObj : 'uploadImagee', // file id
       cutBtn : 'produce', // cut btn id
       resultObj : 'carImg', // result img i
+      rotateR: 'adjust',
       cutScale : 1, // 1:1、3:4
       cutW : 'winW' // '数字'
     });
