@@ -23,10 +23,10 @@
   <div class="page page4">
     <div class="cover">
       <div class="frame">
-        <div class="zan">
-          <img src="./images/fabulous.png" alt="">
+        <div class="zan active">
         </div>
-        <div class="text">您已集齐<span>**</span>枚能量!</div>
+        <div class="text">已集齐<span>**</span>枚能量!</div>
+        <div class="text" style="margin-top: 5px;">点击小手收集能量</div>
       </div>
       <div class="actions">
         <div class="btn1">
@@ -42,9 +42,12 @@
   <script>
     (function () {
       $(function () {
-        $('.share .btn1').on('click', function () {
-          $('.page4').show();
-        })
+          $('.share .btn1').on('click', function () {
+            $('.page4').show();
+          });
+          $('.zan').on('click', function () {
+            $(this).hasClass('active') ? $(this).removeClass('active') : $(this).addClass('active');
+          })
       })
     })()
   </script>

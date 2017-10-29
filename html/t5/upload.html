@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>比速T5 速写未</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/jquery.cxselect.js"></script>
+  <script src="js/preloadjs-0.6.2.min.js"></script>
+  <script src="js/qrcode.min.js"></script>
+  <script src="js/exif.js"></script>
+  <script src="js/move.js"></script>
+  <script src="js/imgClip.js"></script>
+</head>
+<body>
+<!--<div class="ui-loading-wrap" id="loading" style="/* display: none; */">-->
+<!--<i class="ui-loading"></i>-->
+<!--<p>加载中...</p>-->
+<!--</div>-->
+<div class="qrcode" style="display: none;" id="qrcode">
+</div>
+<div id="audio_btn" class="video_exist rotate">
+  <audio loop autoplay src="images/music.mp3" id="media"  preload=""></audio>
+</div>
+<div class="page-load" style="display: block;">
+  <div class="loading">
+    <strong><i></i></strong>
+    <em>0%</em>
+  </div>
+</div>
+<div class="page page3">
+
+  <div class="header">
+    <img src="./images/canvas_header.png" alt="" id="header">
+  </div>
+  <div class="content">
+    <div class="car-box">
+      <!-- <img src="images/photo.png" id="carImg" class="carImg"> -->
+      <img src="" id="carImg" class="carImg">
+    </div>
+    <div class="l_canvas" >
+      <canvas id="canvas01"></canvas>
+    </div>
+    <p id="log2" style="color: #fff; position: absolute; left: 0; top: 0; width: 100%; line-height: 14px; font-size: 10px; word-break: break-all;"></p>
+    <p id="log" style="color: #fff; position: absolute; left: 0; top: 15px; width: 100%; line-height: 14px; font-size: 10px; word-break: break-all;"></p>
+  </div>
+  <div class="footer">
+    <img src="./images/footer1.png" alt="" id="footer">
+  </div>
+  <div class="synthesis" id="synthesis">
+    <img src="./images/btn5.png" alt="">
+  </div>
+  <div class="adjust" id="adjust">
+    <img src="./images/adjust.png" alt="">
+  </div>
+</div>
+<div class="page page7" style="display: block;">
+  <img src="" id="img" alt="">
+  <!-- <div class="logo">
+    <img src="images/logo.png">
+  </div>
+  <div class="car">
+    <img src="images/car2.png">
+  </div>
+  <div class="qrcode">
+    <img src="images/qrcode.png">
+  </div>
+  <div class="word">
+    <img src="images/word.png">
+  </div>
+  <div class="word2">
+    <img src="images/word2.png">
+  </div>
+  <div class="word3">
+    <img src="images/word3.png">
+  </div>
+  <div class="photo">
+    <img src="images/photo.png">
+  </div> -->
+  <div class="cover">
+    <form class="upload-form">
+      <div class="upload">
+        <img src="./images/upload.png" alt="" class="uploadBg">
+        <img src="" class="uploadShow">
+        <input type="file" accept="image/*" id="uploadImagee">
+      </div>
+      <!--<div class="gender">-->
+      <!--<div class="g g1"><img src="./images/man.png" alt=""></div>-->
+      <!--<div class="g g2"><img src="./images/woman.png" alt=""></div>-->
+      <!--</div>-->
+      <div class="selects">
+        <div class="select">
+          <select class="v1" name="" id="">
+            <option value="1">请选择助威方式 </option>
+            <option value="1">我为比速T5自动挡助威 </option>
+            <option value="2">我为比速T5自动挡代言 </option>
+            <option value="3">我为比速T5自动挡呐喊 </option>
+          </select>
+        </div>
+        <div class="select">
+          <select class="v2" name="" id="">
+            <option value="1">请选择助威宣言</option>
+            <option value="1">领先动力 我来体验</option>
+            <option value="2">领先品质 我来体验</option>
+            <option value="3">领先装备 我来体验</option>
+            <option value="4">领先安全 我来体验</option>
+            <option value="5">领先颜值 我来体验</option>
+          </select>
+        </div>
+      </div>
+      <div class="actions">
+        <div class="btn btn1">
+          <img src="./images/btn4.png" alt="">
+        </div>
+        <div class="btn btn2" id="produce">
+          <img src="./images/btn22.png" alt="">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="page page8">
+  <div class="logo">
+    <img src="images/logo.png">
+  </div>
+  <div class=car>
+    <img src="images/car.png">
+  </div>
+  <div class="success">
+    <img src="./images/success.png">
+  </div>
+  <div class=btn8>
+    <img src="images/btn8.png">
+  </div>
+  <div class=btn9>
+    <img src="images/btn9.png">
+  </div>
+</div>
+<div class="page page9">
+  <img src="" alt="">
+</div>
+<!-- <script src="js/veImage.js"></script> -->
+<script src="js/index.js"></script>
+<!--<script src="js/demo.bundle.js"></script>-->
+</body>
+</html>

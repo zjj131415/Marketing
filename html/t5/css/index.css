@@ -1651,6 +1651,8 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page3 { visibility: hidden; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
+.page3 .page3_actions { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; position: absolute; left: 0; bottom: 2rem; z-index: 8; }
+
 .page3 .adjust { position: absolute; right: 0; top: 50%; width: 1.28rem; z-index: 10; }
 
 .page3 .header { position: absolute; left: 0; top: 0; width: 100%; z-index: 5; }
@@ -1671,15 +1673,15 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page3 .footer { position: absolute; left: 0; bottom: 0; width: 100%; z-index: 5; }
 
-.page3 .synthesis { position: absolute; left: 50%; bottom: 1rem; width: 8.8rem; margin-left: -4.4rem; z-index: 10; }
-
 .page4 { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../images/bg2.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
 
 .page4 .cover { position: absolute; left: 0; top: 0; z-index: 4; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); }
 
-.page4 .cover .frame { width: 9.76rem; height: 7.6rem; margin: 7rem auto 0 auto; background-image: url(../images/frame.png); background-repeat: no-repeat; -webkit-background-size: cover; background-size: cover; background-position: center; }
+.page4 .cover .frame { width: 9.76rem; height: 7.6rem; margin: 7rem auto 0 auto; padding-top: 1rem; background-image: url(../images/frame.png); background-repeat: no-repeat; -webkit-background-size: cover; background-size: cover; background-position: center; }
 
-.page4 .cover .zan { width: 2rem; margin: 0 auto; padding-top: 1rem; }
+.page4 .cover .zan { width: 2rem; height: 2rem; margin: 0 auto; background-image: url(../images/za.png); background-position: center; -webkit-background-size: cover; background-size: cover; }
+
+.page4 .cover .zan.active { background-image: url(../images/za_ac.png); }
 
 .page4 .cover .text { margin-top: 1.4rem; font-size: .8rem; color: #fff; text-align: center; }
 

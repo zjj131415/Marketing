@@ -308,6 +308,18 @@ html, body {
   height: 100%;
   // z-index: 100;
   // z-index: -1;
+  .page3_actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    bottom: 2rem;
+    z-index: 8;
+    .synthesis2,
+    .synthesis {
+    }
+  }
   .adjust {
     position: absolute;
     right: 0;
@@ -389,14 +401,6 @@ html, body {
     width: 100%;
     z-index:5;
   }
-  .synthesis {
-    position: absolute;
-    left: 50%;
-    bottom: 1rem;
-    width: 8.8rem;
-    margin-left: -4.4rem;
-    z-index: 10;
-  }
 }
 .page4 {
   position: absolute;
@@ -418,6 +422,7 @@ html, body {
       width: 9.76rem;
       height: 7.6rem;
       margin: 7rem auto 0 auto;
+      padding-top: 1rem;
       background-image: url(../images/frame.png);
       background-repeat: no-repeat;
       background-size: cover;
@@ -425,8 +430,14 @@ html, body {
     }
     .zan {
       width: 2rem;
+      height: 2rem;
       margin: 0 auto;
-      padding-top: 1rem;
+      background-image: url(../images/za.png);
+      background-position: center;
+      background-size: cover;
+      &.active {
+        background-image: url(../images/za_ac.png);
+      }
     }
     .text {
       margin-top: 1.4rem;
