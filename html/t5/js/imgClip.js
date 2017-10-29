@@ -155,12 +155,6 @@ ImgClip.prototype = {
     e = e || window.event;
     var files = e.target.files;  //FileList Objects
     var f = files[0];
-
-    // clear
-    obj.pre.x = obj.pre.y = obj.prex = obj.prey = 0;
-    obj.img = null;
-    resolveObjectURL(obj.dataURL);
-    obj.dataURL = createObjectURL(f);
     var Orientation = null;
     EXIF.getData(f, function () {
       EXIF.getAllTags(this);
@@ -203,23 +197,34 @@ ImgClip.prototype = {
         }
         src = canvas.toDataURL();
         obj.dataURL = src;
-        obj.drawImg(0,0,function(){
+        // clear
+        obj.pre.x = obj.pre.y = obj.prex = obj.prey = 0;
+        obj.img = null;
+        resolveObjectURL(obj.dataURL);
+        // 首次画上图片
+        obj.drawImg(0, 0, function () {
           obj.tstate = 'ok';
-          addEvent(obj.canvas,'touchstart',function(e){
+          addEvent(obj.canvas, 'touchstart', function (e) {
             obj.fntouchstart(e);
-            addEvent(document,'touchmove', function(e){ obj.fntouchmove(e); });
-            addEvent(document,'touchend', function(e){ obj.fntouchend(e); });
+            addEvent(document, 'touchmove', function (e) {
+              obj.fntouchmove(e);
+            });
+            addEvent(document, 'touchend', function (e) {
+              obj.fntouchend(e);
+            });
           });
-          addEvent(obj.canvas,'mousedown',function(e){
+          addEvent(obj.canvas, 'mousedown', function (e) {
             obj.fntouchstart(e);
-            addEvent(document,'mousemove', function(e){ obj.fntouchmove(e); });
-            addEvent(document,'mouseup', function(e){ obj.fntouchend(e); });
+            addEvent(document, 'mousemove', function (e) {
+              obj.fntouchmove(e);
+            });
+            addEvent(document, 'mouseup', function (e) {
+              obj.fntouchend(e);
+            });
           });
-        })
+        });
       };
-    };
-
-    // 首次画上图片
+    }
   },
   drawImg: function (offsetX,offsetY,fn){ // 更新画布
     this.clearCanvas(this.canvas);
@@ -541,9 +546,53 @@ function removeEvent(obj,eventType,func){
   }
 }
 // 获取fileURL
-var createObjectURL = function(blob){
-  return window[window.URL?'URL':'webkitURL']['createObjectURL'](blob);
-};
+// var createObjectURL = function(blob){
+//   var Orientation = null;
+//   EXIF.getData(blob, function () {
+//     EXIF.getAllTags(this);
+//     Orientation = EXIF.getTag(this, 'Orientation');
+//   });
+//   var src = '';
+//   var reader = new FileReader();
+//   reader.readAsDataURL(f);
+//   reader.onload = function (e) {
+//     var image = new Image();
+//     image.src = e.target.result;
+//     image.onload = function () {
+//       var canvas = document.createElement("canvas");
+//       canvas.width = this.naturalWidth;
+//       canvas.height = this.naturalHeight;
+//       var ctx = canvas.getContext("2d");
+//       ctx.drawImage(this, 0, 0, this.naturalWidth, this.naturalHeight);
+//       var base64 = null;
+//       if (Orientation != "" && Orientation != 1 && Orientation != undefined) {
+//         var width = this.naturalWidth;
+//         var height = this.naturalHeight;
+//         switch (Orientation) {
+//           case 6://需要顺时针90度旋转
+//             canvas.width = height;
+//             canvas.height = width;
+//             ctx.rotate(90 * Math.PI / 180);
+//             ctx.drawImage(this, 0, -height);
+//             break;
+//           case 8://需要逆时针90度旋转
+//             canvas.width = height;
+//             canvas.height = width;
+//             ctx.rotate(-90 * Math.PI / 180);
+//             ctx.drawImage(this, -width, 0);
+//             break;
+//           case 3://需要180度旋转
+//             ctx.rotate(180 * Math.PI / 180);
+//             ctx.drawImage(this, -width, -height);
+//             break;
+//         }
+//       }
+//       src = canvas.toDataURL();
+//       obj.dataURL = src;
+//     };
+//   };
+//   return window[window.URL?'URL':'webkitURL']['createObjectURL'](blob);
+// };
 var resolveObjectURL = function(blob){
   window[window.URL?'URL':'webkitURL']['revokeObjectURL'](blob);
 };
