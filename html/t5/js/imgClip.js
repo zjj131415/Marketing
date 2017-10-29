@@ -203,23 +203,23 @@ ImgClip.prototype = {
         }
         src = canvas.toDataURL();
         obj.dataURL = src;
+        obj.drawImg(0,0,function(){
+          obj.tstate = 'ok';
+          addEvent(obj.canvas,'touchstart',function(e){
+            obj.fntouchstart(e);
+            addEvent(document,'touchmove', function(e){ obj.fntouchmove(e); });
+            addEvent(document,'touchend', function(e){ obj.fntouchend(e); });
+          });
+          addEvent(obj.canvas,'mousedown',function(e){
+            obj.fntouchstart(e);
+            addEvent(document,'mousemove', function(e){ obj.fntouchmove(e); });
+            addEvent(document,'mouseup', function(e){ obj.fntouchend(e); });
+          });
+        })
       };
     };
 
     // 首次画上图片
-    obj.drawImg(0,0,function(){
-      obj.tstate = 'ok';
-      addEvent(obj.canvas,'touchstart',function(e){
-        obj.fntouchstart(e);
-        addEvent(document,'touchmove', function(e){ obj.fntouchmove(e); });
-        addEvent(document,'touchend', function(e){ obj.fntouchend(e); });
-      });
-      addEvent(obj.canvas,'mousedown',function(e){
-        obj.fntouchstart(e);
-        addEvent(document,'mousemove', function(e){ obj.fntouchmove(e); });
-        addEvent(document,'mouseup', function(e){ obj.fntouchend(e); });
-      });
-    });
   },
   drawImg: function (offsetX,offsetY,fn){ // 更新画布
     this.clearCanvas(this.canvas);
