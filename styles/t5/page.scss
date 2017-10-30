@@ -207,6 +207,7 @@ html, body {
         top: 5%;
         left: 12%;
         width: 76%;
+        height: 88%;
         .title {
           position: relative;
           margin: 0 auto;
@@ -257,10 +258,12 @@ html, body {
           color: #ffffff;
         }
         .copyright {
-          margin-top: 0.8rem;
+          position: absolute;
+          bottom: 2%;
+          right: -2%;
           text-align: right;
           font-size: 0.4rem;
-          color: #ffffff;
+          color: #a9c4d7;
         }
         .detail {
           line-height: 0.72rem;

@@ -311,7 +311,7 @@ html { -webkit-text-size-adjust: none; -ms-text-size-adjust: 100%; -webkit-tap-h
   44.4% { -webkit-transform: skewX(-3.125deg) skewY(-3.125deg); transform: skewX(-3.125deg) skewY(-3.125deg); }
   55.5% { -webkit-transform: skewX(1.5625deg) skewY(1.5625deg); transform: skewX(1.5625deg) skewY(1.5625deg); }
   66.6% { -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg); transform: skewX(-0.78125deg) skewY(-0.78125deg); }
-  77.7% { -webkit-transform: skewX(0.39062deg) skewY(0.39062deg); transform: skewX(0.39062deg) skewY(0.39062deg); }
+  77.7% { -webkit-transform: skewX(0.39063deg) skewY(0.39063deg); transform: skewX(0.39063deg) skewY(0.39063deg); }
   88.8% { -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg); transform: skewX(-0.19531deg) skewY(-0.19531deg); } }
 
 @keyframes jello { from, 11.1%, to { -webkit-transform: none; transform: none; }
@@ -320,7 +320,7 @@ html { -webkit-text-size-adjust: none; -ms-text-size-adjust: 100%; -webkit-tap-h
   44.4% { -webkit-transform: skewX(-3.125deg) skewY(-3.125deg); transform: skewX(-3.125deg) skewY(-3.125deg); }
   55.5% { -webkit-transform: skewX(1.5625deg) skewY(1.5625deg); transform: skewX(1.5625deg) skewY(1.5625deg); }
   66.6% { -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg); transform: skewX(-0.78125deg) skewY(-0.78125deg); }
-  77.7% { -webkit-transform: skewX(0.39062deg) skewY(0.39062deg); transform: skewX(0.39062deg) skewY(0.39062deg); }
+  77.7% { -webkit-transform: skewX(0.39063deg) skewY(0.39063deg); transform: skewX(0.39063deg) skewY(0.39063deg); }
   88.8% { -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg); transform: skewX(-0.19531deg) skewY(-0.19531deg); } }
 
 .jello { -webkit-animation-name: jello; animation-name: jello; -webkit-transform-origin: center; -ms-transform-origin: center; transform-origin: center; }
@@ -1615,7 +1615,7 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page2 .rule .rule-box .close { position: absolute; top: 4%; left: 10%; width: 0.66rem; height: 0.66rem; }
 
-.page2 .rule .rule-box .rule-content { position: absolute; top: 5%; left: 12%; width: 76%; }
+.page2 .rule .rule-box .rule-content { position: absolute; top: 5%; left: 12%; width: 76%; height: 88%; }
 
 .page2 .rule .rule-box .rule-content .title { position: relative; margin: 0 auto; }
 
@@ -1631,7 +1631,7 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page2 .rule .rule-box .rule-content .describe { margin-top: 0.2rem; margin-bottom: 0.2rem; padding-left: 0.4rem; line-height: 0.72rem; font-size: 0.44rem; color: #ffffff; }
 
-.page2 .rule .rule-box .rule-content .copyright { margin-top: 0.8rem; text-align: right; font-size: 0.4rem; color: #ffffff; }
+.page2 .rule .rule-box .rule-content .copyright { position: absolute; bottom: 2%; right: -2%; text-align: right; font-size: 0.4rem; color: #a9c4d7; }
 
 .page2 .rule .rule-box .rule-content .detail { line-height: 0.72rem; font-size: 0.44rem; color: #ffffff; }
 
