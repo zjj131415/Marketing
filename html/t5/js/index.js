@@ -268,7 +268,8 @@ $(".synthesis").on("click",function(){
       resultObj : 'carImg', // result img i
       rotateR: 'adjust',
       cutScale : 1, // 1:1、3:4
-      cutW : 'winW' // '数字'
+      cutW : 'winW', // '数字'
+      cutH : contentHeight //高度
     });
     var qrcode = new QRCode(document.querySelector(".qrcode"), {
       width : 90,

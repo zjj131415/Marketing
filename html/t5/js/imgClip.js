@@ -31,6 +31,7 @@ var ImgClip = function(opt){
   this.tstate = 'end'; // 拖拽事件状态
   this.cutScale = 1; // 裁剪区域尺寸比例
   this.cutW = 0; // 裁剪区域宽度
+  this.cutH = 0; // 裁剪区域高度
   this.paddB = 100; // 底部工具条高度
   this.rot = 0; // 旋转角度
   this.isRotate = false;
@@ -54,7 +55,8 @@ ImgClip.prototype = {
 
     // save data
     this.cutScale = parseFloat(opt.cutScale);
-    this.winSize = { w: view().w, h: view().h-this.paddB};
+    // this.winSize = { w: view().w, h: view().h-this.paddB};
+    this.winSize = { w: view().w, h: opt.cutH};
     opt.cutW == 'winW' ? (this.cutW = this.winSize.w) : (this.cutW = Number(opt.cutW));
     var hh = parseInt(this.cutW * this.cutScale);
     this.cutSize = {

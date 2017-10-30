@@ -1661,7 +1661,7 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page3 .content .l_canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-.page3 .content .l_canvas #canvas01 { display: block; width: 100%; height: 100%; }
+.page3 .content .l_canvas #canvas01 { display: block; width: 100%; }
 
 .page3 .content .car-box { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
 
