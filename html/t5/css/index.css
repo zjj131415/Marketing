@@ -1583,7 +1583,7 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page1 .logo img { display: block; width: 100%; }
 
-.page1 .word { position: absolute; top: 3%; left: 3.7%; width: 93.6%; }
+.page1 .word { position: absolute; top: 8%; left: 0; width: 100%; }
 
 .page1 .word img { display: block; width: 100%; }
 
