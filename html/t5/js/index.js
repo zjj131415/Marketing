@@ -256,11 +256,11 @@ $(".synthesis").on("click",function(){
       document.querySelector('.upload-form').reset();
       $('.uploadShow').hide();
       $('.uploadBg').show();
-    })
+    });
     var
       cot = $('.content'),
       cW = cot.width(),
-      cH = cot.height;
+      cH = cot.height();
     var cut = new ImgClip({
       canvas : 'canvas01', // canvas id
       fileObj : 'uploadImagee', // file id
@@ -269,7 +269,7 @@ $(".synthesis").on("click",function(){
       rotateR: 'adjust',
       cutScale : 1, // 1:1、3:4
       cutW : 'winW', // '数字'
-      cutH : contentHeight //高度
+      cutH : contentHeight, //高度
     });
     var qrcode = new QRCode(document.querySelector(".qrcode"), {
       width : 90,

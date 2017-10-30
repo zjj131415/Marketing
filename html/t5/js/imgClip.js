@@ -35,6 +35,7 @@ var ImgClip = function(opt){
   this.paddB = 100; // 底部工具条高度
   this.rot = 0; // 旋转角度
   this.isRotate = false;
+  this.ratio = 1;
   //this.drawSize = {w:0,h:0};
 
   opt && this.init(opt);
@@ -53,10 +54,26 @@ ImgClip.prototype = {
     this.cutBtn = this.getObj(opt.cutBtn);
     this.resultObj = this.getObj(opt.resultObj);
 
+    // 屏幕的设备像素比
+    var devicePixelRatio = window.devicePixelRatio || 1;
+   
+    var ctx = this.ctx;
+  // 浏览器在渲染canvas之前存储画布信息的像素比
+    var backingStoreRatio = ctx.webkitBackingStorePixelRatio ||
+      ctx.mozBackingStorePixelRatio ||
+      ctx.msBackingStorePixelRatio ||
+      ctx.oBackingStorePixelRatio ||
+      ctx.backingStorePixelRatio || 1;
+
+  // canvas的实际渲染倍率
+    var ratio = devicePixelRatio / backingStoreRatio;
+
     // save data
     this.cutScale = parseFloat(opt.cutScale);
     // this.winSize = { w: view().w, h: view().h-this.paddB};
-    this.winSize = { w: view().w, h: opt.cutH};
+    this.winSize = { w: view().w*ratio, h: opt.cutH*ratio};
+    // this.winSize = { w: view().w, h: opt.cutH};
+    // console.log(this.winSize);
     opt.cutW == 'winW' ? (this.cutW = this.winSize.w) : (this.cutW = Number(opt.cutW));
     var hh = parseInt(this.cutW * this.cutScale);
     this.cutSize = {
