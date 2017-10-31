@@ -83,6 +83,14 @@ ImgClip.prototype = {
       l: (this.winSize.w - this.cutW)/2
     };
 
+    this.winSize = { w: this.winSize.w*ratio, h: this.winSize.h*ratio};
+    this.cutSize = {
+      w: this.cutSize.w*ratio,
+      h: this.cutSize.h*ratio,
+      t: this.cutSize.t*ratio,
+      l: this.cutSize.l*ratio
+    };
+
     // set canvas
     this.setCanvas(this.canvas);
     this.clearCanvas(this.canvas);
