@@ -72,7 +72,7 @@ ImgClip.prototype = {
     // this.winSize = { w: view().w, h: view().h-this.paddB};
     // this.winSize = { w: view().w*ratio, h: opt.cutH*ratio};
     this.winSize = { w: view().w, h: opt.cutH};
-    alert(this.winSize.h);
+    // alert(this.winSize.h);
     opt.cutW == 'winW' ? (this.cutW = this.winSize.w) : (this.cutW = Number(opt.cutW));
     // var hh = parseInt(this.cutW * this.cutScale);
     var hh = opt.cutH;
