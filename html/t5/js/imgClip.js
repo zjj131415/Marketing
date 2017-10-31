@@ -67,12 +67,12 @@ ImgClip.prototype = {
 
   // canvas的实际渲染倍率
     var ratio = devicePixelRatio / backingStoreRatio;
-
+    alert(opt.cutH);
     // save data
     this.cutScale = parseFloat(opt.cutScale);
-    this.winSize = { w: view().w, h: view().h-this.paddB};
+    // this.winSize = { w: view().w, h: view().h-this.paddB};
     // this.winSize = { w: view().w*ratio, h: opt.cutH*ratio};
-    // this.winSize = { w: view().w, h: opt.cutH};
+    this.winSize = { w: view().w, h: opt.cutH};
     console.log(this.winSize);
     opt.cutW == 'winW' ? (this.cutW = this.winSize.w) : (this.cutW = Number(opt.cutW));
     var hh = parseInt(this.cutW * this.cutScale);
