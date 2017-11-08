@@ -97,12 +97,12 @@ html, body {
 }
 
 .page1 {
-  display: block;
+  display: none;
   position: relative;
   width: 100%;
   height: 100%;
-  background: url(../images/bg.jpg) 0 center no-repeat;
-  background-size: 100% auto;
+  background: url(../images/bg.jpg) no-repeat center;
+  background-size: cover;
   .logo {
     position: absolute;
     top: 0;
@@ -117,13 +117,17 @@ html, body {
   }
   .word {
     position: absolute;
-    top: 8%;
-    left: 0;
-    width: 100%;
-    img {
-      display: block;
-      width: 100%;
-    }
+    top: 10%;
+    left: 50%;
+    width:14.4rem;
+    margin-left: -7.2rem;
+  }
+  .wordtext {
+    position: absolute;
+    top: 29%;
+    left: 50%;
+    width: 11rem;
+    margin-left: -5.5rem;
   }
   .car {
     position: absolute;
@@ -135,35 +139,23 @@ html, body {
       width: 100%;
     }
   }
-  .btn1 {
-    position: absolute;
-    left: 0;
-    bottom: 10%;
-    width: 100%;
-    img {
-      display: block;
-      width: 100%;
-    }
-  }
   .btn2 {
+    position: absolute;
+    right: 0;
+    top: 40%;
+    width: 1.2rem;
+  }
+  .btn1 {
     position: absolute;
     left: 4.8%;
     bottom: 4%;
-    width: 33.7%;
-    img {
-      display: block;
-      width: 100%;
-    }
+    width: 40%;
   }
   .btn3 {
     position: absolute;
     right: 4.8%;
     bottom: 4%;
-    width: 34.2%;
-    img {
-      display: block;
-      width: 100%;
-    }
+    width: 40%;
   }
 }
 
@@ -174,6 +166,15 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
+  .logo {
+    background: #1d4165;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 4%;
+    padding-top: 4%;
+    width: 32%;
+  }
   .rule {
     position: relative;
     width: 100%;
@@ -186,7 +187,7 @@ html, body {
     }
     .rule-box {
       position: absolute;
-      top: 0;
+      top: 8%;
       left: 0;
       width: 100%;
       padding-left: 2%;
@@ -311,23 +312,39 @@ html, body {
   height: 100%;
   // z-index: 100;
   // z-index: -1;
+  #log2 {
+    opacity: 0;
+  }
+  #log {
+    opacity: 0;
+  }
+
   .page3_actions {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: absolute;
     left: 0;
-    bottom: 2rem;
+    bottom: 1.5rem;
     z-index: 8;
     .synthesis2,
     .synthesis {
+      width: 6.8rem;
     }
   }
   .adjust {
     position: absolute;
-    right: 0;
-    top: 50%;
+    right: .4rem;
+    top: 40%;
     width:1.28rem;
+    z-index: 10;
+  }
+  .change_color {
+    position: absolute;
+    right: .4rem;
+    top: 30%;
+    width: 1.28rem;
     z-index: 10;
   }
   .header {
@@ -337,12 +354,19 @@ html, body {
     width: 100%;
     z-index: 5;
   }
+  .text_color {
+    position: absolute;
+    left: 0;
+    top: 35%;
+    width: 10.4rem;
+    z-index: 5;
+  }
   .content {
     position: absolute;
     left: 0;
-    top: 4.6rem;
+    top: 0;
     width: 100%;
-    height: 13.6rem;
+    height: 21.4rem;
     .l_canvas{
       position: absolute;
       top: 0;
@@ -456,11 +480,10 @@ html, body {
     }
     .actions {
       position: absolute;
-      left: 0;
-      bottom: 1.2rem;
+      bottom: 1.5rem;
       width: 100%;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       .btn1 {
         width: 7.2rem;
       }
@@ -560,7 +583,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(../images/bg2.jpg) no-repeat center;
+  background: url(../images/bg99.jpg) no-repeat center;
   background-size: cover;
   .logo {
     position: absolute;
@@ -572,24 +595,28 @@ html, body {
   }
   .car {
     position: absolute;
-    bottom: -1rem;
-    width: 10.12rem;
     left: 50%;
-    margin-left: -5.06rem;
+    top: 2.8rem;
+    width: 8.4rem;
+    margin-left: -4.2rem;
   }
   .form {
-    margin: 3.8rem auto 0 auto;
-    width: 11.28rem;
-    height: 11rem;
-    background: url(../images/form.png);
+    margin: 6.8rem auto 0 auto;
+    width: 10.8rem;
+    height: 7.52rem;
+    background: url(../images/qfqffq.png);
     background-size: cover;
+    form {
+      width: 100%;
+      height: 100%;
+    }
     .form-box {
       position: relative;
       z-index: 30;
       width: 8.4rem;
-      height: 6rem;
+      height: 100%;
       margin: 0 auto;
-      padding-top: 3.4rem;
+      padding-top: 2.4rem;
     }
     .form-item {
       height: 1.2rem;
@@ -599,7 +626,7 @@ html, body {
       .tit {
         font-weight: bold;
         font-size: .52rem;
-        color: #fff;
+        color: #970303;
         letter-spacing: 2px;
       }
       .input {
@@ -614,9 +641,9 @@ html, body {
         -moz-appearance: none;
         appearance: none;
         font-size: .52rem;
-        color: #fff;
+        color: #970303;
         background: transparent;
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid #970303;
         border-radius: 0;
       }
       select {
@@ -659,7 +686,7 @@ html, body {
     width: .64rem;
     height: .64rem;
     right: .8rem;
-    top: .8rem;
+    top: 2.6rem;
     z-index: 6;
   }
   .logo {
@@ -694,7 +721,7 @@ html, body {
     background: rgba(0, 0, 0, .5);
   }
   .box {
-    width: 9.6rem;
+    width: 12rem;
     display: flex;
     flex-wrap: wrap;
     height: 100%;
@@ -705,7 +732,7 @@ html, body {
     width: 4rem;
     position: relative;
     margin-top: 2rem;
-    margin: 2rem .4rem 0 .4rem;
+    margin: 2rem 1rem 0 1rem;
     .number {
       position: absolute;
       left: 50%;
@@ -743,12 +770,19 @@ html, body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, .7);
+    .upload-text {
+      margin: 0 auto;
+      width:5.2rem ;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     .upload {
       position: relative;
       margin: 0 auto;
-      margin-top: 3.2rem;
-      width: 10rem;
-      height: 7rem;
+      margin-top: 1.6rem;
+      width: 12rem;
+      height: 12rem;
       overflow: hidden;
       display: flex;
       align-items: center;
@@ -763,6 +797,10 @@ html, body {
         max-width: 100%;
         max-height: 100%;
         margin: 0 auto;
+        padding: .8rem 1rem;
+        border: 2px dashed #fff;
+        min-width: 10rem;
+        min-height: 7rem;
       }
       input {
         position: absolute;
@@ -790,7 +828,7 @@ html, body {
       }
     }
     .selects {
-      margin-top: 4rem;
+      margin-top: .2rem;
       .select {
         width: 14rem;
         height: 1.6rem;
@@ -812,12 +850,13 @@ html, body {
           background: transparent;
           border-radius: 0;
           font-size: .6rem;
-          color: rgba(255, 255, 255, .5);
+          color: rgba(255, 255, 255, 1);
           padding-right: 1.2rem;
           background-image: url(../images/arrow.png);
           background-repeat: no-repeat;
           background-position: center right;
           background-size: 26px 12px;
+          font-weight: bold;
         }
       }
     }
@@ -932,7 +971,7 @@ html, body {
   top: 0;
   width: 100%;
   height: 100%;
-  background: url(../images/bg2.jpg) no-repeat center;
+  background: url(../images/bg99.jpg) no-repeat center;
   background-size: cover;
   .logo {
     position: absolute;
@@ -943,14 +982,8 @@ html, body {
     width: 32%;
   }
   .success {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    width: 80%;
-    img {
-      display: block;
-      width: 100%;
-    }
+    margin: 6.8rem auto 0 auto;
+    width: 10.8rem;
   }
   .btn8 {
     position: absolute;
@@ -972,12 +1005,27 @@ html, body {
       width: 100%;
     }
   }
+  .share_icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    z-index: 9;
+    > img {
+      width: 6rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
   .car {
     position: absolute;
-    bottom: -1rem;
-    width: 10.12rem;
     left: 50%;
-    margin-left: -5.06rem;
+    top: 2.8rem;
+    width: 8.4rem;
+    margin-left: -4.2rem;
   }
 }
 
@@ -987,6 +1035,13 @@ html, body {
   top:0;
   width: 100%;
   height: 100%;
+  .btn6 {
+    position: absolute;
+    left: 50%;
+    bottom: 5rem;
+    width: 7rem;
+    margin: -3.5rem;
+  }
   > img {
     width:100%;
     height: 100%;

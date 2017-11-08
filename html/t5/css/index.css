@@ -1577,39 +1577,35 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page { display: none; }
 
-.page1 { display: block; position: relative; width: 100%; height: 100%; background: url(../images/bg.jpg) 0 center no-repeat; -webkit-background-size: 100% auto; background-size: 100% auto; }
+.page1 { display: none; position: relative; width: 100%; height: 100%; background: url(../images/bg.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
 
 .page1 .logo { position: absolute; top: 0; left: 0; padding-left: 4%; padding-top: 4%; width: 32%; }
 
 .page1 .logo img { display: block; width: 100%; }
 
-.page1 .word { position: absolute; top: 8%; left: 0; width: 100%; }
+.page1 .word { position: absolute; top: 10%; left: 50%; width: 14.4rem; margin-left: -7.2rem; }
 
-.page1 .word img { display: block; width: 100%; }
+.page1 .wordtext { position: absolute; top: 29%; left: 50%; width: 11rem; margin-left: -5.5rem; }
 
 .page1 .car { position: absolute; top: 48%; left: 6.4%; width: 87.2%; }
 
 .page1 .car img { display: block; width: 100%; }
 
-.page1 .btn1 { position: absolute; left: 0; bottom: 10%; width: 100%; }
+.page1 .btn2 { position: absolute; right: 0; top: 40%; width: 1.2rem; }
 
-.page1 .btn1 img { display: block; width: 100%; }
+.page1 .btn1 { position: absolute; left: 4.8%; bottom: 4%; width: 40%; }
 
-.page1 .btn2 { position: absolute; left: 4.8%; bottom: 4%; width: 33.7%; }
-
-.page1 .btn2 img { display: block; width: 100%; }
-
-.page1 .btn3 { position: absolute; right: 4.8%; bottom: 4%; width: 34.2%; }
-
-.page1 .btn3 img { display: block; width: 100%; }
+.page1 .btn3 { position: absolute; right: 4.8%; bottom: 4%; width: 40%; }
 
 .page2 { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.page2 .logo { background: #1d4165; position: absolute; top: 0; left: 0; padding-left: 4%; padding-top: 4%; width: 32%; }
 
 .page2 .rule { position: relative; width: 100%; height: 100%; overflow: auto; -webkit-overflow-scrolling: touch; }
 
 .page2 .rule .bg { display: block; width: 100%; }
 
-.page2 .rule .rule-box { position: absolute; top: 0; left: 0; width: 100%; padding-left: 2%; padding-right: 2%; }
+.page2 .rule .rule-box { position: absolute; top: 8%; left: 0; width: 100%; padding-left: 2%; padding-right: 2%; }
 
 .page2 .rule .rule-box .rule-bg { display: block; width: 100%; }
 
@@ -1651,13 +1647,23 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page3 { visibility: hidden; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-.page3 .page3_actions { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; position: absolute; left: 0; bottom: 2rem; z-index: 8; }
+.page3 #log2 { opacity: 0; }
 
-.page3 .adjust { position: absolute; right: 0; top: 50%; width: 1.28rem; z-index: 10; }
+.page3 #log { opacity: 0; }
+
+.page3 .page3_actions { width: 100%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; position: absolute; left: 0; bottom: 1.5rem; z-index: 8; }
+
+.page3 .page3_actions .synthesis2, .page3 .page3_actions .synthesis { width: 6.8rem; }
+
+.page3 .adjust { position: absolute; right: .4rem; top: 40%; width: 1.28rem; z-index: 10; }
+
+.page3 .change_color { position: absolute; right: .4rem; top: 30%; width: 1.28rem; z-index: 10; }
 
 .page3 .header { position: absolute; left: 0; top: 0; width: 100%; z-index: 5; }
 
-.page3 .content { position: absolute; left: 0; top: 4.6rem; width: 100%; height: 13.6rem; }
+.page3 .text_color { position: absolute; left: 0; top: 35%; width: 10.4rem; z-index: 5; }
+
+.page3 .content { position: absolute; left: 0; top: 0; width: 100%; height: 21.4rem; }
 
 .page3 .content .l_canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
@@ -1687,7 +1693,7 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page4 .cover .text > span { letter-spacing: 4px; font-weight: bold; color: #c61508; }
 
-.page4 .cover .actions { position: absolute; left: 0; bottom: 1.2rem; width: 100%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
+.page4 .cover .actions { position: absolute; bottom: 1.5rem; width: 100%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
 
 .page4 .cover .actions .btn1 { width: 7.2rem; }
 
@@ -1725,23 +1731,25 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page4 .adjust img { display: block; width: 100%; }
 
-.page5 { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../images/bg2.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
+.page5 { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../images/bg99.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
 
 .page5 .logo { position: absolute; top: 0; left: 0; padding-left: 4%; padding-top: 4%; width: 32%; }
 
-.page5 .car { position: absolute; bottom: -1rem; width: 10.12rem; left: 50%; margin-left: -5.06rem; }
+.page5 .car { position: absolute; left: 50%; top: 2.8rem; width: 8.4rem; margin-left: -4.2rem; }
 
-.page5 .form { margin: 3.8rem auto 0 auto; width: 11.28rem; height: 11rem; background: url(../images/form.png); -webkit-background-size: cover; background-size: cover; }
+.page5 .form { margin: 6.8rem auto 0 auto; width: 10.8rem; height: 7.52rem; background: url(../images/qfqffq.png); -webkit-background-size: cover; background-size: cover; }
 
-.page5 .form .form-box { position: relative; z-index: 30; width: 8.4rem; height: 6rem; margin: 0 auto; padding-top: 3.4rem; }
+.page5 .form form { width: 100%; height: 100%; }
+
+.page5 .form .form-box { position: relative; z-index: 30; width: 8.4rem; height: 100%; margin: 0 auto; padding-top: 2.4rem; }
 
 .page5 .form .form-item { height: 1.2rem; overflow: hidden; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 
-.page5 .form .form-item .tit { font-weight: bold; font-size: .52rem; color: #fff; letter-spacing: 2px; }
+.page5 .form .form-item .tit { font-weight: bold; font-size: .52rem; color: #970303; letter-spacing: 2px; }
 
 .page5 .form .form-item .input { -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; overflow: hidden; }
 
-.page5 .form .form-item .txt { width: 100%; outline: none; border: 0; -webkit-appearance: none; -moz-appearance: none; appearance: none; font-size: .52rem; color: #fff; background: transparent; border-bottom: 1px solid #fff; -webkit-border-radius: 0; border-radius: 0; }
+.page5 .form .form-item .txt { width: 100%; outline: none; border: 0; -webkit-appearance: none; -moz-appearance: none; appearance: none; font-size: .52rem; color: #970303; background: transparent; border-bottom: 1px solid #970303; -webkit-border-radius: 0; border-radius: 0; }
 
 .page5 .form .form-item select { padding-right: 30px; background-image: url(../images/arrow.png) !important; -webkit-background-size: 19px 10px !important; background-size: 19px 10px !important; background-position: center right !important; background-repeat: no-repeat !important; }
 
@@ -1749,7 +1757,7 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page6 { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../images/bg2.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
 
-.page6 .close { position: absolute; width: .64rem; height: .64rem; right: .8rem; top: .8rem; z-index: 6; }
+.page6 .close { position: absolute; width: .64rem; height: .64rem; right: .8rem; top: 2.6rem; z-index: 6; }
 
 .page6 .logo { position: absolute; top: 0; left: 0; padding-left: 4%; padding-top: 4%; width: 32%; }
 
@@ -1759,9 +1767,9 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page6 .box-list { position: relative; z-index: 5; padding: 3rem 0 2rem 0; overflow: hidden; height: 100%; background: rgba(0, 0, 0, 0.5); }
 
-.page6 .box { width: 9.6rem; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; height: 100%; overflow-y: scroll; margin: 0 auto; }
+.page6 .box { width: 12rem; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; height: 100%; overflow-y: scroll; margin: 0 auto; }
 
-.page6 .item { width: 4rem; position: relative; margin-top: 2rem; margin: 2rem .4rem 0 .4rem; }
+.page6 .item { width: 4rem; position: relative; margin-top: 2rem; margin: 2rem 1rem 0 1rem; }
 
 .page6 .item .number { position: absolute; left: 50%; top: 0; margin: -1rem 0 0 -1rem; display: block; width: 2rem; height: 2rem; padding-top: 1.2rem; -webkit-border-radius: 100%; border-radius: 100%; overflow: hidden; text-align: center; font-size: .52rem; color: #fff; background: url(../images/zan.png); -webkit-background-size: cover; background-size: cover; background-repeat: no-repeat; background-position: center; }
 
@@ -1769,11 +1777,13 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page7 .cover { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); }
 
-.page7 .cover .upload { position: relative; margin: 0 auto; margin-top: 3.2rem; width: 10rem; height: 7rem; overflow: hidden; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
+.page7 .cover .upload-text { margin: 0 auto; width: 5.2rem; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
+
+.page7 .cover .upload { position: relative; margin: 0 auto; margin-top: 1.6rem; width: 12rem; height: 12rem; overflow: hidden; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
 
 .page7 .cover .upload .uploadBg { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
 
-.page7 .cover .upload .uploadShow { display: none; max-width: 100%; max-height: 100%; margin: 0 auto; }
+.page7 .cover .upload .uploadShow { display: none; max-width: 100%; max-height: 100%; margin: 0 auto; padding: .8rem 1rem; border: 2px dashed #fff; min-width: 10rem; min-height: 7rem; }
 
 .page7 .cover .upload input { position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 5; opacity: 0; }
 
@@ -1783,11 +1793,11 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page7 .cover .gender .g1.active, .page7 .cover .gender .g2.active { background-color: #000; }
 
-.page7 .cover .selects { margin-top: 4rem; }
+.page7 .cover .selects { margin-top: .2rem; }
 
 .page7 .cover .selects .select { width: 14rem; height: 1.6rem; margin: 0 auto; margin-top: .8rem; background: rgba(94, 94, 94, 0.6); padding: 0 1rem; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 
-.page7 .cover .selects .select select { width: 100%; height: 100%; outline: none; border: 0; -webkit-appearance: none; -moz-appearance: none; appearance: none; color: #fff; background: transparent; -webkit-border-radius: 0; border-radius: 0; font-size: .6rem; color: rgba(255, 255, 255, 0.5); padding-right: 1.2rem; background-image: url(../images/arrow.png); background-repeat: no-repeat; background-position: center right; -webkit-background-size: 26px 12px; background-size: 26px 12px; }
+.page7 .cover .selects .select select { width: 100%; height: 100%; outline: none; border: 0; -webkit-appearance: none; -moz-appearance: none; appearance: none; color: #fff; background: transparent; -webkit-border-radius: 0; border-radius: 0; font-size: .6rem; color: white; padding-right: 1.2rem; background-image: url(../images/arrow.png); background-repeat: no-repeat; background-position: center right; -webkit-background-size: 26px 12px; background-size: 26px 12px; font-weight: bold; }
 
 .page7 .cover .actions { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; position: absolute; left: 0; bottom: 1.28rem; width: 100%; }
 
@@ -1825,13 +1835,11 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page7 .adjust img { display: block; width: 100%; }
 
-.page8 { display: none; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: url(../images/bg2.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
+.page8 { display: none; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: url(../images/bg99.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
 
 .page8 .logo { position: absolute; top: 0; left: 0; padding-left: 4%; padding-top: 4%; width: 32%; }
 
-.page8 .success { position: absolute; top: 10%; left: 10%; width: 80%; }
-
-.page8 .success img { display: block; width: 100%; }
+.page8 .success { margin: 6.8rem auto 0 auto; width: 10.8rem; }
 
 .page8 .btn8 { position: absolute; left: 0%; bottom: 4%; width: 50%; }
 
@@ -1841,9 +1849,15 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page8 .btn9 img { display: block; width: 100%; }
 
-.page8 .car { position: absolute; bottom: -1rem; width: 10.12rem; left: 50%; margin-left: -5.06rem; }
+.page8 .share_icon { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 9; }
+
+.page8 .share_icon > img { width: 6rem; position: absolute; top: 0; right: 0; }
+
+.page8 .car { position: absolute; left: 50%; top: 2.8rem; width: 8.4rem; margin-left: -4.2rem; }
 
 .page9 { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+
+.page9 .btn6 { position: absolute; left: 50%; bottom: 5rem; width: 7rem; margin: -3.5rem; }
 
 .page9 > img { width: 100%; height: 100%; }
 

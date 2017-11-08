@@ -252,6 +252,21 @@ $(".synthesis").on("click",function(){
 
 (function () {
   $(function () {
+      var textObj = {
+          images: [
+              './images/text_color1.png',
+              './images/text_color2.png',
+              './images/text_color3.png',
+              './images/text_color4.png'
+          ],
+          number: 0
+      };
+      $('#textImg').attr('src', textObj.images[textObj.number]);
+      $('.change_color').on('click', function() {
+          textObj.number++;
+          if (textObj.number > 3)  textObj.number = 0;
+          $('#textImg').attr('src', textObj.images[textObj.number]);
+      });
     $('.page7 .btn1').on('click', function () {
       document.querySelector('.upload-form').reset();
       $('.uploadShow').hide();
@@ -349,6 +364,7 @@ $(".synthesis").on("click",function(){
     ]);
     queue.on("complete", function (e) {
       $('.page-load').hide();
+      $('.page1').show();
       queue2.on("complete", function (e) {
        console.log(789)
       }, this);
