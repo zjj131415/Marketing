@@ -187,7 +187,7 @@ html, body {
     }
     .rule-box {
       position: absolute;
-      top: 8%;
+      top: 10%;
       left: 0;
       width: 100%;
       padding-left: 2%;
@@ -195,17 +195,18 @@ html, body {
       .rule-bg {
         display: block;
         width: 100%;
+        height: 56rem;
       }
       .close {
         position: absolute;
-        top: 4%;
+        top: 1%;
         left: 10%;
         width: 0.66rem;
         height: 0.66rem;
       }
       .rule-content {
         position: absolute;
-        top: 5%;
+        top: 2%;
         left: 12%;
         width: 76%;
         height: 88%;
@@ -260,7 +261,7 @@ html, body {
         }
         .copyright {
           position: absolute;
-          bottom: 2%;
+          bottom: -8%;
           right: -2%;
           text-align: right;
           font-size: 0.4rem;
@@ -310,6 +311,19 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    padding-left: 4%;
+    padding-top: 4%;
+    width: 32%;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
   // z-index: 100;
   // z-index: -1;
   #log2 {
@@ -357,7 +371,7 @@ html, body {
   .text_color {
     position: absolute;
     left: 0;
-    top: 35%;
+    top: 44%;
     width: 10.4rem;
     z-index: 5;
   }
@@ -657,7 +671,7 @@ html, body {
     .form-btn {
       position: absolute;
       left: 50%;
-      bottom: 2rem;
+      bottom: 1rem;
       margin-left: -3.46rem;
       width: 6.92rem;
       height: 1.72rem;
@@ -679,7 +693,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(../images/bg2.jpg) no-repeat center;
+  background: url(../images/bg555.jpg) no-repeat center;
   background-size: cover;
   .close {
     position: absolute;
@@ -715,10 +729,10 @@ html, body {
   .box-list {
     position: relative;
     z-index: 5;
-    padding: 3rem 0 2rem 0;
+    padding: 3rem 0 3rem 0;
     overflow: hidden;
     height: 100%;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .7);
   }
   .box {
     width: 12rem;
@@ -753,6 +767,30 @@ html, body {
       background-position: center;
     }
   }
+  .page6_cover {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    .rank_text {
+      width: 9.44rem;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0);
+    }
+  }
+  .rank_btn {
+    position: absolute;
+    left: 50%;
+    bottom: .6rem;
+    width: 6rem;
+    margin-left: -3rem;
+  }
 }
 
 .page7 {
@@ -772,6 +810,7 @@ html, body {
     background: rgba(0, 0, 0, .7);
     .upload-text {
       margin: 0 auto;
+      margin-top: .4rem;
       width:5.2rem ;
       display: flex;
       align-items: center;
@@ -1035,12 +1074,29 @@ html, body {
   top:0;
   width: 100%;
   height: 100%;
+  .page9_cover {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.4);
+  }
+  .cover_img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 9.6rem;
+    transform: translate3d(-50%,-50%, 0);
+  }
   .btn6 {
     position: absolute;
     left: 50%;
     bottom: 5rem;
-    width: 7rem;
-    margin: -3.5rem;
+    width: 8rem;
+    margin: -4rem;
   }
   > img {
     width:100%;
