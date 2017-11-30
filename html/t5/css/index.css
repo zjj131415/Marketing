@@ -2333,9 +2333,11 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page1 .logo img { display: block; width: 100%; }
 
-.page1 .word { position: absolute; top: 10%; left: 50%; width: 14.4rem; margin-left: -7.2rem; }
+.page1 .top_text { position: absolute; width: 5rem; right: 1.7rem; top: .4rem; }
 
-.page1 .wordtext { position: absolute; top: 29%; left: 50%; width: 11rem; margin-left: -5.5rem; }
+.page1 .word { position: absolute; top: 18%; left: 50%; width: 14.4rem; margin-left: -7.2rem; }
+
+.page1 .wordtext { position: absolute; top: 32%; left: 50%; width: 11.6rem; margin-left: -5.8rem; }
 
 .page1 .car { position: absolute; top: 48%; left: 6.4%; width: 87.2%; }
 
@@ -2349,7 +2351,13 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page2 { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-.page2 .logo { background: #1d4165; position: absolute; top: 0; left: 0; padding-left: 4%; padding-top: 4%; width: 32%; }
+.page2 .image1 { margin-top: 1.8rem; }
+
+.page2 .close { position: absolute; left: 2rem; top: 4.4rem; width: 0.66rem; height: 0.66rem; }
+
+.page2 .logo { width: 100%; background: #1b4264; position: absolute; top: 0; left: 0; padding-left: 4%; padding-top: 4%; }
+
+.page2 .logo img { width: 32%; }
 
 .page2 .rule { position: relative; width: 100%; height: 100%; overflow: auto; -webkit-overflow-scrolling: touch; }
 
@@ -2357,7 +2365,7 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page2 .rule .rule-box { position: absolute; top: 10%; left: 0; width: 100%; padding-left: 2%; padding-right: 2%; }
 
-.page2 .rule .rule-box .rule-bg { display: block; width: 100%; height: 56rem; }
+.page2 .rule .rule-box .rule-bg { display: block; width: 100%; height: 55.5rem; }
 
 .page2 .rule .rule-box .close { position: absolute; top: 1%; left: 10%; width: 0.66rem; height: 0.66rem; }
 
@@ -2375,9 +2383,9 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page2 .rule .rule-box .rule-content .tag .word { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; font-size: 0.52rem; font-weight: 500; color: #ffffff; }
 
-.page2 .rule .rule-box .rule-content .describe { margin-top: 0.2rem; margin-bottom: 0.2rem; padding-left: 0.4rem; line-height: 0.72rem; font-size: 0.44rem; color: #ffffff; }
+.page2 .rule .rule-box .rule-content .describe { margin-top: 0.2rem; margin-bottom: 0.2rem; padding-left: 0.4rem; line-height: 0.72rem; font-size: 0.44rem; color: #ffffff; word-break: break-all; }
 
-.page2 .rule .rule-box .rule-content .copyright { position: absolute; bottom: -8%; right: -2%; text-align: right; font-size: 0.4rem; color: #a9c4d7; }
+.page2 .rule .rule-box .rule-content .copyright { position: absolute; bottom: -10%; right: -2%; text-align: right; font-size: 0.4rem; color: #a9c4d7; }
 
 .page2 .rule .rule-box .rule-content .detail { line-height: 0.72rem; font-size: 0.44rem; color: #ffffff; }
 
@@ -2409,9 +2417,11 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page3 .page3_actions .synthesis2, .page3 .page3_actions .synthesis { width: 6.8rem; }
 
-.page3 .adjust { position: absolute; right: .4rem; top: 40%; width: 1.28rem; z-index: 10; }
+.page3 .change_color { position: absolute; right: 0; top: 35%; margin-top: -3.88rem; width: 1.52rem; height: 7.76rem; background: url(../images/ajusdbg.png) no-repeat center 100%/100%; z-index: 10; }
 
-.page3 .change_color { position: absolute; right: .4rem; top: 30%; width: 1.28rem; z-index: 10; }
+.page3 .change_color .img1 { width: .8rem; height: 1.28rem; margin-top: .942rem; display: block; margin-left: .56rem; }
+
+.page3 .adjust { position: absolute; right: .15rem; top: 30%; width: .92rem; height: 4rem; z-index: 15; background: url(../images/ajusds.png) no-repeat center; -webkit-background-size: 100% 100%; background-size: 100% 100%; }
 
 .page3 .header { position: absolute; left: 0; top: 0; width: 100%; z-index: 5; }
 
@@ -2621,7 +2631,7 @@ html, body { position: relative; min-width: 320px; max-width: 750px; height: 100
 
 .page9 .cover_img { position: absolute; left: 50%; top: 50%; width: 9.6rem; -webkit-transform: translate3d(-50%, -50%, 0); transform: translate3d(-50%, -50%, 0); }
 
-.page9 .btn6 { position: absolute; left: 50%; bottom: 5rem; width: 8rem; margin: -4rem; }
+.page9 .btn6 { position: absolute; left: 50%; bottom: 5.4rem; width: 8rem; margin: -4rem; }
 
 .page9 > img { width: 100%; height: 100%; }
 

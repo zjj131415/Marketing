@@ -115,19 +115,25 @@ html, body {
       width: 100%;
     }
   }
+  .top_text {
+    position: absolute;
+    width: 5rem;
+    right: 1.7rem;
+    top: .4rem
+  }
   .word {
     position: absolute;
-    top: 10%;
+    top: 18%;
     left: 50%;
     width:14.4rem;
     margin-left: -7.2rem;
   }
   .wordtext {
     position: absolute;
-    top: 29%;
+    top: 32%;
     left: 50%;
-    width: 11rem;
-    margin-left: -5.5rem;
+    width: 11.6rem;
+    margin-left: -5.8rem;
   }
   .car {
     position: absolute;
@@ -166,14 +172,27 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
+  .image1 {
+    margin-top: 1.8rem;
+  }
+  .close {
+    position: absolute;
+    left: 2rem;
+    top: 4.4rem;
+    width: 0.66rem;
+    height: 0.66rem;
+  }
   .logo {
-    background: #1d4165;
+    width: 100%;
+    background: #1b4264;
     position: absolute;
     top: 0;
     left: 0;
     padding-left: 4%;
     padding-top: 4%;
-    width: 32%;
+    img {
+      width: 32%;
+    }
   }
   .rule {
     position: relative;
@@ -195,7 +214,7 @@ html, body {
       .rule-bg {
         display: block;
         width: 100%;
-        height: 56rem;
+        height: 55.5rem;
       }
       .close {
         position: absolute;
@@ -258,10 +277,11 @@ html, body {
           line-height: 0.72rem;
           font-size: 0.44rem;
           color: #ffffff;
+          word-break: break-all;
         }
         .copyright {
           position: absolute;
-          bottom: -8%;
+          bottom: -10%;
           right: -2%;
           text-align: right;
           font-size: 0.4rem;
@@ -347,19 +367,32 @@ html, body {
       width: 6.8rem;
     }
   }
+  .change_color{
+    position: absolute;
+    right: 0;
+    top: 35%;
+    margin-top: -3.88rem;
+    width: 1.52rem;
+    height: 7.76rem;
+    background: url(../images/ajusdbg.png) no-repeat center 100%/100%;
+    z-index: 10;
+    .img1 {
+      width: .8rem;
+      height: 1.28rem;
+      margin-top: .942rem;
+      display: block;
+      margin-left: .56rem;
+    }
+  }
   .adjust {
     position: absolute;
-    right: .4rem;
-    top: 40%;
-    width:1.28rem;
-    z-index: 10;
-  }
-  .change_color {
-    position: absolute;
-    right: .4rem;
+    right: .15rem;
     top: 30%;
-    width: 1.28rem;
-    z-index: 10;
+    width: .92rem;
+    height: 4rem;
+    z-index: 15;
+    background: url(../images/ajusds.png) no-repeat center;
+    background-size: 100% 100%;
   }
   .header {
     position: absolute;
@@ -1094,7 +1127,7 @@ html, body {
   .btn6 {
     position: absolute;
     left: 50%;
-    bottom: 5rem;
+    bottom: 5.4rem;
     width: 8rem;
     margin: -4rem;
   }
